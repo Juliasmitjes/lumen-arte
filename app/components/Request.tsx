@@ -60,7 +60,7 @@ export default function Request ({ quantity }: RequestProps) {
             placeholder="Naam"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="border font-business rounded p-2"
+            className="border border-gray-500 font-business rounded p-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
             required/>
 
           <input
@@ -68,7 +68,7 @@ export default function Request ({ quantity }: RequestProps) {
             placeholder="E-mailadres"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="border font-business rounded p-2"
+            className="border border-gray-500 font-business rounded p-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
             required/>
 
           <input
@@ -76,7 +76,7 @@ export default function Request ({ quantity }: RequestProps) {
             placeholder="Telefoonnummer (optioneel)"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            className="border font-business rounded p-2"/>
+            className="border border-gray-500 font-business rounded p-2 focus:outline-none focus:ring-2 focus:ring-gray-500"/>
 
           <input
             type="number"
