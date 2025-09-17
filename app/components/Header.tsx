@@ -13,7 +13,7 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
 
-         {/* Logo */}
+         {/* logo */}
           <Link href="/#hero" onClick={() => setIsMenuOpen(false)}>
             <div className="flex items-center gap-2 cursor-pointer">
               <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
@@ -30,16 +30,16 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* dekstop */}
           <div className="hidden md:flex items-center gap-8">
             <Link href="/#galerij" onClick={() => setIsMenuOpen(false)}>
-            <button className="text-foreground hover:text-primary text-xl font-business font-bold  transition-colors duration-300">
+            <button className="text-foreground cursor-pointer hover:text-primary text-xl font-business font-bold  transition-colors duration-300">
               Galerij
             </button>        
             </Link>
 
             <Link href="/#over-mij" onClick={() => setIsMenuOpen(false)}>
-             <button className="text-foreground hover:text-primary text-xl font-business font-bold transition-colors duration-300">
+             <button className="text-foreground cursor-pointer hover:text-primary text-xl font-business font-bold transition-colors duration-300">
               Over mij
             </button>
             </Link>
