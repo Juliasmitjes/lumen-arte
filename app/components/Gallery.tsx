@@ -43,25 +43,27 @@ const Gallery = () => {
        
 
         {/* filter buttons */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex rounded-lg bg-card shadow-soft p-1">
-            {[
-              { key: "alle", label: "Alle werken" },
-              { key: "sculpturen", label: "Lichtsculpturen" },
-              { key: "schilderijen", label: "Schilderijen" }
-            ].map((filter) => (
-              <Button
-                key={filter.key}
-                variant={activeCategory === filter.key ? "default" : "ghost"}
-                size="sm"
-                onClick={() => setActiveCategory(filter.key as "alle" | "sculpturen" | "schilderijen")}
-                className="mx-1"
-              >
-                {filter.label}
-              </Button>
-            ))}
+          <div className="flex justify-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-1 p-2 sm:p-1 w-full max-w-sm rounded-lg bg-card shadow-soft">
+              {[
+                { key: "alle", label: "Alle werken" },
+                { key: "sculpturen", label: "Lichtsculpturen" },
+                { key: "schilderijen", label: "Schilderijen" }
+              ].map((filter) => (
+                <Button
+                  key={filter.key}
+                  variant={activeCategory === filter.key ? "default" : "ghost"}
+                  size="sm"
+                  onClick={() =>
+                    setActiveCategory(filter.key as "alle" | "sculpturen" | "schilderijen")
+                  }
+                  className="w-full sm:w-auto"
+                >
+                  {filter.label}
+                </Button>
+              ))}
+            </div>
           </div>
-        </div>
 
         {/* galerij */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

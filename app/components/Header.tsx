@@ -54,7 +54,7 @@ const Header = () => {
             </Link>
           </div>
 
-           {/* mobiel menu > nog doen! */}
+           {/* mobiel menu */}
           <button
             className="md:hidden text-foreground hover:text-primary transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -62,18 +62,18 @@ const Header = () => {
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
 
-          {/* mobiele navigatie > nog doen! */}
+          {/* mobiele navigatie */}
           {isMenuOpen && (
             <div className="md:hidden absolute top-full left-0 right-0 bg-card border-b border-border shadow-warm">
               <div className="px-6 py-4 space-y-4">
                 <Link href="/#galerij" onClick={() => setIsMenuOpen(false)}>
-                <button className="block text-foreground hover:text-primary transition-colors duration-300">
+                <button className="block text-foreground mb-2 hover:text-primary transition-colors duration-300">
                 Galerij
                 </button>                
                 </Link>
 
                 <Link href="/#over-mij" onClick={() => setIsMenuOpen(false)}>
-                <button className="block text-foreground hover:text-primary transition-colors duration-300">
+                <button className="block text-foreground mb-2 hover:text-primary transition-colors duration-300">
                 Over mij
                 </button>
                 </Link>
