@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X, Palette } from "lucide-react";
+import { Button } from "./ui/button";
 import Link from "next/link";
 
 const Header = () => {
@@ -28,6 +29,42 @@ const Header = () => {
               </div>
             </div>
           </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            <Link href="/#galerij" onClick={() => setIsMenuOpen(false)}>
+            <button className="text-foreground hover:text-primary text-xl font-business font-bold  transition-colors duration-300">
+              Galerij
+            </button>        
+            </Link>
+
+            <Link href="/#over-mij" onClick={() => setIsMenuOpen(false)}>
+             <button className="text-foreground hover:text-primary text-xl font-business font-bold transition-colors duration-300">
+              Over mij
+            </button>
+            </Link>
+
+            <Link href="/#contact" onClick={() => setIsMenuOpen(false)}>
+            <Button 
+              variant="organic"
+              size="sm"
+              className="font-business text-xl font-bold">
+              Contact
+            </Button>  
+            </Link>
+          </div>
+
+          
+
+
+
+
+
+
+
+
+
+
         </div>
 
 
