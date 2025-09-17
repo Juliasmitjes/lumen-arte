@@ -47,14 +47,24 @@ const About = () => {
                 </p>
               </div>
 
-              <Button className="mr-4" variant="heroref" size="lg"  onClick={() => router.push("/#galerij")}>
-                Bekijk mijn werk
-              </Button>
-       
-            <Button variant="outlineref" size="lg"  onClick={() => router.push("/#verhaal")}>
-            Lees meer 
-            <ChevronDown className="w-5 h-5" />
-            </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button 
+                  variant="heroref" 
+                  size="lg"  
+                  onClick={() => router.push("/#galerij")}
+                >
+                  Bekijk mijn werk
+                </Button>
+
+                <Button 
+                  variant="outlineref" 
+                  size="lg"  
+                  onClick={() => router.push("/#verhaal")}
+                >
+                  Lees meer 
+                  <ChevronDown className="w-5 h-5" />
+                </Button>
+              </div>
             </div>           
           </div>
         </div>
