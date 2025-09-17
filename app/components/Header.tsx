@@ -32,19 +32,19 @@ const Header = () => {
 
           {/* dekstop */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/#galerij" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/#galerij">
             <button className="text-foreground cursor-pointer hover:text-primary text-xl font-business font-bold  transition-colors duration-300">
               Galerij
             </button>        
             </Link>
 
-            <Link href="/#over-mij" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/#over-mij">
              <button className="text-foreground cursor-pointer hover:text-primary text-xl font-business font-bold transition-colors duration-300">
               Over mij
             </button>
             </Link>
 
-            <Link href="/#contact" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/#contact">
             <Button 
               variant="organic"
               size="sm"
@@ -54,25 +54,44 @@ const Header = () => {
             </Link>
           </div>
 
-          
+           {/* mobiel menu > nog doen! */}
+          <button
+            className="md:hidden text-foreground hover:text-primary transition-colors"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
 
+          {/* mobiele navigatie > nog doen! */}
+          {isMenuOpen && (
+            <div className="md:hidden absolute top-full left-0 right-0 bg-card border-b border-border shadow-warm">
+              <div className="px-6 py-4 space-y-4">
+                <Link href="/#galerij" onClick={() => setIsMenuOpen(false)}>
+                <button className="block text-foreground hover:text-primary transition-colors duration-300">
+                Galerij
+                </button>                
+                </Link>
 
+                <Link href="/#over-mij" onClick={() => setIsMenuOpen(false)}>
+                <button className="block text-foreground hover:text-primary transition-colors duration-300">
+                Over mij
+                </button>
+                </Link>
 
-
-
-
-
-
-
-
+                <Link href="/#contact" onClick={() => setIsMenuOpen(false)}>
+                <Button 
+                  variant="organic"
+                  size="sm"
+                  className="w-full">
+                  Contact
+                </Button>
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
-
-
-
-
-
-      </nav>
-    </header>
+    </nav>
+  </header>
   );
 }
 
