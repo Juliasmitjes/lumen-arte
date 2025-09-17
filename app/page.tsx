@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import Gallery from "./components/Gallery";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Story from "./components/Story";
 
 
 import Image from "next/image";
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <Gallery />
       <About />
+      <Story />
     </div>
   );
 }

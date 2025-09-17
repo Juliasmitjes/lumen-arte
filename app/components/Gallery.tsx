@@ -36,7 +36,7 @@ const Gallery = () => {
             <br />
             Maar je kunt de sculptuur ook laten staan. Met wat andere hangers, maak je er een Paas- of herfstcreatie van. Eigenlijk zijn de lichtsculpturen in alle seizoenen leuk.
           </p>
-          <p className="text-lg text-foreground font-business font-bold max-w-2xl mx-auto mt-10">
+          <p className="text-lg text-foreground font-business max-w-2xl mx-auto mt-10">
           Nieuwsgierig? Kijk hieronder
           </p>
         </div>
