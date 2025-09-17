@@ -11,7 +11,7 @@ const About = () => {
   const router = useRouter();
 
   return (
-    <section id="over-mij" className="relative min-h-screen flex items-center bg-gradient-earth overflow-hidden">
+    <section id="over-mij" className="relative min-h-screen flex items-center gradient-earth overflow-hidden">
 
       <div className="absolute inset-0">
         <Image
@@ -19,7 +19,7 @@ const About = () => {
         alt="schilderen"
         className="w-full h-full object-cover opacity-80"
         />
-        <div className="absolute inset-0 bg-gradient-warm opacity-20"></div>
+        <div className="absolute inset-0 gradient-warm opacity-20"></div>
         <div className="absolute inset-0 bg-background/20"></div>
       </div>
 
