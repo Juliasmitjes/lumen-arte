@@ -129,7 +129,7 @@ export default function ProductDetail({ params }: ProductPageProps) {
             </div>
 
             {/* productinformatie */}
-            <div className="space-y-6">
+            <div className="space-y-6 ">
               <div>
                 <div className="flex items-start justify-between mb-4">
                   <div>
@@ -147,7 +147,7 @@ export default function ProductDetail({ params }: ProductPageProps) {
                   </div>
                 </div>
 
-                <div className="text-3xl font-bold mb-6 text-primary">
+                <div className="sm:text-3xl text-2xl font-bold mb-6 text-primary">
                   Prijs op aanvraag
                 </div>
               </div>
