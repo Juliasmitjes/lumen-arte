@@ -16,7 +16,7 @@ type ProductPageProps = {
 };
 
 export default function ProductDetail({ params }: ProductPageProps) {
-  const { product: productId } = use(params); // ✅ unwrap Promise
+  const { product: productId } = use(params); 
   const router = useRouter();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
