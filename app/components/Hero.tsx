@@ -34,7 +34,7 @@ const Hero = () => {
           </h1>
 
           {/* beschrijving */}
-          <p className="text-lg lg:text-xl text-foreground font-business font-bold mb-8 max-w-2xl leading-relaxed">
+          <p className="text-lg lg:text-xl text-foreground font-business mb-8 max-w-2xl leading-relaxed">
             Ontdek mijn lichtsculpturen. Gemaakt met liefde voor natuurlijke 
             materialen en duurzame kunst. Ieder stuk is uniek.
           </p>

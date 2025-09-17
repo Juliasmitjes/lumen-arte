@@ -27,7 +27,7 @@ const Gallery = () => {
           <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
             Licht in alle seizoenen
           </h3>
-          <p className="text-lg text-muted-foreground font-business font-bold max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground font-business max-w-2xl mx-auto">
             Kerstbomen passen niet in deze tijd van duurzaamheidsopgaven. We moeten bomen planten en niet kappen. Een kunstboom als alternatief? Dat is ook niet echt duurzaam. 
             <br />
             <br />
@@ -105,7 +105,7 @@ const Gallery = () => {
                   {product.title}
                 </h4>
                 
-                <p className="text-muted-foreground font-business font-bold mb-3">
+                <p className="text-muted-foreground font-business mb-3">
                   {product.description}
                 </p>
                 
