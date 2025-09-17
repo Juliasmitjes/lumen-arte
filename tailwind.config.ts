@@ -9,6 +9,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         business: ['var(--font-nunito-sans)', 'system-ui', 'sans-serif'],
+        playful: ['var(--font-marhey)', 'sans-serif'],
       },
     },
   },
