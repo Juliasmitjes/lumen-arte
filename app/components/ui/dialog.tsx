@@ -9,14 +9,14 @@ interface DialogProps {
 }
 
 export default function Dialog({ open, onClose, children }: DialogProps) {
-  if (!open) return null;
-
-  useEffect(() => {
-  if (!open) return; 
-  const handleEsc = (e: KeyboardEvent) => e.key === "Escape" && onClose();
-  window.addEventListener("keydown", handleEsc);
-  return () => window.removeEventListener("keydown", handleEsc);
+    useEffect(() => {
+    if (!open) return; 
+    const handleEsc = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
   }, [open, onClose]);
+
+  if (!open) return null; 
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
