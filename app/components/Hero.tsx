@@ -3,7 +3,7 @@
 import { Button } from "./ui/button";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
-import linnenImg from "../../public/images/linnen.jpg";
+import kaasdoekImg from "../../public/images/kaasdoek.jpg";
 import Link from "next/link";
 
 const Hero = () => {
@@ -13,8 +13,8 @@ const Hero = () => {
       {/* afbeelding bovenaan */}
       <div className="absolute inset-0">
         <Image
-          src={linnenImg}
-          alt="linnen" 
+          src={kaasdoekImg}
+          alt="kaasdoek" 
           className="w-full h-full object-cover opacity-80"
         />
         <div className="absolute inset-0 gradient-warm opacity-20"></div>

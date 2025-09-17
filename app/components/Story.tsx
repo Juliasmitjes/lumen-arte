@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import linnenTexture from "../../public/images/linnenTexture.jpg";
+import kaasdoekTexture from "../../public/images/kaasdoekTexture.jpg";
 import { Lightbulb, Leaf, Heart, Recycle } from "lucide-react";
 import { Button } from "./ui/button";
 
@@ -39,10 +39,10 @@ const Story = () => {
     <section id="verhaal">
        <div className="min-h-screen gradient-white relative">
        {/* achtergrondafbeelding */}
-        <div className="absolute inset-0 opacity-50">
+        <div className="absolute inset-0 opacity-20">
           <Image
-            src={linnenTexture}
-            alt="linnen texture"
+            src={kaasdoekTexture}
+            alt="kaasdoek"
             fill
             className="object-cover object-center"
           />
