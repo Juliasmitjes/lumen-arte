@@ -2,11 +2,23 @@
 
 import { useState } from "react";
 import { Menu, X, Palette } from "lucide-react";
+import Link from "next/link";
 
-export default function Header() {
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <header className="p-4 bg-gray-100">
-      <h1 className="bg-red-500">DIT IS EEN HEADER EN HIJ WERKT WEJO</h1>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-card backdrop-blur-sm border-b border-border shadow-soft">
+      <nav className="container mx-auto px-6 py-4">
+        <div className="flex items-center justify-between">
+          <h1 className="font-playful">test</h1>
+
+        {/* logo */}
+
+        </div>
+      </nav>
     </header>
   );
 }
+
+export default Header

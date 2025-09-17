@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Provider } from "./provider";
 import "./styles/globals.css";
-import { nunitoSans } from "./fonts/nunitoSans";
 import Header from "./components/Header";
 
+// lettertypen
+import { nunitoSans } from "./fonts/nunitoSans";
 import { Marhey } from "next/font/google";
 
 const marhey = Marhey({
