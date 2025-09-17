@@ -118,7 +118,7 @@ const Gallery = () => {
                 )}
 
                 <Button asChild variant="default" size="sm" className="w-full">
-                  <Link href={`/product/${product.id}`}>
+                  <Link href={`/products/${product.id}`}>
                     Meer informatie
                     <ExternalLink className="w-4 h-4" />
                   </Link>
