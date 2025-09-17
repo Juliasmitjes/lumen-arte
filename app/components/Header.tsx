@@ -20,7 +20,7 @@ const Header = () => {
                 <Palette className="w-5 h-5 text-primary-foreground text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-business font-bold text-foreground">
+                <h1 className="text-xl font-business text-foreground">
                   Jacqueline Tiemens
                 </h1>
                 <p className="text-sm text-muted-foreground font-playful">
@@ -33,13 +33,13 @@ const Header = () => {
           {/* dekstop */}
           <div className="hidden md:flex items-center gap-8">
             <Link href="/#galerij">
-            <button className="text-foreground cursor-pointer hover:text-primary text-xl font-business font-bold  transition-colors duration-300">
+            <button className="text-foreground cursor-pointer hover:text-primary text-xl font-business   transition-colors duration-300">
               Galerij
             </button>        
             </Link>
 
             <Link href="/#over-mij">
-             <button className="text-foreground cursor-pointer hover:text-primary text-xl font-business font-bold transition-colors duration-300">
+             <button className="text-foreground cursor-pointer hover:text-primary text-xl font-business transition-colors duration-300">
               Over mij
             </button>
             </Link>
@@ -48,7 +48,7 @@ const Header = () => {
             <Button 
               variant="organic"
               size="sm"
-              className="font-business text-xl font-bold">
+              className="text-xl">
               Contact
             </Button>  
             </Link>
