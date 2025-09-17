@@ -183,8 +183,8 @@ export default function ProductDetail({ params }: ProductPageProps) {
               </Card>
 
               {/* eigenschappen */}
-              <Card>
-                <CardContent className="p-6 border-2 rounded-md bg-secondary-light border-secondary/10">
+              <Card className="border-2 border-secondary/10 bg-secondary-light rounded-md">
+                <CardContent className="p-6">
                   <h3 className="font-business mb-4 flex items-center">
                     <Award className="w-5 h-5 mr-2 text-primary" />
                     Eigenschappen
@@ -201,8 +201,8 @@ export default function ProductDetail({ params }: ProductPageProps) {
               </Card>
 
               {/* materialen */}
-              <Card>
-                <CardContent className="p-6 border border-border rounded-md bg-secondary/50 border-secondary-warm/20">
+              <Card className="border border-secondary-warm/20 bg-secondary/50 rounded-md">
+                <CardContent className="p-6">
                   <h3 className="font-business mb-4 flex items-center">
                     <Leaf className="w-5 h-5 mr-2 text-primary" />
                     Natuurlijke materialen
@@ -216,8 +216,8 @@ export default function ProductDetail({ params }: ProductPageProps) {
               </Card>
 
               {/* afmetingen */}
-              <Card>
-                <CardContent className="p-6 border border-border rounded-md bg-secondary/20 border-secondary-warm/10">
+              <Card className="border border-secondary-warm/10 bg-secondary/20 rounded-md">
+                <CardContent className="p-6">
                   <h3 className="font-business mb-4 flex items-center">
                     <Package className="w-5 h-5 mr-2 text-primary" />
                     Afmetingen
@@ -240,8 +240,8 @@ export default function ProductDetail({ params }: ProductPageProps) {
               </Card>
 
               {/* beschrijving */}
-              <Card>
-                <CardContent className="p-6 border-2 border-white/20 rounded-md">
+              <Card className="border-2 border-white/20 bg-secondary-light rounded-md">
+                <CardContent className="p-6">
                   <h3 className="font-business mb-4">Over dit kunstwerk</h3>
                   <p className="text-muted-foreground font-business leading-relaxed">
                     {product.longDescription}
