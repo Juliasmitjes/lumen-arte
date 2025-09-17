@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Provider } from "./provider";
 import "./styles/globals.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 // lettertypen
 import { nunitoSans } from "./fonts/nunitoSans";
@@ -29,7 +30,8 @@ export default function RootLayout({
         <Provider>
           <Header />
           <main>{children}</main>
-      </Provider>
+          <Footer />
+        </Provider>
       </body>
     </html>
   );
