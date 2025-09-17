@@ -146,7 +146,7 @@ export default function ProductDetail({ params }: ProductPageProps) {
                         : product.season}
                     </Badge>
                     <h1 className="text-3xl font-bold text-foreground mb-2">{product.title}</h1>
-                    <p className="text-lg font-bold font-business text-muted-foreground">{product.description}</p>
+                    <p className="text-lg font-business text-muted-foreground">{product.description}</p>
                   </div>
                 </div>
 
@@ -160,18 +160,18 @@ export default function ProductDetail({ params }: ProductPageProps) {
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <Clock className="w-5 h-5 mr-2 text-green-600" />
-                    <span className="text-green-600 font-business font-bold">
+                    <span className="text-green-600 font-business">
                       Op voorraad - Handgemaakt op bestelling
                     </span>
                   </div>
 
                   <div className="flex items-center gap-4 mb-6">
-                    <label htmlFor="quantity" className="font-business font-bold">Aantal:</label>
+                    <label htmlFor="quantity" className="font-business">Aantal:</label>
                     <select
                       id="quantity"
                       value={quantity}
                       onChange={(e) => setQuantity(Number(e.target.value))}
-                      className="border border-border rounded-md px-3 py-2 bg-background font-business font-bold"
+                      className="border border-border rounded-md px-3 py-2 bg-background font-business "
                     >
                       {[1,2,3].map(num => (
                         <option key={num} value={num}>{num}</option>
@@ -188,13 +188,13 @@ export default function ProductDetail({ params }: ProductPageProps) {
               {/* eigenschappen */}
               <Card>
                 <CardContent className="p-6 border-2 rounded-md bg-secondary-light border-secondary/10">
-                  <h3 className="font-bold font-business mb-4 flex items-center">
+                  <h3 className="font-business mb-4 flex items-center">
                     <Award className="w-5 h-5 mr-2 text-primary" />
                     Eigenschappen
                   </h3>
                   <div className="grid grid-cols-2 gap-3">
                     {product.features.map((feature, index) => (
-                      <div key={index} className="flex font-business font-bold items-center text-sm">
+                      <div key={index} className="flex font-business items-center text-sm">
                         <div className="w-2 h-2 bg-primary rounded-full mr-2" />
                         {feature}
                       </div>
@@ -206,7 +206,7 @@ export default function ProductDetail({ params }: ProductPageProps) {
               {/* materialen */}
               <Card>
                 <CardContent className="p-6 border border-border rounded-md bg-secondary/50 border-secondary-warm/20">
-                  <h3 className="font-bold font-business mb-4 flex items-center">
+                  <h3 className="font-business mb-4 flex items-center">
                     <Leaf className="w-5 h-5 mr-2 text-primary" />
                     Natuurlijke materialen
                   </h3>
@@ -221,22 +221,22 @@ export default function ProductDetail({ params }: ProductPageProps) {
               {/* afmetingen */}
               <Card>
                 <CardContent className="p-6 border border-border rounded-md bg-secondary/20 border-secondary-warm/10">
-                  <h3 className="font-business font-bold mb-4 flex items-center">
+                  <h3 className="font-business mb-4 flex items-center">
                     <Package className="w-5 h-5 mr-2 text-primary" />
                     Afmetingen
                   </h3>
                   <div className="grid grid-cols-3 gap-4 text-sm">
                     <div>
                       <span className="font-bold font-business text-muted-foreground">Hoogte:</span>
-                      <div className="font-bold font-business">{product.dimensions.height}</div>
+                      <div className="font-business">{product.dimensions.height}</div>
                     </div>
                     <div>
                       <span className="font-bold font-business text-muted-foreground">Breedte:</span>
-                      <div className="font-bold font-business">{product.dimensions.width}</div>
+                      <div className="font-business">{product.dimensions.width}</div>
                     </div>
                     <div>
                       <span className="font-bold font-business text-muted-foreground">Diepte:</span>
-                      <div className="font-bold font-business">{product.dimensions.depth}</div>
+                      <div className="font-business">{product.dimensions.depth}</div>
                     </div>
                   </div>
                 </CardContent>
@@ -245,8 +245,8 @@ export default function ProductDetail({ params }: ProductPageProps) {
               {/* beschrijving */}
               <Card>
                 <CardContent className="p-6 border-2 border-white/20 rounded-md">
-                  <h3 className="font-bold font-business mb-4">Over dit kunstwerk</h3>
-                  <p className="text-muted-foreground font-bold font-business leading-relaxed">
+                  <h3 className="font-business mb-4">Over dit kunstwerk</h3>
+                  <p className="text-muted-foreground font-business leading-relaxed">
                     {product.longDescription}
                   </p>
                 </CardContent>
