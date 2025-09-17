@@ -39,7 +39,7 @@ const Story = () => {
     <section id="verhaal">
        <div className="min-h-screen gradient-white relative">
        {/* achtergrondafbeelding */}
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-50">
           <Image
             src={linnenTexture}
             alt="linnen texture"
