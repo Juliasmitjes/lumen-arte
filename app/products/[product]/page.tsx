@@ -16,7 +16,7 @@ import Image from "next/image";
 // import { useToast } from '@/hooks/use-toast';
 
 type ProductPageProps = {
-  params: { id: string };
+  params: { product: string };
 };
 
   // const { toast } = useToast();
@@ -26,7 +26,7 @@ export default function ProductDetail({ params }: ProductPageProps) {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [isZoomed, setIsZoomed] = useState(false);
-  const product = getProductById(params.id);
+  const product = getProductById(params.product);
 
   if (!product) {
     return (
