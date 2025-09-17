@@ -40,6 +40,7 @@ export default function Request ({ quantity }: RequestProps) {
     setFormData({ name: "", email: "", phone: "", quantity });
     setTimeout(() => setShowPopup(false), 3000);
   } catch (error) {
+    console.error(error);
     setErrorPopup(true);
     setTimeout(() => setErrorPopup(false), 4000);
   }

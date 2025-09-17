@@ -64,22 +64,19 @@ const Story = () => {
               </div>
 
               <div className="border-l-4 border-accent pl-6">
-                <h2 className="text-xl mb-4">"Zullen we eens zonder boom?"</h2>
+                <h2 className="text-xl mb-4">&quot;Zullen we eens zonder boom?&quot;</h2>
                 <p>
-                  'Zullen we eens zonder boom?', probeerde ik. Protest bij man en kinderen. 'Er zijn alternatieven, 
-                  zoals een kunstboom.' 'Nee mam, hartstikke kitsch en zo'n nepboom is ook niet duurzaam'. Daarmee 
-                  was ik het met ze eens. 'Een constructie van steigerhout dan?' 'Lelijk, mam'. 'Of een moderne 
-                  minimalistische variant?'. 'Zo'n kaal ding, dan kunnen we beter helemaal niets doen.' En ook 
-                  daarin gaf ik ze gelijk. En toch liet het me niet los.
+                  &apos;Zullen we eens zonder boom?&apos;, probeerde ik. Protest bij man en kinderen. &apos;Er zijn alternatieven, 
+                  zoals een kunstboom.&apos; &apos;Nee mam, hartstikke kitsch en zo&apos;n nepboom is ook niet duurzaam&apos;. Daarmee 
+                  was ik het met ze eens. &apos;Een constructie van steigerhout dan?&apos; &apos;Lelijk, mam.&apos; &apos;Of een moderne minimalistische variant?&apos; &apos;Zo&apos;n kaal ding, dan kunnen we beter helemaal niets doen.&apos; En ook daarin gaf ik ze gelijk. En toch liet het me niet los.
                 </p>
               </div>
-
               <div>
                 <h2 className="text-2xl mb-4">De uitdaging</h2>
                 <p>
                   Ik dacht aan de glinsterende kiezels in mijn jeugd. Er is zoveel schoonheid. Het moet mogelijk 
                   zijn om een beter alternatief te bedenken. Ik ga het proberen! Ik zei tegen man en kinderen, 
-                  'ik ga de uitdaging aan. Ik bedenk een feestelijke lichtbron als alternatief voor een boom: 
+                  ik ga de uitdaging aan. Ik bedenk een feestelijke lichtbron als alternatief voor een boom: 
                   eenvoudig, minimaal materiaalgebruik (duurzaam) én met een wow-effect. Het beeld tekende zich 
                   in mijn hoofd af, maar de weg ernaartoe was een tocht met hobbels over constructies ontdekkingen 
                   over fournituren, lijmen, papiersoorten en stoffen...
