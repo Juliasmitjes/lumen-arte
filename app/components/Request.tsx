@@ -60,7 +60,7 @@ export default function Request ({ quantity }: RequestProps) {
             placeholder="Naam"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="border font-business font-bold rounded p-2"
+            className="border font-business rounded p-2"
             required/>
 
           <input
@@ -68,7 +68,7 @@ export default function Request ({ quantity }: RequestProps) {
             placeholder="E-mailadres"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="border font-business font-bold  rounded p-2"
+            className="border font-business rounded p-2"
             required/>
 
           <input
@@ -76,24 +76,24 @@ export default function Request ({ quantity }: RequestProps) {
             placeholder="Telefoonnummer (optioneel)"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            className="border font-business font-bold  rounded p-2"/>
+            className="border font-business rounded p-2"/>
 
           <input
             type="number"
             value={formData.quantity}
             readOnly
-            className="border font-business font-bold  rounded p-2 bg-gray-100"/>
+            className="border font-business rounded p-2 bg-gray-100"/>
 
           <Button type="submit">Verzenden</Button>
 
           {showPopup && (
-            <div className="fixed bottom-6 right-6 bg-green-600 font-business font-bold text-white px-4 py-2 rounded-lg shadow-lg">
+            <div className="fixed bottom-6 right-6 bg-green-600 font-business text-white px-4 py-2 rounded-lg shadow-lg">
               Bedankt voor je bericht. Ik neem snel contact met je op!
             </div>
           )}
 
           {errorPopup && (
-            <div className="fixed bottom-6 right-6 bg-red-600 font-business font-bold text-white px-4 py-2 rounded-lg shadow-lg">
+            <div className="fixed bottom-6 right-6 bg-red-600 font-business text-white px-4 py-2 rounded-lg shadow-lg">
               Er is iets misgegaan. Probeer het opnieuw.
             </div>
           )}

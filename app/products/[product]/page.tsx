@@ -2,8 +2,6 @@
 
 import { use, useState } from "react"; 
 import { useRouter } from "next/navigation";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 import Request from "../../components/Request";
 import { ArrowLeft, X, Clock, Award, Leaf, Package } from "lucide-react";
 import { Button } from "../../components/ui/button";
@@ -60,7 +58,6 @@ export default function ProductDetail({ params }: ProductPageProps) {
 
   return (
     <main>
-      <Header />
       <div className="min-h-screen bg-background">
         <div className="container mx-auto mt-16 px-4 py-8">
           {/* terug naar hoofdmenu knop */}
@@ -117,7 +114,7 @@ export default function ProductDetail({ params }: ProductPageProps) {
                       className={`w-20 h-20 rounded-lg overflow-hidden transition-all ${
                         selectedImageIndex === index
                           ? 'ring-2 ring-primary shadow-lg'
-                          : 'opacity-70 hover:opacity-100'
+                          : 'opacity-70 cursor-pointer hover:opacity-100'
                       }`}
                     >
                       <Image
@@ -256,7 +253,6 @@ export default function ProductDetail({ params }: ProductPageProps) {
           </div>
         </div>
       </div>
-      <Footer />
     </main>
   );
 }
