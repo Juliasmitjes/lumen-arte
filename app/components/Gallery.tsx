@@ -17,7 +17,7 @@ const Gallery = () => {
     : products.filter(product => product.category === activeCategory);
 
   return (
-    <section id="galerij" className="py-20 bg-gradient-earth">
+    <section id="galerij" className="py-20 gradient-earth">
       <div className="container mx-auto px-6">
         {/* header */}
         <div className="text-center mb-16">

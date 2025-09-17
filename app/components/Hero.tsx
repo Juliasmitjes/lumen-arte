@@ -9,7 +9,7 @@ import Link from "next/link";
 const Hero = () => {
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center bg-gradient-earth overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center gradient-earth overflow-hidden">
       {/* afbeelding bovenaan */}
       <div className="absolute inset-0">
         <Image
@@ -17,7 +17,7 @@ const Hero = () => {
           alt="linnen" 
           className="w-full h-full object-cover opacity-80"
         />
-        <div className="absolute inset-0 bg-gradient-warm opacity-20"></div>
+        <div className="absolute inset-0 gradient-warm opacity-20"></div>
         <div className="absolute inset-0 bg-background/20"></div>
       </div>
 

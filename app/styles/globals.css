@@ -1,5 +1,49 @@
 @import "tailwindcss";
 
+/* gradients */
+
+.gradient-warm {
+  background-image: linear-gradient(
+    135deg,
+    hsl(var(--primary)) 0%,
+    hsl(var(--accent)) 50%,
+    hsl(var(--secondary)) 100%
+  );
+}
+
+.gradient-earth {
+  background-image: linear-gradient(
+    180deg,
+    hsl(var(--background)) 0%,
+    hsl(var(--muted)) 100%
+  )
+}
+
+.gradient-sunset {
+  background-image: linear-gradient(
+    45deg,
+    hsl(var(--primary)) 50%,
+    hsl(var(--highlight)) 100%
+  )
+}
+
+.gradient-white {
+  background-image: linear-gradient(
+    135deg,
+    hsl(35, 45%, 94%),
+    hsl(35, 35%, 85%)
+  )
+}
+
+.gradient-accent {
+  background-image: linear-gradient(
+    135deg,
+    hsl(16, 75%, 58%),
+    hsl(25, 65%, 45%)
+  )
+}
+
+
 :root {
   /* Natuurlijke kleurenpalet */
   --background: 36 55% 85%; /* Warm linnen crème */
@@ -44,14 +88,6 @@
     --ring: 15 65% 55%;
 
     --radius: 0.75rem;
-
-    /* Gradiënten voor warmte */
-    --gradient-warm: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(var(--secondary)) 100%);
-    --gradient-earth: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
-    --gradient-sunset: linear-gradient(45deg, hsl(var(--primary)) 50%, hsl(var(--highlight)) 100%);
-
-    --gradient-white: linear-gradient(135deg, hsl(35, 45%, 94%), hsl(35, 35%, 85%));
-    --gradient-accent: linear-gradient(135deg, hsl(16, 75%, 58%), hsl(25, 65%, 45%));
     
     /* Schaduwen met natuurlijke kleuren */
     --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
@@ -103,20 +139,12 @@
 
   --color-radius: var(--radius);
 
-  --color-gradient-warm: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(var(--secondary)) 100%);
-  --color-gradient-earth: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
-  --color-gradient-sunset: linear-gradient(45deg, hsl(var(--primary)) 50%, hsl(var(--highlight)) 100%);
-
-  --color-gradient-white: linear-gradient(135deg, hsl(35, 45%, 94%), hsl(35, 35%, 85%));
-  --color-gradient-accent: linear-gradient(135deg, hsl(16, 75%, 58%), hsl(25, 65%, 45%));
-
   --color-shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
   --color-shadow-warm: 0 8px 32px hsl(var(--highlight) / 0.15);
   --color-shadow-deep: 0 12px 40px hsl(var(--foreground) / 0.1);
 
   --color-transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --color-transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
 
   /* fonts */
   --font-business: var(--font-nunito-sans), system-ui, sans-serif;
