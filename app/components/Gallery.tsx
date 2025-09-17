@@ -75,7 +75,7 @@ const Gallery = () => {
               onMouseLeave={() => setHoveredItem(null)}
             >
               {/* afbeeldingen */}
-              <Link href={`/product/${product.id}`} className="relative overflow-hidden aspect-[4/5] block group">
+              <Link href={`/products/${product.id}`} className="relative overflow-hidden aspect-[4/5] block group">
                 <Image
                   src={product.images[0]}
                   alt={product.title}
