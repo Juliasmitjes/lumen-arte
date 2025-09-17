@@ -12,14 +12,28 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
 
-        {/* logo */}
-        <link href="#" onClick={() => setIsMenuOpen(false)}/>
-        <div className="flex items-center gap-2 cursor-pointer">
-          <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-            <Palette className="w-5 h-5 text-primary-foreground text-white" />
-          </div>
+         {/* Logo */}
+          <Link href="/#hero" onClick={() => setIsMenuOpen(false)}>
+            <div className="flex items-center gap-2 cursor-pointer">
+              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                <Palette className="w-5 h-5 text-primary-foreground text-white" />
+              </div>
+              <div>
+                <h1 className="text-xl font-business font-bold text-foreground">
+                  Jacqueline Tiemens
+                </h1>
+                <p className="text-sm text-muted-foreground font-playful">
+                  Handgemaakte kunst
+                </p>
+              </div>
+            </div>
+          </Link>
         </div>
-        </div>
+
+
+
+
+
       </nav>
     </header>
   );
