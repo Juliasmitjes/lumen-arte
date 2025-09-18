@@ -70,7 +70,7 @@ export default function ProductDetail({ params }: ProductPageProps) {
             Terug naar home
           </Button>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
             {/* afbeeldingen */}
             <div>
               <div

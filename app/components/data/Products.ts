@@ -57,22 +57,23 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    title: 'Landschap',
-    description: 'Koele tinten die een Scandinavisch landschap oproepen',
-    longDescription: 'Een mooi schilderij ',
+    title: 'Krijtjes',
+    description: 'Een kleurrijk doek vol speelse expressie',
+    longDescription: 'Dit levendige schilderij, gemaakt met olieverf op linnen, straalt de energie en vrijheid van een zomerse dag uit. De frisse kleuren en losse penseelstreken doen denken aan krijttekeningen op straat: spontaan, vrolijk en vol beweging. Perfect om een ruimte op te fleuren en een speelse, creatieve sfeer te creëren. Elk werk is met zorg handgemaakt, waardoor geen enkel exemplaar hetzelfde is.',
     price: 150,
     images: [schilderij1Img],
-    materials: ['Olieverf op doek', 'Licht', 'Linnen'],
+    materials: ['Olieverf op doek', 'Natuurlijk linnen', 'Lichtreflecterende pigmenten'],
     season: 'zomer',
     dimensions: {
       height: '40 cm',
       width: '40 cm',
-      depth: '40 cm'
+      depth: '4 cm'
     },
     features: [
-      'Mooie kleuren',
-      'fris',
-      'karakteristiek'
+      'Kleurrijk ontwerp',
+      'Compact formaat, geschikt voor diverse ruimtes',
+      'Direct ophangbaar',
+      'Handgeschilderd in olieverf'
     ],
     inStock: true,
     category: 'schilderijen'

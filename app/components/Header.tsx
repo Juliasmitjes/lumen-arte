@@ -67,13 +67,13 @@ const Header = () => {
             <div className="md:hidden absolute top-full left-0 right-0 bg-card border-b border-border shadow-warm">
               <div className="px-6 py-4 space-y-4">
                 <Link href="/#galerij" onClick={() => setIsMenuOpen(false)}>
-                <button className="block text-foreground mb-2 hover:text-primary transition-colors duration-300">
+                <button className="block text-foreground mb-6 mt-2 hover:text-primary transition-colors duration-300">
                 Galerij
                 </button>                
                 </Link>
 
                 <Link href="/#over-mij" onClick={() => setIsMenuOpen(false)}>
-                <button className="block text-foreground mb-2 hover:text-primary transition-colors duration-300">
+                <button className="block text-foreground mb-6 hover:text-primary transition-colors duration-300">
                 Over mij
                 </button>
                 </Link>

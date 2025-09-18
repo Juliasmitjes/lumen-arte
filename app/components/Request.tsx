@@ -48,8 +48,8 @@ export default function Request ({ quantity }: RequestProps) {
 
   return (
     <>
-      <Button variant="default" size="lg" onClick={() => setOpen(true)}>
-        Vrijblijvend aanvragen
+      <Button variant="default" size="default" className="sm:px-8" onClick={() => setOpen(true)}>
+        Meer informatie
       </Button>
 
       <Dialog open={open} onClose={() => setOpen(false)}>

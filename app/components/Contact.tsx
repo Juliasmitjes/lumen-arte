@@ -83,7 +83,7 @@ const Contact = () => {
                   }
                 ].map((contact, index) => (
                   <div key={index} className="flex items-center gap-4 p-4 bg-card rounded-lg shadow-soft hover:shadow-warm transition-all duration-300 group">
-                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 active:scale-110 transition-transform duration-300">
                       <contact.icon className="w-5 h-5 text-primary-foreground" />
                     </div>
                     <div className="flex-1">

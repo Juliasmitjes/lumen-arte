@@ -120,7 +120,7 @@ const Story = () => {
             {coreValues.map((value, index) => (
               <div
                 key={index}
-                className="flex items-start gap-5 p-6 bg-card/80 rounded-2xl shadow-soft hover:shadow-warm transition-all duration-300 group"
+                className="flex items-start gap-5 p-6 bg-card/80 rounded-2xl shadow-soft hover:shadow-warm active:scale-110 transition-all duration-300 group"
               >
                 <div className="flex-shrink-0 w-14 h-14 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <value.icon className="w-6 h-6 text-primary-foreground" />
