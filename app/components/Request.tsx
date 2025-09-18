@@ -61,7 +61,7 @@ export default function Request ({ quantity }: RequestProps) {
             placeholder="Naam"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="border border-gray-500 font-business rounded p-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="border border-border font-business rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
             required/>
 
           <input
@@ -69,7 +69,7 @@ export default function Request ({ quantity }: RequestProps) {
             placeholder="E-mailadres"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="border border-gray-500 font-business rounded p-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="border border-border font-business rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
             required/>
 
           <input
@@ -77,13 +77,13 @@ export default function Request ({ quantity }: RequestProps) {
             placeholder="Telefoonnummer (optioneel)"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            className="border border-gray-500 font-business rounded p-2 focus:outline-none focus:ring-2 focus:ring-gray-500"/>
+            className="border border-border font-business rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-primary transition-colors"/>
 
           <input
             type="number"
             value={formData.quantity}
             readOnly
-            className="border font-business rounded p-2 bg-gray-100"/>
+            className="border border-border font-business rounded-lg p-2 bg-gray-100"/>
 
           <Button type="submit">Verzenden</Button>
 
