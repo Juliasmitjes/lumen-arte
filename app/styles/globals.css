@@ -75,10 +75,8 @@ html, body {
 }
 
 
-
-
 :root {
-  /* Natuurlijke kleurenpalet */
+  /* Natuurlijke kleuren */
   --background: 36 55% 85%; /* Warm linnen crème */
   --foreground: 20 35% 22%; /* Diep kastanje-bruin, warm en natuurlijk */
 
@@ -89,7 +87,7 @@ html, body {
   --popover-foreground: 25 20% 24%;
 
   /* Warm saliegroen primair */
-  --primary: 94 9% 55%;         /* Hoofdkleur: perfect zo */
+  --primary: 94 9% 55%;         /* Hoofdkleur */
   --primary-foreground: 35 30% 94%; /* Licht linnen voor contrast */
   --primary-warm: 94 18% 40%;   /* Dieper en warmer saliegroen */
   --primary-light: 94 14% 70%;  /* Zachter, vriendelijker saliegroen */
