@@ -16,10 +16,21 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const mailtoLink = `mailto:jacqtiemens@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-      `Naam: ${formData.name}\nEmail: ${formData.email}\n\nBericht:\n${formData.message}`
+    try {
+      const mailtoLink = `mailto:jacqtiemens@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+    `Naam: ${formData.name}\nEmail: ${formData.email}\n\nBericht:\n${formData.message}`
     )}`;
+
     window.location.href = mailtoLink;
+
+    toast.success("Bedankt voor je bericht! Ik neem snel contact met je op.");
+
+    setFormData({ name: "", email: "", subject: "", message: "" });
+
+    } catch (error) {
+      console.error(error);
+      toast.error("Er is iets misgegaan. Probeer het opnieuw.");
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
