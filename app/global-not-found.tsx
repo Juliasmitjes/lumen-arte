@@ -11,9 +11,11 @@ export const metadata: Metadata = {
 export default function GlobalNotFound() {
   return (
     <html lang="en" className={`${nunitoSans.variable} antialiased`}>
-      <body>
-        <h1>404 - Pagina niet gevonden</h1>
-        <p>Oeps! Deze pagina bestaat niet of is verplaatst.</p>
+      <body className="relative min-h-screen flex items-center justify-center gradient-earth overflow-hidden">
+        <div className="text-center p-3 sm:p-6 bg-white/70 rounded-lg shadow-lg space-y-3">
+          <h1 className="font-bold text-foreground">404 - Pagina niet gevonden</h1>
+          <p className="text-foreground">Oeps! Deze pagina bestaat niet of is verplaatst.</p>
+        </div>
       </body>
     </html>
   )
