@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Dialog from "./ui/dialog";
 import { Button } from "./ui/button";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface RequestProps {
   quantity: number;
@@ -10,8 +12,6 @@ interface RequestProps {
 
 export default function Request ({ quantity }: RequestProps) {
   const [open, setOpen] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
-  const [errorPopup, setErrorPopup] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -36,18 +36,17 @@ export default function Request ({ quantity }: RequestProps) {
 
     if (!res.ok) throw new Error("Request failed");
 
-    setShowPopup(true);
+    toast("Bedankt voor je bericht. Ik neem snel contact met je op!");
     setFormData({ name: "", email: "", phone: "", quantity });
-    setTimeout(() => setShowPopup(false), 3000);
   } catch (error) {
     console.error(error);
-    setErrorPopup(true);
-    setTimeout(() => setErrorPopup(false), 4000);
+    toast.error("Er is iets misgegaan. Probeer het opnieuw.");
   }
 };
 
   return (
     <>
+    <ToastContainer position="top-center"/>
       <Button variant="default" size="default" className="sm:px-8" onClick={() => setOpen(true)}>
         Meer informatie
       </Button>
@@ -86,19 +85,6 @@ export default function Request ({ quantity }: RequestProps) {
             className="border border-border font-business rounded-lg p-2 bg-gray-100"/>
 
           <Button type="submit">Verzenden</Button>
-
-          {showPopup && (
-            <div className="fixed bottom-6 right-6 bg-green-600 font-business text-white px-4 py-2 rounded-lg shadow-lg">
-              Bedankt voor je bericht. Ik neem snel contact met je op!
-            </div>
-          )}
-
-          {errorPopup && (
-            <div className="fixed bottom-6 right-6 bg-red-600 font-business text-white px-4 py-2 rounded-lg shadow-lg">
-              Er is iets misgegaan. Probeer het opnieuw.
-            </div>
-          )}
-
         </form>
       </Dialog>
     </>
