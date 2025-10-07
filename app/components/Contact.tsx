@@ -3,6 +3,7 @@
 import { Button } from "./ui/button";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const [formData, setFormData] = useState({

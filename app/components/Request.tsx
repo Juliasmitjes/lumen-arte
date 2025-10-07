@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Dialog from "./ui/dialog";
 import { Button } from "./ui/button";
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 interface RequestProps {
   quantity: number;
@@ -36,7 +35,7 @@ export default function Request ({ quantity }: RequestProps) {
 
     if (!res.ok) throw new Error("Request failed");
 
-    toast("Bedankt voor je bericht. Ik neem snel contact met je op!");
+    toast.success("Bedankt voor je bericht. Ik neem snel contact met je op!");
     setFormData({ name: "", email: "", phone: "", quantity });
   } catch (error) {
     console.error(error);
@@ -46,7 +45,6 @@ export default function Request ({ quantity }: RequestProps) {
 
   return (
     <>
-    <ToastContainer position="top-center"/>
       <Button variant="default" size="default" className="sm:px-8" onClick={() => setOpen(true)}>
         Meer informatie
       </Button>
