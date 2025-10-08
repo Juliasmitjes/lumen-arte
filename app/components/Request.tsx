@@ -1,17 +1,24 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
 import Dialog from "./ui/dialog";
 import { Button } from "./ui/button";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 interface RequestProps {
   quantity: number;
 }
 
+type FormData = {
+  name: string;
+  email: string;
+  phone: string;
+  quantity: number;
+};
+
 export default function Request ({ quantity }: RequestProps) {
   const [open, setOpen] = useState(false);
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,29 +26,29 @@ export default function Request ({ quantity }: RequestProps) {
     quantity,
   });
 
-   useEffect(() => {
-    setFormData((prev) => ({ ...prev, quantity }));
-  }, [quantity]);
-
- const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-
-  try {
+  const mutation = useMutation({
+  mutationFn: async (data: FormData) => {
     const res = await fetch("/api/send-request", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(data),
     });
-
     if (!res.ok) throw new Error("Request failed");
-
+    return res.json();
+  },
+  onSuccess: () => {
     toast.success("Bedankt voor je bericht. Ik neem snel contact met je op!");
     setFormData({ name: "", email: "", phone: "", quantity });
-  } catch (error) {
-    console.error(error);
+    setOpen(false);
+  },
+  onError: () => {
     toast.error("Er is iets misgegaan. Probeer het opnieuw.");
-  }
-};
+  },
+});
+
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  mutation.mutate(formData);};
 
   return (
     <>
