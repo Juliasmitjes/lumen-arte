@@ -18,6 +18,7 @@ type FormData = {
 };
 
 export default function Request ({ quantity }: RequestProps) {
+  const [errors, setErrors] = useState<{ name?: string; email?: string }>({});
   const [open, setOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -48,14 +49,25 @@ export default function Request ({ quantity }: RequestProps) {
 
  const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
-  mutation.mutate(formData);};
+
+  const newErrors: typeof errors = {};
+  if (!formData.name.trim()) newErrors.name = "Naam is verplicht";
+  if (!formData.email.trim()) newErrors.email = "E-mailadres is verplicht";
+
+  if (Object.keys(newErrors).length > 0) {
+    setErrors(newErrors);
+    return;
+  }
+
+  setErrors({});
+  mutation.mutate(formData);
+};
 
   return (
     <>
       <Button variant="default" size="default" className="sm:px-8" onClick={() => setOpen(true)}>
         Meer informatie
       </Button>
-
       <Dialog open={open} onClose={() => setOpen(false)}>
         <h2 className="text-lg font-bold mb-4">Vrijblijvend informatie aanvragen</h2>
 
@@ -67,6 +79,7 @@ export default function Request ({ quantity }: RequestProps) {
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             className="border border-border font-business rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
             required/>
+
 
           <input
             type="email"
@@ -92,6 +105,7 @@ export default function Request ({ quantity }: RequestProps) {
           <Button type="submit">Verzenden</Button>
         </form>
       </Dialog>
+
     </>
   );
 }
