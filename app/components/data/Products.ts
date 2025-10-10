@@ -1,16 +1,35 @@
 import { Product } from '../../types/products';
-import boom1Img from "../../../public/images/boom1.jpg";
-import boom2Img from "../../../public/images/boom2.jpeg";
+
+// -- schilderijen --
+
 import schilderij1Img from "../../../public/images/schilderij1.jpg";
-import boom3Img from "../../../public/images/boom3.jpg";
 import schilderij2Img from "../../../public/images/schilderij2.jpg";
-import boom4Img from "../../../public/images/boom4.jpeg";
 import schilderij3Img from "../../../public/images/schilderij3.jpg";
 import schilderij4Img from "../../../public/images/schilderij4.jpg";
 import schilderij5Img from "../../../public/images/schilderij5.jpg";
 import schilderij6Img from "../../../public/images/schilderij6.jpg";
 import schilderij7Img from "../../../public/images/schilderij7.jpg";
 import schilderij8Img from "../../../public/images/schilderij8.jpg";
+
+// -- sculpturen --
+
+// sculptuur 1
+import boomBruin1 from "../../../public/images/boomBruin1.jpg";
+import boomBruin2 from "../../../public/images/boomBruin2.jpg"; 
+import boomBruin3 from "../../../public/images/boomBruin3.jpg";
+
+// sculptuur 2
+import boomRood1 from "../../../public/images/boomRood1.jpg";
+import boomRood2 from "../../../public/images/boomRood2.jpg"; 
+import boomRood3 from "../../../public/images/boomRood3.jpg";
+
+// sculptuur 3
+import boomBlauw1 from "../../../public/images/boomBlauw1.jpg";
+import boomBlauw2 from "../../../public/images/boomBlauw2.jpg";
+
+// sculptuur 4
+import boomPaars1 from "../../../public/images/boomPaars1.jpg";
+
 
 export const products: Product[] = [
   {
@@ -19,7 +38,7 @@ export const products: Product[] = [
     description: 'Organische vormen in warme aardtinten',
     longDescription: 'Deze prachtige lichtsculptuur brengt de warmte van de herfst in huis. Gemaakt met zorgvuldig geselecteerde materialen die de natuurlijke schoonheid van het seizoen weerspiegelen. De warme LED-verlichting creëert een intieme sfeer die perfect past bij koude herfstavonden.',
     price: 295,
-    images: [boom1Img, boom2Img],
+    images: [boomBruin1, boomBruin2, boomBruin3],
     materials: ['Berkenhouten stokken', 'Warm LED-lichtsnoer', 'IJzeren ringen'],
     season: 'herfst',
     dimensions: {
@@ -43,7 +62,7 @@ export const products: Product[] = [
     description: 'Minimalistische elegantie voor moderne interieurs',
     longDescription: 'Een tijdloze lichtsculptuur die zich perfect aanpast aan elk modern interieur. De cleane lijnen en neutrale tinten maken deze sculptuur een elegante toevoeging aan elke ruimte. Het zachte licht creëert een serene atmosfeer.',
     price: 275,
-    images: [boom2Img, boom1Img],
+    images: [boomRood1, boomRood2, boomRood3],
     materials: ['Beukenhout', 'Warm wit LED-snoer', 'Natuurlijk linnen', 'RVS bevestigingen'],
     season: 'alle-seizoenen',
     dimensions: {
@@ -90,7 +109,7 @@ export const products: Product[] = [
     description: 'Warme oranje en bruine tinten met zachte gloed',
     longDescription: 'Een warme scuptuur die je kamer vult met gezellig herfstlicht. De subtiele gloed en organische vormen zorgen voor een betoverend middelpunt, perfect voor zowel feestelijke avonden als bijzondere gelegenheden.',
     price: 275,
-    images: [boom3Img],
+    images: [boomBlauw1, boomBlauw2],
     materials: ['Hout', 'Natuurlijke vezels'],
     season: 'alle-seizoenen',
     dimensions: {
@@ -138,7 +157,7 @@ export const products: Product[] = [
     description: 'Feestelijke, vrolijke sculptuur met een frisse uitstraling',
     longDescription: 'Een speelse en feestelijke sculptuur die met zijn frisse kleuren en natuurlijke materialen direct een positieve sfeer oproept. Het werk combineert biologisch linnen, gevilte wol en zorgvuldig gekozen dennenappels tot een verrassend geheel dat doet denken aan het ontwaken van de natuur. De zachte, dimbare LED-verlichting versterkt dit gevoel en zorgt voor een uitnodigende gloed in elke ruimte. Brengt vrolijkheid, een feestje voor iedere dag!',
     price: 275,
-    images: [boom4Img],
+    images: [boomPaars1],
     materials: ['Biologisch linnen', 'Gevilte wol', 'Denneappels'],
     season: 'winter',
     dimensions: {
