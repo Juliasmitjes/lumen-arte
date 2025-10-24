@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import schilderenVoorbeeld from "../../public/images/schilderenVoorbeeld.jpg";
+import Kunstenaar from "../../public/images/kunstenaar.jpg";
 
 
 const About = () => {
@@ -15,12 +16,12 @@ const About = () => {
 
       <div className="absolute inset-0">
         <Image
-        src={schilderenVoorbeeld}
+        src={Kunstenaar}
         alt="schilderen"
-        className="w-full h-full object-cover opacity-80"
+        className="w-full h-full object-cover opacity-70"
         />
-        <div className="absolute inset-0 gradient-warm opacity-20"></div>
-        <div className="absolute inset-0 bg-background/20"></div>
+        <div className="absolute inset-0 gradient-warm opacity-30"></div>
+        <div className="absolute inset-0 bg-background/30"></div>
       </div>
 
        
@@ -37,7 +38,7 @@ const About = () => {
                 Veelzijdig en bevlogen
               </h3>
               
-              <div className="prose prose-lg text-primary-foreground font-business text-lg mb-8">
+              <div className="prose prose-lg text-muted-foreground font-semibold font-business text-lg mb-8">
                 <p className="mb-4">
                   Ik ben gek op het leven en vind ook veel leuk: getallen, taal, kinderen, kunst. Soms is het lastig kiezen. Gelukkig hoeft niet alles tegelijk. Mijn leven is een avontuurlijke reis van accountant, moeder én kunstenaar. Hoe heerlijk! Vorm kleur en creativiteit. Met hart en handen en altijd met passie. 
                 </p>
