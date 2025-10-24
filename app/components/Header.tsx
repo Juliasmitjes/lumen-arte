@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X, Palette } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import Image from "next/image";
+import Logo from "../../public/images/logo.png"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,15 +18,17 @@ const Header = () => {
          {/* logo */}
           <Link href="/#hero" onClick={() => setIsMenuOpen(false)}>
             <div className="flex items-center gap-2 cursor-pointer">
-              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                <Palette className="w-5 h-5 text-primary-foreground text-white" />
+              <div className="w-10 h-10 rounded-full flex items-center justify-center">
+                <Image src={Logo} 
+                alt="LumenArte logo" 
+                 />
               </div>
               <div>
-                <h1 className="text-xl font-business text-foreground">
-                  Jacqueline Tiemens
+                <h1 className="text-xl font-business font-bold text-foreground">
+                  LumenArte
                 </h1>
                 <p className="text-sm text-muted-foreground font-playful">
-                  Handgemaakte kunst
+                  Handgemaakte lichtsculpturen
                 </p>
               </div>
             </div>

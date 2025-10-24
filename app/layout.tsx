@@ -17,8 +17,8 @@ const marhey = Marhey({
 })
 
 export const metadata: Metadata = {
-  title: "Lichtsculpturen",
-  description: "Kunst door Jacqueline Tiemens",
+  title: "LumenArte",
+  description: "Handgemaakte lichtsculpturen",
 };
 
 export default function RootLayout({
