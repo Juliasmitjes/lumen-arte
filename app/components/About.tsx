@@ -4,7 +4,6 @@ import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
-import schilderenVoorbeeld from "../../public/images/schilderenVoorbeeld.jpg";
 import Kunstenaar from "../../public/images/kunstenaar.jpg";
 
 
