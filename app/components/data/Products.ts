@@ -14,22 +14,30 @@ import schilderij8Img from "../../../public/images/schilderij8.jpg";
 // -- sculpturen --
 
 // sculptuur 1
-import boomBruin1 from "../../../public/images/boomBruin1.jpg";
-import boomBruin2 from "../../../public/images/boomBruin2.jpg"; 
-import boomBruin3 from "../../../public/images/boomBruin3.jpg";
+import boomBruin1 from "../../../public/images/BoomBruin/BoomBruin1.jpg"
+import boomBruin2 from "../../../public/images/BoomBruin/BoomBruin2.jpg"
+import boomBruin3 from "../../../public/images/BoomBruin/BoomBruin3.png"
+import boomBruin4 from "../../../public/images/BoomBruin/BoomBruin4.png"
+import boomBruin5 from "../../../public/images/BoomBruin/BoomBruin5.png"
 
 // sculptuur 2
-import boomRood1 from "../../../public/images/boomRood1.jpg";
-import boomRood2 from "../../../public/images/boomRood2.jpg"; 
-import boomRood3 from "../../../public/images/boomRood3.jpg";
+import boomRood1 from "../../../public/images/BoomRood/BoomRood1.jpg";
+import boomRood2 from "../../../public/images/BoomRood/BoomRood2.jpg";
+import boomRood3 from "../../../public/images/BoomRood/BoomRood3.png";
+import boomRood4 from "../../../public/images/BoomRood/BoomRood4.png";
+import boomRood5 from "../../../public/images/BoomRood/BoomRood5.jpg";
+import boomRood6 from "../../../public/images/BoomRood/BoomRood6.png";
 
 // sculptuur 3
-import boomBlauw1 from "../../../public/images/boomBlauw1.jpg";
-import boomBlauw2 from "../../../public/images/boomBlauw2.jpg";
+import boomBlauw1 from "../../../public/images/BoomBlauw/BoomBlauw1.jpg";
+import boomBlauw2 from "../../../public/images/BoomBlauw/BoomBlauw2.jpg";
+import boomBlauw3 from "../../../public/images/BoomBlauw/BoomBlauw3.png";
+import boomBlauw4 from "../../../public/images/BoomBlauw/BoomBlauw4.png";
 
 // sculptuur 4
-import boomPaars1 from "../../../public/images/boomPaars1.jpg";
-
+import boomPaars1 from "../../../public/images/BoomPaars/BoomPaars1.jpg";
+import boomPaars2 from "../../../public/images/BoomPaars/BoomPaars2.jpg";
+import boomPaars3 from "../../../public/images/BoomPaars/BoomPaars3.png";
 
 export const products: Product[] = [
   {
@@ -38,7 +46,7 @@ export const products: Product[] = [
     description: 'Organische vormen in warme aardtinten',
     longDescription: 'Deze prachtige lichtsculptuur brengt de warmte van de herfst in huis. Gemaakt met zorgvuldig geselecteerde materialen die de natuurlijke schoonheid van het seizoen weerspiegelen. De warme LED-verlichting creëert een intieme sfeer die perfect past bij koude herfstavonden.',
     price: 295,
-    images: [boomBruin1, boomBruin2, boomBruin3],
+    images: [boomBruin1, boomBruin2, boomBruin3, boomBruin4, boomBruin5],
     materials: ['Berkenhouten stokken', 'Warm LED-lichtsnoer', 'IJzeren ringen'],
     season: 'herfst',
     dimensions: {
@@ -62,7 +70,7 @@ export const products: Product[] = [
     description: 'Minimalistische elegantie voor moderne interieurs',
     longDescription: 'Een tijdloze lichtsculptuur die zich perfect aanpast aan elk modern interieur. De cleane lijnen en neutrale tinten maken deze sculptuur een elegante toevoeging aan elke ruimte. Het zachte licht creëert een serene atmosfeer.',
     price: 275,
-    images: [boomRood1, boomRood2, boomRood3],
+    images: [boomRood1, boomRood2, boomRood3, boomRood4, boomRood5, boomRood6],
     materials: ['Beukenhout', 'Warm wit LED-snoer', 'Natuurlijk linnen', 'RVS bevestigingen'],
     season: 'alle-seizoenen',
     dimensions: {
@@ -109,7 +117,7 @@ export const products: Product[] = [
     description: 'Warme oranje en bruine tinten met zachte gloed',
     longDescription: 'Een warme scuptuur die je kamer vult met gezellig herfstlicht. De subtiele gloed en organische vormen zorgen voor een betoverend middelpunt, perfect voor zowel feestelijke avonden als bijzondere gelegenheden.',
     price: 275,
-    images: [boomBlauw1, boomBlauw2],
+    images: [boomBlauw1, boomBlauw2, boomBlauw3, boomBlauw4],
     materials: ['Hout', 'Natuurlijke vezels'],
     season: 'alle-seizoenen',
     dimensions: {
@@ -157,7 +165,7 @@ export const products: Product[] = [
     description: 'Feestelijke, vrolijke sculptuur met een frisse uitstraling',
     longDescription: 'Een speelse en feestelijke sculptuur die met zijn frisse kleuren en natuurlijke materialen direct een positieve sfeer oproept. Het werk combineert biologisch linnen, gevilte wol en zorgvuldig gekozen dennenappels tot een verrassend geheel dat doet denken aan het ontwaken van de natuur. De zachte, dimbare LED-verlichting versterkt dit gevoel en zorgt voor een uitnodigende gloed in elke ruimte. Brengt vrolijkheid, een feestje voor iedere dag!',
     price: 275,
-    images: [boomPaars1],
+    images: [boomPaars1, boomPaars2, boomPaars3],
     materials: ['Biologisch linnen', 'Gevilte wol', 'Denneappels'],
     season: 'winter',
     dimensions: {
