@@ -96,11 +96,17 @@ export default function Request ({ quantity }: RequestProps) {
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             className="border border-border font-business rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-primary transition-colors"/>
 
-          <input
+          <input 
+          type="text"
+          placeholder= "Schrijf een bericht"
+          className="border border-border font-business rounded-lg p-10 focus:outline-none focus:ring-2 focus:ring-primary transition-colors"          
+          />
+
+          {/* <input
             type="number"
             value={formData.quantity}
             readOnly
-            className="border border-border font-business rounded-lg p-2 bg-gray-100"/>
+            className="border border-border font-business rounded-lg p-2 bg-gray-100"/> */}
 
           <Button type="submit">Verzenden</Button>
         </form>

@@ -47,7 +47,7 @@ const Gallery = () => {
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-1 p-2 sm:p-1 w-full max-w-sm rounded-lg bg-card shadow-soft">
               {[
                 { key: "sculpturen", label: "Lichtsculpturen" },
-                { key: "schilderijen", label: "Schilderijen" }
+                { key: "schilderijen", label: "Pasteltekeningen" }
               ].map((filter) => (
                 <Button
                   key={filter.key}

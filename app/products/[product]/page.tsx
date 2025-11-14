@@ -163,7 +163,7 @@ export default function ProductDetail({ params }: ProductPageProps) {
                   </div>
 
                   <div className="flex items-center gap-4 mb-6">
-                    <label htmlFor="quantity" className="font-business">Aantal:</label>
+                    {/* <label htmlFor="quantity" className="font-business">Aantal:</label>
                     <select
                       id="quantity"
                       value={quantity}
@@ -173,7 +173,7 @@ export default function ProductDetail({ params }: ProductPageProps) {
                       {[1,2,3].map(num => (
                         <option key={num} value={num}>{num}</option>
                       ))}
-                    </select>
+                    </select> */}
                     <Request quantity={quantity} />
                   </div>
                   <p className="text-xs text-muted-foreground mt-4">
