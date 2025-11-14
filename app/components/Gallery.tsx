@@ -69,9 +69,7 @@ const Gallery = () => {
           {filteredProducts.map((product, index) => (
             <div
               key={product.id}
-              className={`group relative bg-card rounded-xl overflow-hidden shadow-soft hover:shadow-warm transition-all duration-500 hover:-translate-y-2 ${
-                index % 2 === 0 ? 'lg:translate-y-4' : ''
-              }`}
+              className={`group relative bg-card rounded-xl overflow-hidden shadow-soft hover:shadow-warm transition-all duration-500 hover:-translate-y-2`}
               onMouseEnter={() => setHoveredItem(product.id)}
               onMouseLeave={() => setHoveredItem(null)}
             >

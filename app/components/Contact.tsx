@@ -2,10 +2,11 @@
 
 import { Button } from "./ui/button";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { useState } from "react";
+import React, { useState, useRef } from "react";
 import { toast } from "react-toastify";
 
 const Contact = () => {
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -48,14 +49,11 @@ const Contact = () => {
           {/* header */}
           <div className="lg:text-center mb-8 sm:mb-16">
             <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4">
-              Ik hoor graag van je!
+              Nieuwsgierig?
             </h2>
             <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
               Neem contact op
             </h3>
-            <p className="text-lg text-muted-foreground font-business max-w-2xl lg:mx-auto">
-              Nieuwsgierig naar mijn werk? Of wil je een opdracht bespreken?
-            </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16">
@@ -66,7 +64,7 @@ const Contact = () => {
                 <h4 className="text-2xl font-semibold text-foreground mb-6">
                   Kom langs in mijn atelier
                 </h4>
-                <p className="text-muted-foreground text-md font-business mb-8">
+                <p className="text-muted-foreground text-lg font-business mb-8">
                   In mijn atelier kun je mijn werk van dichtbij bekijken. 
                   Maak een afspraak en ontdek mijn lichtsculpturen en schilderijen.
                 </p>
@@ -177,7 +175,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div>
+                {/* <div>
                   <label htmlFor="subject" className="block text-md font-business text-foreground mb-2">
                     Onderwerp
                   </label>
@@ -195,7 +193,7 @@ const Contact = () => {
                     <option value="Atelierbezoek">Atelierbezoek</option>
                     <option value="Anders">Anders</option>
                   </select>
-                </div>
+                </div> */}
 
                 <div>
                   <label htmlFor="message" className="block text-md font-business text-foreground mb-2">

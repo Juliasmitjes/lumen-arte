@@ -90,28 +90,6 @@ const Story = () => {
                 </p>
               </div>
             </div>
-
-            {/* CTA */}
-              <div className="mt-12 text-center">
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button
-                    variant="hero"
-                    size="lg"
-                    className="bg-accent"
-                    asChild
-                  >
-                    <a href="#galerij">Bekijk lichtsculpturen</a>
-                  </Button>
-
-                  <Button
-                    variant="outlineref"
-                    size="lg"
-                    asChild
-                  >
-                    <a href="#contact">Contact</a>
-                  </Button>
-                </div>
-              </div>
           </div>
 
           

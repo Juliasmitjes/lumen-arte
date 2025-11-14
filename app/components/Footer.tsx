@@ -23,7 +23,7 @@ const Footer = () => {
               </div>
               <span className="font-business text-lg">LumenArte</span>
             </div>
-            <p className="font-playful text-accent-light text-sm">Handgemaakte lichtsculpturen</p>
+            <p className="font-playful text-accent-light text-sm">Lichtsculpturen en pasteltekeningen</p>
           </Link>      
 
            {/* links naar pagina's */}
