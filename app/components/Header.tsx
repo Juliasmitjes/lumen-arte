@@ -28,7 +28,7 @@ const Header = () => {
                   LumenArte
                 </h1>
                 <p className="text-sm text-muted-foreground font-playful">
-                  Handgemaakte lichtsculpturen
+                  Lichtsculpturen en pasteltekeningen
                 </p>
               </div>
             </div>

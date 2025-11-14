@@ -8,11 +8,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Gallery = () => {
-  const [activeCategory, setActiveCategory] = useState<"alle" | "sculpturen" | "schilderijen">("alle");
+  const [activeCategory, setActiveCategory] = useState<"sculpturen" | "schilderijen">("sculpturen");
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
   
 
-  const filteredProducts = activeCategory === "alle" 
+  const filteredProducts = activeCategory === null 
     ? products 
     : products.filter(product => product.category === activeCategory);
 
@@ -46,7 +46,6 @@ const Gallery = () => {
           <div className="flex justify-center mb-12">
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-1 p-2 sm:p-1 w-full max-w-sm rounded-lg bg-card shadow-soft">
               {[
-                { key: "alle", label: "Alle werken" },
                 { key: "sculpturen", label: "Lichtsculpturen" },
                 { key: "schilderijen", label: "Schilderijen" }
               ].map((filter) => (
@@ -55,7 +54,7 @@ const Gallery = () => {
                   variant={activeCategory === filter.key ? "default" : "ghost"}
                   size="sm"
                   onClick={() =>
-                    setActiveCategory(filter.key as "alle" | "sculpturen" | "schilderijen")
+                    setActiveCategory(filter.key as "sculpturen" | "schilderijen")
                   }
                   className="w-full sm:w-auto"
                 >
