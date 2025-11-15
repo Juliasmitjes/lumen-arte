@@ -18,7 +18,7 @@ const About = () => {
         
         {/* content */}
         <div>
-          <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4 mt-10 sm:mt-0">Mijn verhaal</h2>
+          <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4 mt-10 lg:mt-0">Mijn verhaal</h2>
           <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Veelzijdig en bevlogen</h3>
           <div className="prose prose-lg text-muted-foreground font-semibold font-business text-xl mb-8">
             <p className="mb-4"> Ik ben gek op het leven en vind ook veel leuk: getallen, taal, kinderen, kunst. Soms is het lastig kiezen. Gelukkig hoeft niet alles tegelijk. Mijn leven is een avontuurlijke reis van accountant, moeder én kunstenaar. Hoe heerlijk! Vorm kleur en creativiteit. Met hart en handen en altijd met passie. 
@@ -36,7 +36,7 @@ const About = () => {
         </div>
 
         {/* afbeelding */}
-        <div className="w-full h-full mb-10 sm:mb-0">
+        <div className="w-full h-full mb-10 lg:mb-0">
           <Image
             src={Kunstenaar}
             alt="schilderen"

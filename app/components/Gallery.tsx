@@ -56,7 +56,7 @@ const Gallery = () => {
                   onClick={() =>
                     setActiveCategory(filter.key as "sculpturen" | "schilderijen")
                   }
-                  className="w-full sm:w-auto"
+                  className="flex-1 sm:w-auto"
                 >
                   {filter.label}
                 </Button>
