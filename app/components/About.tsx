@@ -40,7 +40,7 @@ const About = () => {
           <Image
             src={Kunstenaar}
             alt="schilderen"
-            className="w-full h-auto object-cover opacity-70 rounded-xl"
+            className="w-full h-auto object-cover rounded-xl"
           />
         </div>
       </div>
