@@ -98,7 +98,7 @@ export default function ProductDetail({ params }: ProductPageProps) {
                 "
               >
                 <span className="text-white text-lg font-business tracking-wide">
-                  Klik voor inzoomen
+                  Klik om te vergroten
                 </span>
               </div>
             </div>              
