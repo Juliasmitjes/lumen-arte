@@ -96,11 +96,11 @@ export default function Request ({ quantity }: RequestProps) {
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             className="border border-border font-business rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-primary transition-colors"/>
 
-          <input 
-          type="text"
-          placeholder= "Schrijf een bericht"
-          className="border border-border font-business rounded-lg p-10 focus:outline-none focus:ring-2 focus:ring-primary transition-colors"          
-          />
+          <textarea
+            placeholder="Schrijf een bericht"
+            rows={5}
+            className="border border-border font-business rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-primary transition-colors resize-none"
+          ></textarea>
 
           {/* <input
             type="number"
