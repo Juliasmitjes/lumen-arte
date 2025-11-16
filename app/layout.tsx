@@ -19,6 +19,11 @@ const marhey = Marhey({
 export const metadata: Metadata = {
   title: "LumenArte",
   description: "Handgemaakte lichtsculpturen",
+  icons: {
+    icon: "/favicon.ico", // standaard favicon
+    shortcut: "/favicon.ico", // voor snelkoppelingen
+    apple: "/apple-touch-icon.png", // voor iOS
+  }
 };
 
 export default function RootLayout({
