@@ -74,15 +74,34 @@ export default function ProductDetail({ params }: ProductPageProps) {
             {/* afbeeldingen */}
             <div>
               <div
-                className="aspect-[4/3] rounded-2xl overflow-hidden bg-warm-sand shadow-lg cursor-pointer"
-                onClick={() => setIsZoomed(true)}
+              className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-warm-sand shadow-lg cursor-pointer"
+              onClick={() => setIsZoomed(true)}
+            >
+              <Image
+                src={product.images[selectedImageIndex]}
+                alt={product.title}
+                className="w-full h-full object-cover"
+              />
+
+              {/* Hover overlay */}
+              <div
+                className="
+                  absolute inset-0 
+                  bg-black/40 
+                  opacity-0 
+                  group-hover:opacity-100 
+                  transition-opacity 
+                  duration-300 
+                  flex 
+                  items-center 
+                  justify-center
+                "
               >
-                <Image
-                  src={product.images[selectedImageIndex]}
-                  alt={product.title}
-                  className="w-full h-full object-cover"
-                />
+                <span className="text-white text-lg font-business tracking-wide">
+                  Klik voor inzoomen
+                </span>
               </div>
+            </div>              
 
               {isZoomed && (
                 <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
