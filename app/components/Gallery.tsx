@@ -136,9 +136,8 @@ const Gallery = () => {
                         {product.description}
                       </p>
                       <p className="text-sm text-accent-warm font-business">
-                        Unieke pasteltekening op papier – handgemaakt.  
-                        Geen doorlink, maar volledig te bekijken in deze galerij.
-                      </p>
+                      Formaat: {product.dimensions.height} × {product.dimensions.width} × {product.dimensions.depth}
+                    </p>
                     </>
                   ) : (
                     <>
