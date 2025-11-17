@@ -4,41 +4,31 @@ import { Button } from "./ui/button";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import React, { useState, useRef } from "react";
 import { toast } from "react-toastify";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  const form = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    try {
-      const mailtoLink = `mailto:jacqtiemens@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-    `Naam: ${formData.name}\nEmail: ${formData.email}\n\nBericht:\n${formData.message}`
-    )}`;
+    if (!form.current) return;
 
-    window.location.href = mailtoLink;
-
-    toast.success("Bedankt voor je bericht! Ik neem snel contact met je op.");
-
-    setFormData({ name: "", email: "", subject: "", message: "" });
-
-    } catch (error) {
-      console.error(error);
-      toast.error("Er is iets misgegaan. Probeer het opnieuw.");
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    emailjs
+      .sendForm('service_2pttrmd', 'template_1m4p294', form.current, {
+        publicKey: '8GQ2mbHqj2pVKGmsp',
+      })
+      .then(
+        () => {
+          toast.success('Dank je wel voor je bericht! Ik neem snel contact met je op.');
+          form.current?.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          toast.error('Er is iets misgegaan. Probeer het opnieuw.');
+        },
+      );
   };
 
   return (
@@ -140,8 +130,9 @@ const Contact = () => {
                 Stuur een bericht
               </h4>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={form} onSubmit={sendEmail} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
                   <div>
                     <label htmlFor="name" className="block text-md font-business text-foreground mb-2">
                       Naam *
@@ -151,8 +142,6 @@ const Contact = () => {
                       id="name"
                       name="name"
                       required
-                      value={formData.name}
-                      onChange={handleChange}
                       className="w-full px-4 py-3 bg-background font-business border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
                       placeholder="Je naam"
                     />
@@ -167,8 +156,6 @@ const Contact = () => {
                       id="email"
                       name="email"
                       required
-                      value={formData.email}
-                      onChange={handleChange}
                       className="w-full px-4 py-3 bg-background font-business border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
                       placeholder="je@email.com"
                     />
@@ -203,8 +190,6 @@ const Contact = () => {
                     id="message"
                     name="message"
                     required
-                    value={formData.message}
-                    onChange={handleChange}
                     rows={5}
                     className="w-full px-4 py-3 bg-background border font-business border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors resize-none"
                     placeholder="Vertel me over je interesse in mijn werk..."
