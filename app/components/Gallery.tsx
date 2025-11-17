@@ -17,7 +17,7 @@ const Gallery = () => {
       : products.filter((product) => product.category === activeCategory);
 
   return (
-    <section id="galerij" className="py-20 gradient-earth">
+    <section id="galerij" className="lg:py-20 gradient-earth">
       <div className="container mx-auto px-6">
 
         {/* HEADER */}
@@ -59,7 +59,7 @@ const Gallery = () => {
         <div
             className={
               activeCategory === "schilderijen"
-                ? "grid grid-cols-1 md:grid-cols-2 gap-8" 
+                ? "columns-1 md:columns-2 gap-8 md:gap-8"
                 : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" 
             }
           >
@@ -73,15 +73,16 @@ const Gallery = () => {
                 key={product.id}
                 className={`bg-card rounded-xl overflow-hidden shadow-soft transition-all duration-500 ${
                   isSculpture ? "group hover:shadow-warm hover:-translate-y-2" : ""
-                }`}
+                } ${isPainting ? "inline-block w-full mb-8" : ""}`}
                 onMouseEnter={() => isSculpture && setHoveredItem(product.id)}
                 onMouseLeave={() => isSculpture && setHoveredItem(null)}
-              >
+                style={isPainting ? { breakInside: "avoid" } : undefined}
+              > 
 
                 {/* AFBEEELDING BLOK */}
                 {isPainting ? (
                   /* ---- SCHILDERIJEN: GEEN LINK, GEEN HOVER ---- */
-                  <div className="relative overflow-hidden aspect-[5/3]">
+                  <div className="relative overflow-hidden">
                     <Image
                       src={product.images[0]}
                       alt={product.title}
