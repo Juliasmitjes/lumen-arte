@@ -2,7 +2,7 @@
 
 import { Button } from "./ui/button";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import { toast } from "react-toastify";
 import emailjs from '@emailjs/browser';
 

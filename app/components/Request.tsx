@@ -1,67 +1,89 @@
 "use client";
 
-import { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
+import { useState, useRef } from "react";
 import Dialog from "./ui/dialog";
 import { Button } from "./ui/button";
 import { toast } from 'react-toastify';
+import emailjs from '@emailjs/browser';
 
-interface RequestProps {
-  quantity: number;
-}
+const Request = ({ productId }: { productId: string }) => {
 
-type FormData = {
-  name: string;
-  email: string;
-  phone: string;
-  quantity: number;
-};
-
-export default function Request ({ quantity }: RequestProps) {
-  const [errors, setErrors] = useState<{ name?: string; email?: string }>({});
   const [open, setOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    quantity,
-  });
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   phone: "",
+  //   message: "",
+  // });
 
-  const mutation = useMutation({
-  mutationFn: async (data: FormData) => {
-    const res = await fetch("/api/send-request", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-    if (!res.ok) throw new Error("Request failed");
-    return res.json();
-  },
-  onSuccess: () => {
-    toast.success("Bedankt voor je bericht. Ik neem snel contact met je op!");
-    setFormData({ name: "", email: "", phone: "", quantity });
-    setOpen(false);
-  },
-  onError: () => {
-    toast.error("Er is iets misgegaan. Probeer het opnieuw.");
-  },
-});
+ const form = useRef<HTMLFormElement>(null);
 
- const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
+ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-  const newErrors: typeof errors = {};
-  if (!formData.name.trim()) newErrors.name = "Naam is verplicht";
-  if (!formData.email.trim()) newErrors.email = "E-mailadres is verplicht";
+    if (!form.current) return;
 
-  if (Object.keys(newErrors).length > 0) {
-    setErrors(newErrors);
-    return;
-  }
+    emailjs
+      .sendForm('service_2pttrmd', 'template_0fpxw3d', form.current, {
+        publicKey: '8GQ2mbHqj2pVKGmsp',
+      })
+      .then(
+        () => {
+          toast.success('Dank je wel voor je bericht! Ik neem snel contact met je op.');
+          form.current?.reset();
+        //   setFormData({          
+        //   name: "",
+        //   email: "",
+        //   phone: "",
+        //   message: "",
+        // });
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          toast.error('Er is iets misgegaan. Probeer het opnieuw.');
+        },
+      );
+  };
 
-  setErrors({});
-  mutation.mutate(formData);
-};
+
+
+
+
+//   const mutation = useMutation({
+//   mutationFn: async (data: FormData) => {
+//     const res = await fetch("/api/send-request", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify(data),
+//     });
+//     if (!res.ok) throw new Error("Request failed");
+//     return res.json();
+//   },
+//   onSuccess: () => {
+//     toast.success("Bedankt voor je bericht. Ik neem snel contact met je op!");
+//     setFormData({ name: "", email: "", phone: "", quantity });
+//     setOpen(false);
+//   },
+//   onError: () => {
+//     toast.error("Er is iets misgegaan. Probeer het opnieuw.");
+//   },
+// });
+
+//  const handleSubmit = async (e: React.FormEvent) => {
+//   e.preventDefault();
+
+//   const newErrors: typeof errors = {};
+//   if (!formData.name.trim()) newErrors.name = "Naam is verplicht";
+//   if (!formData.email.trim()) newErrors.email = "E-mailadres is verplicht";
+
+//   if (Object.keys(newErrors).length > 0) {
+//     setErrors(newErrors);
+//     return;
+//   }
+
+//   setErrors({});
+//   mutation.mutate(formData);
+// };
 
   return (
     <>
@@ -71,33 +93,39 @@ export default function Request ({ quantity }: RequestProps) {
       <Dialog open={open} onClose={() => setOpen(false)}>
         <h2 className="text-lg font-bold mb-4">Vrijblijvend informatie aanvragen</h2>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-3">
+          <input type="hidden" name="productId" value={productId} />
+
           <input
             type="text"
-            placeholder="Naam"
-            value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            name="name"
+            placeholder="Naam *"
+            // value={formData.name}
+            // onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             className="border border-border font-business rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
             required/>
 
 
           <input
             type="email"
-            placeholder="E-mailadres"
-            value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            name="email"
+            placeholder="E-mailadres *"
+            // value={formData.email}
+            // onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             className="border border-border font-business rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
             required/>
 
           <input
             type="tel"
+            name="phone"
             placeholder="Telefoonnummer (optioneel)"
-            value={formData.phone}
-            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+            // value={formData.phone}
+            // onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             className="border border-border font-business rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-primary transition-colors"/>
 
           <textarea
-            placeholder="Schrijf een bericht"
+            placeholder="Schrijf een bericht *"
+            name="message"
             rows={5}
             className="border border-border font-business rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-primary transition-colors resize-none"
           ></textarea>
@@ -114,4 +142,6 @@ export default function Request ({ quantity }: RequestProps) {
 
     </>
   );
-}
+};
+
+export default Request;

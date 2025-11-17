@@ -19,7 +19,7 @@ export default function ProductDetail({ params }: ProductPageProps) {
   const { product: productId } = use(params); 
   const router = useRouter();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);
+  // const [quantity, setQuantity] = useState(1);
   const [isZoomed, setIsZoomed] = useState(false);
 
   const product = getProductById(productId); 
@@ -193,7 +193,7 @@ export default function ProductDetail({ params }: ProductPageProps) {
                         <option key={num} value={num}>{num}</option>
                       ))}
                     </select> */}
-                    <Request quantity={quantity} />
+                    <Request productId={product.id.toString()} />
                   </div>
                   <p className="text-xs text-muted-foreground mt-4">
                     Gratis verzending binnen Nederland • 30 dagen bedenktijd
