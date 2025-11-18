@@ -18,17 +18,17 @@ const Gallery = () => {
 
   return (
     <section id="galerij" className="lg:py-20 gradient-earth">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 pb-10 lg:pb-0">
 
         {/* HEADER */}
         <div className="text-center mb-16">
-          <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4">Mijn creaties</h2>
+          <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4 pt-10 lg:pt-0">Mijn creaties</h2>
           <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Licht in alle seizoenen</h3>
 
           <p className="text-lg text-muted-foreground font-business max-w-2xl mx-auto">
             Kerstbomen passen niet in deze tijd van duurzaamheidsopgaven. We moeten bomen planten en niet kappen. Een kunstboom als alternatief? Dat is ook niet echt duurzaam. <br /> <br /> Ik ben de uitdaging aangegaan om met minimaal materiaal een maximaal effect te bereiken. Dat is gelukt! Mijn lichtsculpturen hebben een grootse uitstraling. En het materiaalgebruik is beperkt: drie stokken, wat ijzeren ringen, een lichtsnoer en wat stof en vilt. Voordeel is ook dat je de sculptuur na Kerst makkelijk opbergt. Eén doos, die stokken en de ringen met een haak aan de muur. Dat is alles. <br /> <br /> Maar je kunt de sculptuur ook laten staan. Met wat andere hangers, maak je er een Paas- of herfstcreatie van. Eigenlijk zijn de lichtsculpturen in alle seizoenen leuk. </p>
 
-          <p className="text-lg text-foreground font-business max-w-2xl mx-auto mt-10">
+          <p className="text-lg text-foreground font-business max-w-2xl mx-auto mt-10 ">
             Nieuwsgierig? Kijk hieronder
           </p>
         </div>
@@ -118,7 +118,7 @@ const Gallery = () => {
                 )}
 
                 {/* CONTENT BLOK */}
-                <div className="p-6">
+                <div className="p-6 ">
 
                   {/* category tag */}
                   <span className="inline-block bg-secondary text-accent-foreground text-sm font-business font-bold px-3 py-1 rounded-full mb-3">
