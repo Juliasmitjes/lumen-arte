@@ -240,7 +240,7 @@ export default function ProductDetail({ params }: ProductPageProps) {
                 </CardContent>
               </Card>
 
-              {/* beschrijving */}
+              {/* beschrijving
               <Card className="border-2 border-white/20 bg-secondary-light rounded-md">
                 <CardContent className="p-6">
                   <h3 className="font-business mb-4">Over dit kunstwerk</h3>
@@ -248,7 +248,7 @@ export default function ProductDetail({ params }: ProductPageProps) {
                     {product.longDescription}
                   </p>
                 </CardContent>
-              </Card>
+              </Card> */}
 
             </div>
           </div>

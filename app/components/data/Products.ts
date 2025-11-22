@@ -55,11 +55,10 @@ export const products: Product[] = [
       depth: '120 cm'
     },
     features: [
-      'Handgemaakt met natuurlijke materialen',
-      'Energiezuinige LED-verlichting',
+      'Handgemaakt',
       'Eenvoudig op te bergen na gebruik',
       'Seizoensgebonden decoratie mogelijk',
-      'Duurzaam en milieuvriendelijk'
+      'Mimaal materiaalgebruik met groots effect',
     ],
     inStock: true,
     category: 'sculpturen'
@@ -79,11 +78,10 @@ export const products: Product[] = [
       depth: '100 cm'
     },
     features: [
-      'Tijdloos design',
-      'Hoogwaardige materialen',
-      'Dimbare LED-verlichting',
-      'Makkelijk te monteren',
-      'Geschikt voor alle seizoenen'
+      'Handgemaakt',
+      'Eenvoudig op te bergen na gebruik',
+      'Seizoensgebonden decoratie mogelijk',
+      'Mimaal materiaalgebruik met groots effect',
     ],
     inStock: true,
     category: 'sculpturen'
@@ -126,11 +124,10 @@ export const products: Product[] = [
       depth: '100 cm'
     },
     features: [
-      'Tijdloos design',
-      'Hoogwaardige materialen',
-      'Dimbare LED-verlichting',
-      'Makkelijk te monteren',
-      'Geschikt voor alle seizoenen'
+      'Handgemaakt',
+      'Eenvoudig op te bergen na gebruik',
+      'Seizoensgebonden decoratie mogelijk',
+      'Mimaal materiaalgebruik met groots effect',
     ],
     inStock: true,
     category: 'sculpturen'
@@ -174,11 +171,10 @@ export const products: Product[] = [
       depth: '100 cm'
     },
     features: [
-      'Tijdloos design',
-      'Hoogwaardige materialen',
-      'Dimbare LED-verlichting',
-      'Makkelijk te monteren',
-      'Geschikt voor alle seizoenen'
+      'Handgemaakt',
+      'Eenvoudig op te bergen na gebruik',
+      'Seizoensgebonden decoratie mogelijk',
+      'Mimaal materiaalgebruik met groots effect',
     ],
     inStock: true,
     category: 'sculpturen'
