@@ -29,9 +29,6 @@ const About = () => {
             <Button variant="heroref" size="lg" onClick={() => router.push("/#galerij")}>
               Bekijk mijn werk
             </Button>
-            <Button variant="outlineref" size="lg" onClick={() => router.push("/#verhaal")}>
-              Lees meer <ChevronDown className="w-5 h-5" />
-            </Button>
           </div>
         </div>
 
@@ -49,7 +46,7 @@ const About = () => {
             Bekijk mijn werk
           </Button>
         </div>
-      </div>
+     </div>
     </div>
   </div>
 </section>
