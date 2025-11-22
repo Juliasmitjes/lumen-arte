@@ -116,7 +116,7 @@ const Gallery = () => {
                   </div>
                 ) : (
                   <>
-                    {/* SCULPTUREN (ONAANGEPAST) */}
+                    {/* SCULPTUREN */}
                     <Link
                       href={`/products/${product.id}`}
                       className="relative overflow-hidden aspect-[4/5] block group"
