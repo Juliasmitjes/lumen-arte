@@ -27,7 +27,7 @@ const Hero = () => {
           
           {/* titel */}
           <h1 className="text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-            Licht en warmte
+            Licht en kleur 
             <span className="block font-playful text-accent text-4xl lg:text-5xl mt-2">
               in alle seizoenen
             </span>
