@@ -181,7 +181,7 @@ export default function ProductDetail({ params }: ProductPageProps) {
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-4 mb-6">
+                  <div className="flex items-center gap-4">
                     {/* <label htmlFor="quantity" className="font-business">Aantal:</label>
                     <select
                       id="quantity"
