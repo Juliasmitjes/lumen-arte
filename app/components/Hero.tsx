@@ -47,9 +47,15 @@ const Hero = () => {
             </Link>
           </Button>
 
-          <Button asChild variant="outline" size="hero">
+          <Button asChild variant="organic" size="hero">
           <Link href="/#over-mij">
             Leer mij kennen
+          </Link>
+        </Button>
+
+        <Button asChild variant="outline" size="hero">
+          <Link href="/#contact">
+            Contact
           </Link>
         </Button>
       </div>

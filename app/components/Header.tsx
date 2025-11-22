@@ -34,30 +34,6 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* dekstop */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/#galerij">
-            <button className="text-foreground cursor-pointer hover:text-primary text-xl font-business   transition-colors duration-300">
-              Galerij
-            </button>        
-            </Link>
-
-            <Link href="/#over-mij">
-             <button className="text-foreground cursor-pointer hover:text-primary text-xl font-business transition-colors duration-300">
-              Over mij
-            </button>
-            </Link>
-
-            <Link href="/#contact">
-            <Button 
-              variant="organic"
-              size="sm"
-              className="text-xl">
-              Contact
-            </Button>  
-            </Link>
-          </div>
-
            {/* mobiel menu */}
           <button
             className="md:hidden text-foreground hover:text-primary transition-colors"
