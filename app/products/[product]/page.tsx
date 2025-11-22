@@ -195,10 +195,7 @@ export default function ProductDetail({ params }: ProductPageProps) {
                     </select> */}
                     <Request productId={product.id.toString()} />
                   </div>
-                  <p className="text-xs text-muted-foreground mt-4">
-                    Gratis verzending binnen Nederland • 30 dagen bedenktijd
-                  </p>
-                </CardContent>
+                 </CardContent>
               </Card>
 
               {/* eigenschappen */}
@@ -214,21 +211,6 @@ export default function ProductDetail({ params }: ProductPageProps) {
                         <div className="w-2 h-2 bg-primary rounded-full mr-2" />
                         {feature}
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* materialen */}
-              <Card className="border border-secondary-warm/20 bg-secondary/50 rounded-md">
-                <CardContent className="p-6">
-                  <h3 className="font-business mb-4 flex items-center">
-                    <Leaf className="w-5 h-5 mr-2 text-primary" />
-                    Natuurlijke materialen
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {product.materials.map((material, index) => (
-                      <Badge key={index} variant="default">{material}</Badge>
                     ))}
                   </div>
                 </CardContent>

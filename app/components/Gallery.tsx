@@ -144,12 +144,6 @@ const Gallery = () => {
                       <p className="text-muted-foreground font-business mb-3">
                         {product.description}
                       </p>
-
-                      {product.materials && (
-                        <p className="text-sm text-accent-warm font-business font-bold mb-4">
-                          Materialen: {product.materials.join(", ")}
-                        </p>
-                      )}
                     </>
                   )}
 
