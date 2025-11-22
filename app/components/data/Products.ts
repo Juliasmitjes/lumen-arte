@@ -51,8 +51,7 @@ export const products: Product[] = [
     season: 'herfst',
     dimensions: {
       height: '180 cm',
-      width: '120 cm', 
-      depth: '120 cm'
+      diameter: '120 cm', 
     },
     features: [
       'Handgemaakt',
@@ -74,8 +73,7 @@ export const products: Product[] = [
     season: 'alle-seizoenen',
     dimensions: {
       height: '160 cm',
-      width: '100 cm',
-      depth: '100 cm'
+      diameter: '100 cm',
     },
     features: [
       'Handgemaakt',
@@ -98,7 +96,6 @@ export const products: Product[] = [
     dimensions: {
       height: '40 cm',
       width: '40 cm',
-      depth: '4 cm'
     },
     features: [
       'Kleurrijk ontwerp',
@@ -120,8 +117,7 @@ export const products: Product[] = [
     season: 'alle-seizoenen',
     dimensions: {
       height: '160 cm',
-      width: '100 cm',
-      depth: '100 cm'
+      diameter: '100 cm',
     },
     features: [
       'Handgemaakt',
@@ -144,7 +140,6 @@ export const products: Product[] = [
     dimensions: {
       height: '100 cm',
       width: '70 cm',
-      depth: '3 cm'
     },
     features: [
     'Origineel abstract ontwerp',
@@ -167,8 +162,7 @@ export const products: Product[] = [
     season: 'winter',
     dimensions: {
       height: '160 cm',
-      width: '100 cm',
-      depth: '100 cm'
+      diameter: '100 cm',
     },
     features: [
       'Handgemaakt',
@@ -191,7 +185,6 @@ export const products: Product[] = [
     dimensions: {
       height: '100 cm',
       width: '70 cm',
-      depth: '3 cm'
     },
     features: [
     'Diepe, warme kleuren',
@@ -215,7 +208,6 @@ export const products: Product[] = [
     dimensions: {
       height: '100 cm',
       width: '70 cm',
-      depth: '3 cm'
     },
     features: [
     'Kleurrijk en expressief',
@@ -238,7 +230,6 @@ export const products: Product[] = [
     dimensions: {
       height: '100 cm',
       width: '70 cm',
-      depth: '3 cm'
     },
     features: [
     'Expressieve penseelstreken',
@@ -262,7 +253,6 @@ export const products: Product[] = [
     dimensions: {
       height: '100 cm',
       width: '70 cm',
-      depth: '3 cm'
     },
     features: [
     'Geïnspireerd door klassieke kunst',
@@ -286,7 +276,6 @@ export const products: Product[] = [
     dimensions: {
       height: '100 cm',
       width: '70 cm',
-      depth: '3 cm'
     },
     features: [
     'Luchtig en humoristisch',
@@ -310,7 +299,6 @@ export const products: Product[] = [
     dimensions: {
       height: '100 cm',
       width: '70 cm',
-      depth: '3 cm'
     },
     features: [
     'Muzikale thematiek',

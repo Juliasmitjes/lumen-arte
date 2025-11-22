@@ -228,14 +228,12 @@ export default function ProductDetail({ params }: ProductPageProps) {
                       <span className="font-bold font-business text-muted-foreground">Hoogte:</span>
                       <div className="font-business">{product.dimensions.height}</div>
                     </div>
-                    <div>
-                      <span className="font-bold font-business text-muted-foreground">Breedte:</span>
-                      <div className="font-business">{product.dimensions.width}</div>
-                    </div>
-                    <div>
-                      <span className="font-bold font-business text-muted-foreground">Diepte:</span>
-                      <div className="font-business">{product.dimensions.depth}</div>
-                    </div>
+                     {product.category === "sculpturen" && (
+                      <div>
+                        <span className="font-bold font-business text-muted-foreground">Diameter:</span>
+                        <div className="font-business">{product.dimensions.diameter}</div>
+                      </div>
+                    )}
                   </div>
                 </CardContent>
               </Card>

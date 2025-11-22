@@ -136,8 +136,8 @@ const Gallery = () => {
                         {product.description}
                       </p>
                       <p className="text-sm text-accent-warm font-business">
-                      Formaat: {product.dimensions.height} × {product.dimensions.width} × {product.dimensions.depth}
-                    </p>
+                        Formaat: {product.dimensions.height} × {product.dimensions.width}
+                      </p>
                     </>
                   ) : (
                     <p className="text-muted-foreground font-business mb-4">
