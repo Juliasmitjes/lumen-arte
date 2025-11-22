@@ -140,11 +140,9 @@ const Gallery = () => {
                     </p>
                     </>
                   ) : (
-                    <>
-                      <p className="text-muted-foreground font-business mb-3">
-                        {product.description}
-                      </p>
-                    </>
+                    <p className="text-muted-foreground font-business mb-4">
+                      {product.description}
+                    </p>
                   )}
 
                   {/* BUTTON (ALLEEN SCULPTUREN) */}
