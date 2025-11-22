@@ -88,11 +88,10 @@ const Gallery = () => {
                 onMouseLeave={() => isSculpture && setHoveredItem(null)}
               >
 
-                {/* SCHILDERIJEN - NIEUWE STRAKKE LAYOUT */}
+                {/* SCHILDERIJEN  */}
                 {isPainting ? (
                   <div className="flex flex-col md:flex-row gap-6 p-8 md:p-10 items-center md:items-start">
 
-                    {/* Kleinere, strakkere afbeelding */}
                     <div className="relative w-full md:w-[40%]">
                       <div className="rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
                         <Image
