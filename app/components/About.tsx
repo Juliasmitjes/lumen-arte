@@ -26,8 +26,8 @@ const About = () => {
           </div>
           {/* buttons visible on large screens inside the same content box */}
           <div className="hidden lg:flex gap-4 justify-start">
-            <Button variant="heroref" size="lg" onClick={() => router.push("/#galerij")}>
-              Bekijk mijn werk
+            <Button variant="heroref" size="lg" onClick={() => router.push("/#contact")}>
+              Neem contact op
             </Button>
           </div>
         </div>
@@ -42,8 +42,8 @@ const About = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10 lg:mb-0 lg:hidden">
-          <Button variant="heroref" size="lg" onClick={() => router.push("/#galerij")}>
-            Bekijk mijn werk
+          <Button variant="heroref" size="lg" onClick={() => router.push("/#contact")}>
+            Neem contact op
           </Button>
         </div>
      </div>
