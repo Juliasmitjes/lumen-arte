@@ -20,8 +20,10 @@ const Request = ({ productId }: { productId: string }) => {
 
  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+     console.log("sendEmail TRIGGERED");
 
-    if (!form.current) return;
+    if (!form.current) { console.log("NO FORM REF");
+    return; }
 
     emailjs
       .sendForm('service_nlds72b', 'template_2lbt0we', form.current, {
