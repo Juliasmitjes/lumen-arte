@@ -122,7 +122,7 @@ export const products: Product[] = [
   },
   {
     id: 5,
-    title: 'Vormen',
+    title: 'Abstract',
     price: 275,
     images: [schilderij2Img],
     season: 'lente',
@@ -161,7 +161,7 @@ export const products: Product[] = [
   },
   {
     id: 7,
-    title: 'Herfst',
+    title: 'Abstract',
     price: 325,
     images: [schilderij3Img],
     season: 'herfst',
@@ -181,7 +181,7 @@ export const products: Product[] = [
   },
   {
     id: 8,
-    title: 'Vrolijk',
+    title: 'Abstract',
     price: 250,
     images: [schilderij4Img],
     season: 'lente',
@@ -200,7 +200,7 @@ export const products: Product[] = [
   },
   {
     id: 9,
-    title: 'Dansen',
+    title: 'Abstract',
     price: 295,
     images: [schilderij5Img],
     season: 'herfst',
@@ -220,7 +220,7 @@ export const products: Product[] = [
   },
   {
     id: 10,
-    title: 'Griekse vaas',
+    title: 'Vaas',
     price: 340,
     images: [schilderij6Img],
     season: 'alle-seizoenen',
@@ -280,7 +280,7 @@ export const products: Product[] = [
   },
   {
     id: 13,
-    title: 'Bloemenpracht',  
+    title: 'Bloemen',  
     price: 280,
     images: [schilderij9Img],
     season: 'zomer',
