@@ -32,7 +32,7 @@ const Gallery = ({ activeCategory }: GalleryProps) => {
                 Licht in alle seizoenen
               </h2>
 
-              <p className="text-lg text-muted-foreground font-business max-w-2xl mx-auto">
+              <p className="text-muted-foreground font-business font-semibold max-w-2xl mx-auto text-xl">
                 Kerstbomen passen niet in deze tijd van duurzaamheidsopgaven. We moeten bomen planten
                 en niet kappen. Een kunstboom als alternatief? Dat is ook niet echt duurzaam. <br /><br />
                 Ik ben de uitdaging aangegaan om met minimaal materiaal een maximaal effect te bereiken.
@@ -41,10 +41,6 @@ const Gallery = ({ activeCategory }: GalleryProps) => {
                 ringen met een haak aan de muur. Dat is alles. <br /><br />
                 Maar je kunt de sculptuur ook laten staan. Met wat andere hangers, maak je er een Paas- of
                 herfstcreatie van. Eigenlijk zijn de lichtsculpturen in alle seizoenen leuk.
-              </p>
-
-              <p className="text-lg text-foreground font-business max-w-2xl mx-auto mt-10">
-                Nieuwsgierig? Kijk hieronder
               </p>
             </div>
           )}
