@@ -1,5 +1,7 @@
 import { Product } from '../../types/products';
 
+import inDoos from "../../../public/images/inDoos.jpg";
+
 // -- schilderijen --
 
 import schilderij1Img from "../../../public/images/schilderij1.jpg";
@@ -46,7 +48,7 @@ export const products: Product[] = [
     description: 'Organische vormen in warme aardtinten',
     longDescription: 'Deze prachtige lichtsculptuur brengt de warmte van de herfst in huis. Gemaakt met zorgvuldig geselecteerde materialen die de natuurlijke schoonheid van het seizoen weerspiegelen. De warme LED-verlichting creëert een intieme sfeer die perfect past bij koude herfstavonden.',
     price: 295,
-    images: [boomBruin1, boomBruin2, boomBruin3, boomBruin4, boomBruin5],
+    images: [boomBruin1, boomBruin2, boomBruin3, boomBruin4, boomBruin5, inDoos],
     materials: ['Berkenhouten stokken', 'Warm LED-lichtsnoer', 'IJzeren ringen'],
     season: 'herfst',
     dimensions: {
@@ -68,7 +70,7 @@ export const products: Product[] = [
     description: 'Minimalistische elegantie voor moderne interieurs',
     longDescription: 'Een tijdloze lichtsculptuur die zich perfect aanpast aan elk modern interieur. De cleane lijnen en neutrale tinten maken deze sculptuur een elegante toevoeging aan elke ruimte. Het zachte licht creëert een serene atmosfeer.',
     price: 275,
-    images: [boomRood1, boomRood2, boomRood3, boomRood4, boomRood5, boomRood6],
+    images: [boomRood1, boomRood2, boomRood3, boomRood4, boomRood5, boomRood6, inDoos],
     materials: ['Beukenhout', 'Warm wit LED-snoer', 'Natuurlijk linnen', 'RVS bevestigingen'],
     season: 'alle-seizoenen',
     dimensions: {
@@ -112,7 +114,7 @@ export const products: Product[] = [
     description: 'Warme oranje en bruine tinten met zachte gloed',
     longDescription: 'Een warme scuptuur die je kamer vult met gezellig herfstlicht. De subtiele gloed en organische vormen zorgen voor een betoverend middelpunt, perfect voor zowel feestelijke avonden als bijzondere gelegenheden.',
     price: 275,
-    images: [boomBlauw1, boomBlauw2, boomBlauw3, boomBlauw4],
+    images: [boomBlauw1, boomBlauw2, boomBlauw3, boomBlauw4, inDoos],
     materials: ['Hout', 'Natuurlijke vezels'],
     season: 'alle-seizoenen',
     dimensions: {
@@ -157,7 +159,7 @@ export const products: Product[] = [
     description: 'Feestelijke, vrolijke sculptuur met een frisse uitstraling',
     longDescription: 'Een speelse en feestelijke sculptuur die met zijn frisse kleuren en natuurlijke materialen direct een positieve sfeer oproept. Het werk combineert biologisch linnen, gevilte wol en zorgvuldig gekozen dennenappels tot een verrassend geheel dat doet denken aan het ontwaken van de natuur. De zachte, dimbare LED-verlichting versterkt dit gevoel en zorgt voor een uitnodigende gloed in elke ruimte. Brengt vrolijkheid, een feestje voor iedere dag!',
     price: 275,
-    images: [boomPaars1, boomPaars2, boomPaars3],
+    images: [boomPaars1, boomPaars2, boomPaars3, inDoos],
     materials: ['Biologisch linnen', 'Gevilte wol', 'Denneappels'],
     season: 'winter',
     dimensions: {
