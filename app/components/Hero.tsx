@@ -77,7 +77,7 @@ const Hero = ({ activeCategory, setActiveCategory }: HeroProps) => {
                 size="lg"
                 className="rounded-full px-6 font-medium w-full sm:w-auto text-base"
               >
-              <a href="#verhaal">Leer mij kennen</a>
+              <a href="#over-mij">Leer mij kennen</a>
               </Button>
               <Button
                 asChild
