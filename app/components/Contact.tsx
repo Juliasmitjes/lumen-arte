@@ -50,15 +50,6 @@ const Contact = () => {
             
             {/* info */}
             <div className="space-y-8">
-              <div>
-                <h4 className="text-2xl font-semibold text-foreground mb-6">
-                  Kom langs in mijn atelier
-                </h4>
-                <p className="text-muted-foreground text-lg font-business mb-8">
-                  In mijn atelier kun je mijn werk van dichtbij bekijken. 
-                  Maak een afspraak en ontdek mijn lichtsculpturen en schilderijen.
-                </p>
-              </div>
 
               {/* contactgegevens */}
               <div className="space-y-6">
@@ -101,26 +92,6 @@ const Contact = () => {
                     </div>
                   </div>
                 ))}
-              </div>
-
-              <div className="bg-card p-6 rounded-xl shadow-soft">
-                <h5 className="font-playful text-xl text-accent mb-2">
-                  Wat ik aanbied
-                </h5>
-                <ul className="text-muted-foreground font-business text-md mb-4 space-y-1 list-disc list-inside">
-                    <li>
-                        Orginele lichtsculpturen op maat
-                    </li>
-                    <li>
-                        Werken voor bedrijven en particulieren
-                    </li>
-                    <li>
-                        Advies over kunstkeuze en plaatsing
-                    </li>
-                </ul>
-                <p className="text-muted-foreground font-business font-bold text-md mb-4">
-                  Maak een afspraak voor een persoonlijke kennismaking
-                </p>
               </div>
             </div>
 
@@ -192,7 +163,7 @@ const Contact = () => {
                     required
                     rows={5}
                     className="w-full px-4 py-3 bg-background border font-business border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors resize-none"
-                    placeholder="Vertel me over je interesse in mijn werk..."
+                    placeholder=""
                   />
                 </div>
 

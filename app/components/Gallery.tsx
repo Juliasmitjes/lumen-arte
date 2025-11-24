@@ -22,11 +22,8 @@ const Gallery = () => {
         {/* HEADER */}
         <div className="text-center mb-16">
           <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4 pt-10 lg:pt-0">
-            Mijn creaties
-          </h2>
-          <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
             Licht in alle seizoenen
-          </h3>
+          </h2>
 
           <p className="text-lg text-muted-foreground font-business max-w-2xl mx-auto">
             Kerstbomen passen niet in deze tijd van duurzaamheidsopgaven. We moeten bomen planten en niet kappen. 
@@ -143,17 +140,10 @@ const Gallery = () => {
 
                     {/* SCULPTUUR CONTENT */}
                     <div className="p-6">
-                      <span className="inline-block bg-secondary text-accent-foreground text-sm font-business font-bold px-3 py-1 rounded-full mb-3">
-                        Lichtsculptuur
-                      </span>
 
                       <h4 className="text-xl font-semibold text-foreground mb-4">
                         {product.title}
                       </h4>
-
-                      <p className="text-muted-foreground font-business mb-4">
-                        {product.description}
-                      </p>
 
                       <Button asChild variant="default" size="sm" className="w-full">
                         <Link href={`/products/${product.id}`}>
