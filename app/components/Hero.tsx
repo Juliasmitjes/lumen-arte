@@ -22,8 +22,8 @@ const Hero = () => {
           alt="kaasdoek"
           className="w-full h-full object-cover opacity-80"
         />
-        <div className="absolute inset-0 gradient-warm opacity-20"></div>
-        <div className="absolute inset-0 bg-background/20"></div>
+        <div className="absolute inset-0 gradient-warm opacity-40"></div>
+        <div className="absolute inset-0 bg-background/60"></div>
       </div>
 
       {/* content */}
@@ -52,7 +52,8 @@ const Hero = () => {
             <Button
               asChild
               size="lg"
-              className="rounded-full px-6 font-medium w-full sm:w-auto text-base bg-accent text-accent-foreground"
+              variant="default"
+              className="rounded-full px-6 font-medium w-full sm:w-auto text-base text-primary-foreground"
             >
               <a href="#over-mij">Leer mij kennen</a>
             </Button>
@@ -60,7 +61,8 @@ const Hero = () => {
             <Button
               asChild
               size="lg"
-              className="rounded-full px-6 font-medium w-full sm:w-auto text-base bg-accent text-accent-foreground"
+              variant="hero"
+              className="rounded-full px-6 font-medium w-full sm:w-auto text-base text-accent-foreground"
             >
               <a href="#contact">Contact</a>
             </Button>

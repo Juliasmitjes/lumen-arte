@@ -23,7 +23,7 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
 
   return (
     <section id="galerij" className="lg:py-20 gradient-earth">
-      <div className="container mx-auto px-6 pb-10 lg:pb-0">
+      <div className="container mx-auto px-6 pb-10 lg:pb-0 pt-16 lg:pt-0">
 
         {/* ===== FILTER KNOPPEN ===== */}
         <div
