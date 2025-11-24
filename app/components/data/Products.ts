@@ -177,8 +177,8 @@ export const products: Product[] = [
     images: [schilderij1Img],
     season: 'zomer',
     dimensions: {
-      height: '40 cm',
-      width: '40 cm',
+      height: '50 cm',
+      width: '70 cm',
     },
     features: [
       'Kleurrijk ontwerp',
@@ -196,8 +196,8 @@ export const products: Product[] = [
     images: [schilderij2Img],
     season: 'lente',
     dimensions: {
-      height: '100 cm',
-      width: '70 cm',
+      height: '58 cm',
+      width: '50 cm',
     },
     features: [
     'Origineel abstract ontwerp',
@@ -216,7 +216,7 @@ export const products: Product[] = [
     images: [schilderij3Img],
     season: 'herfst',
     dimensions: {
-      height: '100 cm',
+      height: '50 cm',
       width: '70 cm',
     },
     features: [
@@ -236,7 +236,7 @@ export const products: Product[] = [
     images: [schilderij4Img],
     season: 'lente',
     dimensions: {
-      height: '100 cm',
+      height: '50 cm',
       width: '70 cm',
     },
     features: [
@@ -255,7 +255,7 @@ export const products: Product[] = [
     images: [schilderij5Img],
     season: 'herfst',
     dimensions: {
-      height: '100 cm',
+      height: '80 cm',
       width: '70 cm',
     },
     features: [
@@ -270,26 +270,6 @@ export const products: Product[] = [
   },
   {
     id: 12,
-    title: 'Vaas',
-    price: 340,
-    images: [schilderij6Img],
-    season: 'alle-seizoenen',
-    dimensions: {
-      height: '100 cm',
-      width: '70 cm',
-    },
-    features: [
-    'Geïnspireerd door klassieke kunst',
-    'Minimalistisch en modern',
-    'Uniek gebruik van materialen',
-    'Duurzaam afgewerkt',
-    'Geschikt voor diverse ruimtes'
-    ],
-    inStock: true,
-    category: 'schilderijen'
-  },
-  {
-    id: 13,
     title: 'Kippen',
     price: 220,
     images: [schilderij7Img],
@@ -309,34 +289,14 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 14,
-    title: 'Man met gitaar',
-    price: 360,
-    images: [schilderij8Img],
-    season: 'alle-seizoenen',
-    dimensions: {
-      height: '100 cm',
-      width: '70 cm',
-    },
-    features: [
-    'Muzikale thematiek',
-    'Diepe kleuren en textuur',
-    'Sterke emotionele uitstraling',
-    'Hoogwaardige olieverf',
-    'Uniek en handgemaakt'
-    ],
-    inStock: true,
-    category: 'schilderijen'
-  },
-  {
-    id: 15,
+    id: 13,
     title: 'Bloemen',  
     price: 280,
     images: [schilderij9Img],
     season: 'zomer',
     dimensions: {
-      height: '100 cm',
-      width: '70 cm',
+      height: '40 cm',
+      width: '50 cm',
     },
     features: [
     'Vrolijke, heldere kleuren',
@@ -349,14 +309,14 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 16,
+    id: 14,
     title: 'Wensboom',
     price: 310,
     images: [schilderij10Img],
     season: 'winter',
     dimensions: {
-      height: '100 cm',
-      width: '70 cm',
+      height: '50 cm',
+      width: '50 cm',
     },
     features: [
     'Elegant en tijdloos ontwerp',  
