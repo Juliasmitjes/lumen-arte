@@ -7,8 +7,14 @@ import { products } from "./data/Products";
 import Image from "next/image";
 import Link from "next/link";
 
-const Gallery = () => {
-  const [activeCategory, setActiveCategory] = useState<"sculpturen" | "schilderijen">("sculpturen");
+interface GalleryProps {
+  activeCategory: "sculpturen" | "schilderijen";
+  setActiveCategory: (
+    value: "sculpturen" | "schilderijen"
+  ) => void;
+}
+
+const Gallery = ({ activeCategory }: GalleryProps) => {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
 
   const filteredProducts = products.filter(
@@ -18,52 +24,42 @@ const Gallery = () => {
   return (
     <section id="galerij" className="lg:py-20 gradient-earth">
       <div className="container mx-auto px-6 pb-10 lg:pb-0">
+        
+        {/* HEADER sculpturen */}
+          {activeCategory === "sculpturen" && (
+            <div className="text-center mb-16">
+              <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4 pt-10 lg:pt-0">
+                Licht in alle seizoenen
+              </h2>
 
-        {/* HEADER */}
-        <div className="text-center mb-16">
-          <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4 pt-10 lg:pt-0">
-            Licht in alle seizoenen
-          </h2>
+              <p className="text-lg text-muted-foreground font-business max-w-2xl mx-auto">
+                Kerstbomen passen niet in deze tijd van duurzaamheidsopgaven. We moeten bomen planten
+                en niet kappen. Een kunstboom als alternatief? Dat is ook niet echt duurzaam. <br /><br />
+                Ik ben de uitdaging aangegaan om met minimaal materiaal een maximaal effect te bereiken.
+                Dat is gelukt! Mijn lichtsculpturen hebben een grootse uitstraling. En het materiaalgebruik
+                is beperkt. Voordeel is dat je de sculptuur makkelijk opbergt. Eén doos, die stokken en de
+                ringen met een haak aan de muur. Dat is alles. <br /><br />
+                Maar je kunt de sculptuur ook laten staan. Met wat andere hangers, maak je er een Paas- of
+                herfstcreatie van. Eigenlijk zijn de lichtsculpturen in alle seizoenen leuk.
+              </p>
 
-          <p className="text-lg text-muted-foreground font-business max-w-2xl mx-auto">
-            Kerstbomen passen niet in deze tijd van duurzaamheidsopgaven. We moeten bomen planten en niet kappen. 
-            Een kunstboom als alternatief? Dat is ook niet echt duurzaam. <br /><br />
-            Ik ben de uitdaging aangegaan om met minimaal materiaal een maximaal effect te bereiken. Dat is gelukt! 
-            Mijn lichtsculpturen hebben een grootse uitstraling. En het materiaalgebruik is beperkt. Voordeel is dat 
-            je de sculptuur makkelijk opbergt. Eén doos, die stokken en de ringen met een haak aan de muur. Dat is alles. 
-            <br /><br />
-            Maar je kunt de sculptuur ook laten staan. Met wat andere hangers, maak je er een Paas- of herfstcreatie van. 
-            Eigenlijk zijn de lichtsculpturen in alle seizoenen leuk.
-          </p>
+              <p className="text-lg text-foreground font-business max-w-2xl mx-auto mt-10">
+                Nieuwsgierig? Kijk hieronder
+              </p>
+            </div>
+          )}
 
-          <p className="text-lg text-foreground font-business max-w-2xl mx-auto mt-10 ">
-            Nieuwsgierig? Kijk hieronder
-          </p>
-        </div>
+        {/* HEADER schilderijen */}
+          {activeCategory === "schilderijen" && (
+            <div className="text-center mb-16">
+              <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4 pt-10 lg:pt-0">
+                Pasteltekeningen
+              </h2>
+            </div>
+          )}
 
-        {/* FILTER BUTTONS */}
-        <div className="flex justify-center mb-12">
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-1 p-2 sm:p-1 w-full max-w-sm rounded-lg bg-card shadow-soft">
-            {[
-              { key: "sculpturen", label: "Lichtsculpturen" },
-              { key: "schilderijen", label: "Pasteltekeningen" },
-            ].map((filter) => (
-              <Button
-                key={filter.key}
-                variant={activeCategory === filter.key ? "default" : "ghost"}
-                size="sm"
-                onClick={() =>
-                  setActiveCategory(filter.key as "sculpturen" | "schilderijen")
-                }
-                className="flex-1 sm:w-auto"
-              >
-                {filter.label}
-              </Button>
-            ))}
-          </div>
-        </div>
 
-        {/* GALERIJ */}
+        {/* GALLERY GRID */}
         <div
           className={
             activeCategory === "schilderijen"
@@ -84,8 +80,7 @@ const Gallery = () => {
                 onMouseEnter={() => isSculpture && setHoveredItem(product.id)}
                 onMouseLeave={() => isSculpture && setHoveredItem(null)}
               >
-
-                {/* SCHILDERIJEN  */}
+                {/* PASTELTEKENINGEN */}
                 {isPainting ? (
                   <div className="flex flex-col md:flex-row gap-6 p-8 md:p-10 items-center md:items-start">
 
@@ -99,7 +94,6 @@ const Gallery = () => {
                       </div>
                     </div>
 
-                    {/* Tekst rechts */}
                     <div className="w-full md:w-[55%] flex flex-col justify-center text-center md:text-left">
                       <h4 className="text-xl font-semibold text-foreground mb-3">
                         {product.title}
@@ -109,10 +103,13 @@ const Gallery = () => {
                         Formaat: {product.dimensions.height} × {product.dimensions.width}
                       </p>
                     </div>
+
                   </div>
                 ) : (
                   <>
-                    {/* SCULPTUREN */}
+                    {/* LICHTSCULPTUREN */}
+
+                    
                     <Link
                       href={`/products/${product.id}`}
                       className="relative overflow-hidden aspect-[4/5] block group"
@@ -138,9 +135,7 @@ const Gallery = () => {
                       </div>
                     </Link>
 
-                    {/* SCULPTUUR CONTENT */}
                     <div className="p-6">
-
                       <h4 className="text-xl font-semibold text-foreground mb-4">
                         {product.title}
                       </h4>
@@ -158,6 +153,7 @@ const Gallery = () => {
             );
           })}
         </div>
+
       </div>
     </section>
   );
