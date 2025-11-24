@@ -73,7 +73,7 @@ const Contact = () => {
               {/* contactgegevens */}
               <div className="space-y-6">
                 {contacts.map((contact, index) => {
-                  const Wrapper: any = contact.action ? "a" : "div";
+                  const Wrapper: React.ElementType = contact.action ? "a" : "div";
 
                   return (
                     <Wrapper
