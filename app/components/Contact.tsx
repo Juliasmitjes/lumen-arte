@@ -15,7 +15,7 @@ const Contact = () => {
     if (!form.current) return;
 
     emailjs
-      .sendForm("service_2pttrmd", "template_1m4p294", form.current, {
+      .sendForm("service_vf59u73", "template_y70s3da", form.current, {
         publicKey: "8GQ2mbHqj2pVKGmsp",
       })
       .then(
