@@ -70,6 +70,24 @@ const Hero = ({ activeCategory, setActiveCategory }: HeroProps) => {
                   </Button>
                 ))}
               </div>
+              <div className=" flex flex-col items-center sm:flex-row gap-3 sm:gap-3 ml-0 sm:ml-6 mt-4 sm:mt-0">
+              {/* navigatie knoppen */}
+              <Button
+                asChild
+                size="lg"
+                className="rounded-full px-6 font-medium w-full sm:w-auto text-base"
+              >
+              <a href="#verhaal">Leer mij kennen</a>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="secondary"
+                className="rounded-full px-6 font-medium w-full sm:w-auto text-base"
+              >
+                <a href="#contact">Contact</a>
+              </Button>
+              </div>
             </div>
 
 
