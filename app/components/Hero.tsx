@@ -42,7 +42,7 @@ const Hero = ({ activeCategory, setActiveCategory }: HeroProps) => {
 
           {/* ===== FILTER + NAV BUTTONS ===== */}
           <div className="flex flex-col items-center lg:flex-row justify-center lg:justify-start mt-10 gap-8">
-            {/* filter knoppen */}
+          {/* filter knoppen */}
             <div
               className="
                 flex flex-col sm:flex-row
@@ -59,20 +59,23 @@ const Hero = ({ activeCategory, setActiveCategory }: HeroProps) => {
               ].map((filter) => (
                 <Button
                   key={filter.key}
+                  asChild
                   variant={activeCategory === filter.key ? "default" : "ghost"}
                   size="lg"
-                  onClick={() =>
-                    setActiveCategory(
-                      filter.key as "sculpturen" | "schilderijen"
-                    )
-                  }
                   className="
                     rounded-full px-6 font-medium
                     w-full sm:w-auto
                     text-base
                   "
                 >
-                  {filter.label}
+                  <a
+                    href="#galerij"
+                    onClick={() =>
+                      setActiveCategory(filter.key as "sculpturen" | "schilderijen")
+                    }
+                  >
+                    {filter.label}
+                  </a>
                 </Button>
               ))}
             </div>
