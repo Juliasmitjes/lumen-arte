@@ -20,18 +20,15 @@ const Request = ({ productId }: { productId: string }) => {
 
  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-     console.log("sendEmail TRIGGERED");
-
-    if (!form.current) { console.log("NO FORM REF");
-    return; }
+    
+    if (!form.current) return;
 
     emailjs
       .sendForm('service_nlds72b', 'template_2lbt0we', form.current, {
         publicKey: 'exPCgKyMcz5MS9WFp',
       })
       .then(
-        (response) => {
-          console.log("SUCCESS", response);
+        () => {
           toast.success('Dank je wel voor je bericht! Ik neem snel contact met je op.');
           form.current?.reset();
         //   setFormData({          
