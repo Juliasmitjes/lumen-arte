@@ -280,7 +280,7 @@ export const products: Product[] = [
   },
   {
     id: 13,
-    title: 'Zonnestralen',  
+    title: 'Bloemenpracht',  
     price: 280,
     images: [schilderij9Img],
     season: 'zomer',
@@ -300,10 +300,10 @@ export const products: Product[] = [
   },
   {
     id: 14,
-    title: 'Stilleven met bloemen',
+    title: 'Fantasieboom',
     price: 310,
     images: [schilderij10Img],
-    season: 'lente',
+    season: 'winter',
     dimensions: {
       height: '100 cm',
       width: '70 cm',
