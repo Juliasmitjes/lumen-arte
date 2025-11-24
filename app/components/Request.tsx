@@ -24,7 +24,7 @@ const Request = ({ productId }: { productId: string }) => {
     if (!form.current) return;
 
     emailjs
-      .sendForm('service_2pttrmd', 'template_0fpxw3d', form.current, {
+      .sendForm('service_vf59u73', 'template_wecj7ko', form.current, {
         publicKey: '8GQ2mbHqj2pVKGmsp',
       })
       .then(
@@ -44,8 +44,6 @@ const Request = ({ productId }: { productId: string }) => {
         },
       );
   };
-
-
 
 
 
