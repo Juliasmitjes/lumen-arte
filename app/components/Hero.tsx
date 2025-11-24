@@ -11,8 +11,10 @@ type HeroProps = {
 
 const Hero = ({ activeCategory, setActiveCategory }: HeroProps) => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center gradient-earth overflow-hidden">
-
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center gradient-earth overflow-hidden"
+    >
       {/* background image */}
       <div className="absolute inset-0">
         <Image
@@ -27,7 +29,6 @@ const Hero = ({ activeCategory, setActiveCategory }: HeroProps) => {
       {/* content */}
       <div className="relative container mx-auto px-6 py-20 text-center lg:text-left">
         <div className="max-w-3xl mx-auto lg:mx-0">
-
           <h1 className="text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
             Licht en kleur
             <span className="block font-playful text-accent text-4xl lg:text-5xl mt-2">
@@ -35,62 +36,71 @@ const Hero = ({ activeCategory, setActiveCategory }: HeroProps) => {
             </span>
           </h1>
 
-          <p className="text-lg lg:text-xl text-foreground font-business mb-8 max-w-2xl leading-relaxed">
+          <p className="hidden sm:block text-lg lg:text-xl text-foreground font-business mb-8 max-w-2xl leading-relaxed">
             Ontdek mijn lichtsculpturen. Duurzaam en gemaakt met liefde.
           </p>
 
-         {/* ===== FILTER BUTTONS ===== */}
-            <div className="flex justify-center lg:justify-start mt-10">
-              <div className="
-                flex flex-col sm:flex-row 
-                gap-3 sm:gap-3
+          {/* ===== FILTER + NAV BUTTONS ===== */}
+          <div className="flex flex-col items-center lg:flex-row justify-center lg:justify-start mt-10 gap-8">
+            {/* filter knoppen */}
+            <div
+              className="
+                flex flex-col sm:flex-row
+                gap-4 sm:gap-3
                 p-2
-                rounded-4xl sm:rounded-full 
+                rounded-4xl sm:rounded-full
                 bg-white/40 backdrop-blur-md shadow-soft
                 w-full sm:w-auto
-              ">
-                {[
-                  { key: "sculpturen", label: "Lichtsculpturen" },
-                  { key: "schilderijen", label: "Pasteltekeningen" },
-                ].map((filter) => (
-                  <Button
-                    key={filter.key}
-                    variant={activeCategory === filter.key ? "default" : "ghost"}
-                    size="lg"
-                    onClick={() =>
-                      setActiveCategory(filter.key as "sculpturen" | "schilderijen")
-                    }
-                    className="
-                      rounded-full px-6 font-medium
-                      w-full sm:w-auto
-                      text-base
-                    "
-                  >
-                    {filter.label}
-                  </Button>
-                ))}
-              </div>
-              <div className=" flex flex-col items-center sm:flex-row gap-3 sm:gap-3 ml-0 sm:ml-6 mt-4 sm:mt-0">
-              {/* navigatie knoppen */}
+              "
+            >
+              {[
+                { key: "sculpturen", label: "Lichtsculpturen" },
+                { key: "schilderijen", label: "Pasteltekeningen" },
+              ].map((filter) => (
+                <Button
+                  key={filter.key}
+                  variant={activeCategory === filter.key ? "default" : "ghost"}
+                  size="lg"
+                  onClick={() =>
+                    setActiveCategory(
+                      filter.key as "sculpturen" | "schilderijen"
+                    )
+                  }
+                  className="
+                    rounded-full px-6 font-medium
+                    w-full sm:w-auto
+                    text-base
+                  "
+                >
+                  {filter.label}
+                </Button>
+              ))}
+            </div>
+
+            {/* navigatie knoppen */}
+            <div
+              className="
+                flex flex-col sm:flex-row
+                gap-4 sm:gap-3
+                w-full sm:w-auto
+              "
+            >
               <Button
                 asChild
-                size="lg"
-                className="rounded-full px-6 font-medium w-full sm:w-auto text-base"
+                size="lg"      
+                className="rounded-full px-6 font-medium w-full sm:w-auto text-base bg-accent text-accent-foreground"
               >
-              <a href="#over-mij">Leer mij kennen</a>
+                <a href="#over-mij">Leer mij kennen</a>
               </Button>
               <Button
                 asChild
                 size="lg"
-                variant="secondary"
-                className="rounded-full px-6 font-medium w-full sm:w-auto text-base"
+                className="rounded-full px-6 font-medium w-full sm:w-auto text-base bg-accent text-accent-foreground"
               >
                 <a href="#contact">Contact</a>
               </Button>
-              </div>
             </div>
-
-
+          </div>
         </div>
       </div>
     </section>
