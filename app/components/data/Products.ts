@@ -63,8 +63,8 @@ export const products: Product[] = [
     images: [boomBruin1, boomBruin2, boomBruin3, boomBruin4, boomBruin5, inDoos],
     season: 'herfst',
     dimensions: {
-      height: '180 cm',
-      diameter: '120 cm', 
+      height: '195 cm',
+      diameter: '60 cm', 
     },
     features: [
       'Handgemaakt',
@@ -82,8 +82,8 @@ export const products: Product[] = [
     images: [boomRood1, boomRood2, boomRood3, boomRood4, boomRood5, boomRood6, inDoos],
     season: 'alle-seizoenen',
     dimensions: {
-      height: '160 cm',
-      diameter: '100 cm',
+      height: '200 cm',
+      diameter: '70 cm',
     },
     features: [
       'Handgemaakt',
@@ -101,8 +101,8 @@ export const products: Product[] = [
     images: [boomBlauw1, boomBlauw2, boomBlauw3, boomBlauw4, inDoos],
     season: 'alle-seizoenen',
     dimensions: {
-      height: '160 cm',
-      diameter: '100 cm',
+      height: '175 cm',
+      diameter: '60 cm',
     },
     features: [
       'Handgemaakt',
@@ -120,8 +120,8 @@ export const products: Product[] = [
     images: [boomPaars1, boomPaars2, boomPaars3, inDoos],
     season: 'winter',
     dimensions: {
-      height: '160 cm',
-      diameter: '100 cm',
+      height: '220 cm',
+      diameter: '70 cm',
     },
     features: [
       'Handgemaakt',
@@ -139,8 +139,8 @@ export const products: Product[] = [
     images: [boomKrul1, boomKrul2, boomKrul3, inDoos],
     season: 'winter',
     dimensions: {
-      height: '160 cm',
-      diameter: '100 cm',
+      height: '170 cm',
+      diameter: '60 cm',
     },
     features: [
       'Handgemaakt',
@@ -158,8 +158,8 @@ export const products: Product[] = [
     images: [boomStreep1, boomStreep2, boomStreep3, boomStreep4, boomStreep5, inDoos],
     season: 'winter',
     dimensions: {
-      height: '160 cm',
-      diameter: '100 cm',
+      height: '170 cm',
+      diameter: '60 cm',
     },
     features: [
       'Handgemaakt',

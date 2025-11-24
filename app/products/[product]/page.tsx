@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useState } from "react"; 
+import { use, useState, useEffect } from "react"; 
 import { useRouter } from "next/navigation";
 import Request from "../../components/Request";
 import { ArrowLeft, X, Clock, Award, Leaf, Package } from "lucide-react";
@@ -11,13 +11,14 @@ import { getProductById } from '../../components/data/Products';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import Image from "next/image";
 
-type ProductPageProps = {
-  params: Promise<{ product: string }>; 
-};
-
-export default function ProductDetail({ params }: ProductPageProps) {
-  const { product: productId } = use(params); 
+export default function ProductDetail({ params }: { params: { product: string } }) {
+  const productId = params.product;
   const router = useRouter();
+  
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   // const [quantity, setQuantity] = useState(1);
   const [isZoomed, setIsZoomed] = useState(false);
