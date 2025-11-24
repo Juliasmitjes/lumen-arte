@@ -14,10 +14,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <Hero 
-      activeCategory={activeCategory}
-      setActiveCategory={setActiveCategory}
-      />
+      <Hero />
       <Gallery 
       activeCategory={activeCategory}
       setActiveCategory={setActiveCategory}

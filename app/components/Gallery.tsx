@@ -14,7 +14,7 @@ interface GalleryProps {
   ) => void;
 }
 
-const Gallery = ({ activeCategory }: GalleryProps) => {
+const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
 
   const filteredProducts = products.filter(
@@ -24,36 +24,67 @@ const Gallery = ({ activeCategory }: GalleryProps) => {
   return (
     <section id="galerij" className="lg:py-20 gradient-earth">
       <div className="container mx-auto px-6 pb-10 lg:pb-0">
-        
-        {/* HEADER sculpturen */}
-          {activeCategory === "sculpturen" && (
-            <div className="text-center mb-16">
-              <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4 pt-10 lg:pt-0">
-                Licht in alle seizoenen
-              </h2>
 
-              <p className="text-muted-foreground font-business font-semibold max-w-2xl mx-auto text-xl">
-                Kerstbomen passen niet in deze tijd van duurzaamheidsopgaven. We moeten bomen planten
-                en niet kappen. Een kunstboom als alternatief? Dat is ook niet echt duurzaam. <br /><br />
-                Ik ben de uitdaging aangegaan om met minimaal materiaal een maximaal effect te bereiken.
-                Dat is gelukt! Mijn lichtsculpturen hebben een grootse uitstraling. En het materiaalgebruik
-                is beperkt. Voordeel is dat je de sculptuur makkelijk opbergt. Eén doos, die stokken en de
-                ringen met een haak aan de muur. Dat is alles. <br /><br />
-                Maar je kunt de sculptuur ook laten staan. Met wat andere hangers, maak je er een Paas- of
-                herfstcreatie van. Eigenlijk zijn de lichtsculpturen in alle seizoenen leuk.
-              </p>
-            </div>
-          )}
+        {/* ===== FILTER KNOPPEN ===== */}
+        <div
+          className="
+            flex flex-col sm:flex-row
+            gap-4 sm:gap-3
+            p-2
+            rounded-4xl sm:rounded-full
+            bg-white/40 backdrop-blur-md shadow-soft
+            w-full sm:w-90 mx-auto mb-14
+            items-center justify-center
+          "
+        >
+          {[
+            { key: "sculpturen", label: "Lichtsculpturen" },
+            { key: "schilderijen", label: "Pasteltekeningen" },
+          ].map((filter) => (
+            <Button
+              key={filter.key}
+              asChild
+              variant={activeCategory === filter.key ? "default" : "ghost"}
+              size="lg"
+              className="
+                rounded-full px-6 font-medium
+                w-full sm:w-auto
+                text-base
+              "
+            >
+              <a
+                href="#galerij"
+                onClick={() =>
+                  setActiveCategory(filter.key as "sculpturen" | "schilderijen")
+                }
+              >
+                {filter.label}
+              </a>
+            </Button>
+          ))}
+        </div>
+
+        {/* HEADER sculpturen */}
+        {activeCategory === "sculpturen" && (
+          <div className="text-center mb-16">
+            <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4 pt-10 lg:pt-0">
+              Licht in alle seizoenen
+            </h2>
+
+            <p className="text-muted-foreground font-business font-semibold max-w-2xl mx-auto text-xl">
+              Kerstbomen passen niet in deze tijd van duurzaamheidsopgaven. We moeten bomen planten en niet kappen. Een kunstboom als alternatief? Dat is ook niet echt duurzaam. <br /><br /> Ik ben de uitdaging aangegaan om met minimaal materiaal een maximaal effect te bereiken. Dat is gelukt! Mijn lichtsculpturen hebben een grootse uitstraling. En het materiaalgebruik is beperkt. Voordeel is dat je de sculptuur makkelijk opbergt. Eén doos, die stokken en de ringen met een haak aan de muur. Dat is alles. <br /><br /> Maar je kunt de sculptuur ook laten staan. Met wat andere hangers, maak je er een Paas- of herfstcreatie van. Eigenlijk zijn de lichtsculpturen in alle seizoenen leuk.
+            </p>
+          </div>
+        )}
 
         {/* HEADER schilderijen */}
-          {activeCategory === "schilderijen" && (
-            <div className="text-center mb-16">
-              <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4 pt-10 lg:pt-0">
-                Pasteltekeningen
-              </h2>
-            </div>
-          )}
-
+        {activeCategory === "schilderijen" && (
+          <div className="text-center mb-16">
+            <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4 pt-10 lg:pt-0">
+              Pasteltekeningen
+            </h2>
+          </div>
+        )}
 
         {/* GALLERY GRID */}
         <div
@@ -104,8 +135,6 @@ const Gallery = ({ activeCategory }: GalleryProps) => {
                 ) : (
                   <>
                     {/* LICHTSCULPTUREN */}
-
-                    
                     <Link
                       href={`/products/${product.id}`}
                       className="relative overflow-hidden aspect-[4/5] block group"

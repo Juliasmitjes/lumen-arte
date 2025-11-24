@@ -9,7 +9,7 @@ type HeroProps = {
   setActiveCategory: (value: "sculpturen" | "schilderijen") => void;
 };
 
-const Hero = ({ activeCategory, setActiveCategory }: HeroProps) => {
+const Hero = () => {
   return (
     <section
       id="hero"
@@ -40,69 +40,30 @@ const Hero = ({ activeCategory, setActiveCategory }: HeroProps) => {
             Ontdek mijn lichtsculpturen en pasteltekeningen. Duurzaam en gemaakt met liefde.
           </p>
 
-          {/* ===== FILTER + NAV BUTTONS ===== */}
-          <div className="flex flex-col items-center lg:flex-row justify-center lg:justify-start mt-10 gap-8">
-          {/* filter knoppen */}
-            <div
-              className="
-                flex flex-col sm:flex-row
-                gap-4 sm:gap-3
-                p-2
-                rounded-4xl sm:rounded-full
-                bg-white/40 backdrop-blur-md shadow-soft
-                w-full sm:w-auto
-              "
+          {/* ===== Alleen navigatie knoppen ===== */}
+          <div
+            className="
+              flex flex-col sm:flex-row
+              gap-4 sm:gap-3
+              w-full sm:w-auto
+              justify-center lg:justify-start mt-10
+            "
+          >
+            <Button
+              asChild
+              size="lg"
+              className="rounded-full px-6 font-medium w-full sm:w-auto text-base bg-accent text-accent-foreground"
             >
-              {[
-                { key: "sculpturen", label: "Lichtsculpturen" },
-                { key: "schilderijen", label: "Pasteltekeningen" },
-              ].map((filter) => (
-                <Button
-                  key={filter.key}
-                  asChild
-                  variant={activeCategory === filter.key ? "default" : "ghost"}
-                  size="lg"
-                  className="
-                    rounded-full px-6 font-medium
-                    w-full sm:w-auto
-                    text-base
-                  "
-                >
-                  <a
-                    href="#galerij"
-                    onClick={() =>
-                      setActiveCategory(filter.key as "sculpturen" | "schilderijen")
-                    }
-                  >
-                    {filter.label}
-                  </a>
-                </Button>
-              ))}
-            </div>
+              <a href="#over-mij">Leer mij kennen</a>
+            </Button>
 
-            {/* navigatie knoppen */}
-            <div
-              className="
-                flex flex-col sm:flex-row
-                gap-4 sm:gap-3
-                w-full sm:w-auto
-              "
+            <Button
+              asChild
+              size="lg"
+              className="rounded-full px-6 font-medium w-full sm:w-auto text-base bg-accent text-accent-foreground"
             >
-              <Button
-                asChild
-                size="lg"      
-                className="rounded-full px-6 font-medium w-full sm:w-auto text-base bg-accent text-accent-foreground"
-              >
-                <a href="#over-mij">Leer mij kennen</a>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                className="rounded-full px-6 font-medium w-full sm:w-auto text-base bg-accent text-accent-foreground"
-              >
-                <a href="#contact">Contact</a>
-              </Button>
-            </div>
+              <a href="#contact">Contact</a>
+            </Button>
           </div>
         </div>
       </div>
