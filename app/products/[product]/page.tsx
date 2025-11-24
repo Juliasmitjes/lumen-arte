@@ -162,7 +162,6 @@ export default function ProductDetail({ params }: ProductPageProps) {
                         : product.season}
                     </Badge>
                     <h1 className="text-3xl font-bold text-foreground mb-2">{product.title}</h1>
-                    <p className="text-lg font-business text-muted-foreground">{product.description}</p>
                   </div>
                 </div>
 
