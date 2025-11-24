@@ -28,7 +28,8 @@ const Request = ({ productId }: { productId: string }) => {
         publicKey: 'exPCgKyMcz5MS9WFp',
       })
       .then(
-        () => {
+        (response) => {
+          console.log("SUCCESS", response);
           toast.success('Dank je wel voor je bericht! Ik neem snel contact met je op.');
           form.current?.reset();
         //   setFormData({          
