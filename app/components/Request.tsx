@@ -24,8 +24,8 @@ const Request = ({ productId }: { productId: string }) => {
     if (!form.current) return;
 
     emailjs
-      .sendForm('service_2pttrmd', 'template_0fpxw3d', form.current, {
-        publicKey: '8GQ2mbHqj2pVKGmsp',
+      .sendForm('service_nlds72b', 'template_2lbt0we', form.current, {
+        publicKey: 'exPCgKyMcz5MS9WFp',
       })
       .then(
         () => {
