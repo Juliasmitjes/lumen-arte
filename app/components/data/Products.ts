@@ -300,7 +300,7 @@ export const products: Product[] = [
   },
   {
     id: 14,
-    title: 'Fantasieboom',
+    title: 'Wensboom',
     price: 310,
     images: [schilderij10Img],
     season: 'winter',
