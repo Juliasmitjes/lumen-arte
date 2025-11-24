@@ -43,6 +43,18 @@ import boomPaars1 from "../../../public/images/BoomPaars/BoomPaars1.jpg";
 import boomPaars2 from "../../../public/images/BoomPaars/BoomPaars2.jpg";
 import boomPaars3 from "../../../public/images/BoomPaars/BoomPaars3.png";
 
+// sculptuur 5
+import boomKrul1 from "../../../public/images/BoomKrul/BoomKrul1.jpg";
+import boomKrul2 from "../../../public/images/BoomKrul/BoomKrul2.jpg";
+import boomKrul3 from "../../../public/images/BoomKrul/BoomKrul3.jpg";
+
+// sculptuur 6
+import boomStreep1 from "../../../public/images/BoomStreep/BoomStreep1.jpg";
+import boomStreep2 from "../../../public/images/BoomStreep/BoomStreep2.jpg";
+import boomStreep3 from "../../../public/images/BoomStreep/BoomStreep3.jpg";
+import boomStreep4 from "../../../public/images/BoomStreep/BoomStreep4.jpg";
+import boomStreep5 from "../../../public/images/BoomStreep/BoomStreep5.jpg";
+
 export const products: Product[] = [
   {
     id: 1,
@@ -84,25 +96,6 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    title: 'Krijtjes',
-    price: 150,
-    images: [schilderij1Img],
-    season: 'zomer',
-    dimensions: {
-      height: '40 cm',
-      width: '40 cm',
-    },
-    features: [
-      'Kleurrijk ontwerp',
-      'Compact formaat, geschikt voor diverse ruimtes',
-      'Direct ophangbaar',
-      'Handgeschilderd in olieverf'
-    ],
-    inStock: true,
-    category: 'schilderijen'
-  },
-  {
-    id: 4,
     title: 'Bubbellicht',
     price: 275,
     images: [boomBlauw1, boomBlauw2, boomBlauw3, boomBlauw4, inDoos],
@@ -120,8 +113,84 @@ export const products: Product[] = [
     inStock: true,
     category: 'sculpturen'
   },
+   {
+    id: 4,
+    title: 'Lentelicht',
+    price: 275,
+    images: [boomPaars1, boomPaars2, boomPaars3, inDoos],
+    season: 'winter',
+    dimensions: {
+      height: '160 cm',
+      diameter: '100 cm',
+    },
+    features: [
+      'Handgemaakt',
+      'Eenvoudig op te bergen na gebruik',
+      'Seizoensgebonden decoratie mogelijk',
+      'Mimaal materiaalgebruik met groots effect',
+    ],
+    inStock: true,
+    category: 'sculpturen'
+  },
   {
     id: 5,
+    title: 'Krullen',
+    price: 275,
+    images: [boomKrul1, boomKrul2, boomKrul3, inDoos],
+    season: 'winter',
+    dimensions: {
+      height: '160 cm',
+      diameter: '100 cm',
+    },
+    features: [
+      'Handgemaakt',
+      'Eenvoudig op te bergen na gebruik',
+      'Seizoensgebonden decoratie mogelijk',
+      'Mimaal materiaalgebruik met groots effect',
+    ],
+    inStock: true,
+    category: 'sculpturen'
+  },
+    {
+    id: 6,
+    title: 'Strepen',
+    price: 275,
+    images: [boomStreep1, boomStreep2, boomStreep3, boomStreep4, boomStreep5, inDoos],
+    season: 'winter',
+    dimensions: {
+      height: '160 cm',
+      diameter: '100 cm',
+    },
+    features: [
+      'Handgemaakt',
+      'Eenvoudig op te bergen na gebruik',
+      'Seizoensgebonden decoratie mogelijk',
+      'Mimaal materiaalgebruik met groots effect',
+    ],
+    inStock: true,
+    category: 'sculpturen'
+  },
+  {
+    id: 7,
+    title: 'Krijtjes',
+    price: 150,
+    images: [schilderij1Img],
+    season: 'zomer',
+    dimensions: {
+      height: '40 cm',
+      width: '40 cm',
+    },
+    features: [
+      'Kleurrijk ontwerp',
+      'Compact formaat, geschikt voor diverse ruimtes',
+      'Direct ophangbaar',
+      'Handgeschilderd in olieverf'
+    ],
+    inStock: true,
+    category: 'schilderijen'
+  }, 
+  {
+    id: 8,
     title: 'Abstract',
     price: 275,
     images: [schilderij2Img],
@@ -141,26 +210,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 6,
-    title: 'Lentelicht',
-    price: 275,
-    images: [boomPaars1, boomPaars2, boomPaars3, inDoos],
-    season: 'winter',
-    dimensions: {
-      height: '160 cm',
-      diameter: '100 cm',
-    },
-    features: [
-      'Handgemaakt',
-      'Eenvoudig op te bergen na gebruik',
-      'Seizoensgebonden decoratie mogelijk',
-      'Mimaal materiaalgebruik met groots effect',
-    ],
-    inStock: true,
-    category: 'sculpturen'
-  },
-  {
-    id: 7,
+    id: 9,
     title: 'Abstract',
     price: 325,
     images: [schilderij3Img],
@@ -180,7 +230,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 8,
+    id: 10,
     title: 'Abstract',
     price: 250,
     images: [schilderij4Img],
@@ -199,7 +249,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 9,
+    id: 11,
     title: 'Abstract',
     price: 295,
     images: [schilderij5Img],
@@ -219,7 +269,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 10,
+    id: 12,
     title: 'Vaas',
     price: 340,
     images: [schilderij6Img],
@@ -239,7 +289,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 11,
+    id: 13,
     title: 'Kippen',
     price: 220,
     images: [schilderij7Img],
@@ -259,7 +309,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 12,
+    id: 14,
     title: 'Man met gitaar',
     price: 360,
     images: [schilderij8Img],
@@ -279,7 +329,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 13,
+    id: 15,
     title: 'Bloemen',  
     price: 280,
     images: [schilderij9Img],
@@ -299,7 +349,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 14,
+    id: 16,
     title: 'Wensboom',
     price: 310,
     images: [schilderij10Img],
