@@ -39,27 +39,39 @@ const Hero = ({ activeCategory, setActiveCategory }: HeroProps) => {
             Ontdek mijn lichtsculpturen. Duurzaam en gemaakt met liefde.
           </p>
 
-          {/* ===== FILTER BUTTONS (nu in Hero) ===== */}
-          <div className="flex justify-center lg:justify-start mt-10">
-            <div className="flex flex-col sm:flex-row gap-3 p-2 rounded-full bg-white/40 backdrop-blur-md shadow-soft">
-              {[
-                { key: "sculpturen", label: "Lichtsculpturen" },
-                { key: "schilderijen", label: "Pasteltekeningen" },
-              ].map((filter) => (
-                <Button
-                  key={filter.key}
-                  variant={activeCategory === filter.key ? "default" : "ghost"}
-                  size="lg"
-                  onClick={() =>
-                    setActiveCategory(filter.key as "sculpturen" | "schilderijen")
-                  }
-                  className="rounded-full px-6 font-medium"
-                >
-                  {filter.label}
-                </Button>
-              ))}
+         {/* ===== FILTER BUTTONS ===== */}
+            <div className="flex justify-center lg:justify-start mt-10">
+              <div className="
+                flex flex-col sm:flex-row 
+                gap-3 sm:gap-3
+                p-2
+                rounded-4xl sm:rounded-full 
+                bg-white/40 backdrop-blur-md shadow-soft
+                w-full sm:w-auto
+              ">
+                {[
+                  { key: "sculpturen", label: "Lichtsculpturen" },
+                  { key: "schilderijen", label: "Pasteltekeningen" },
+                ].map((filter) => (
+                  <Button
+                    key={filter.key}
+                    variant={activeCategory === filter.key ? "default" : "ghost"}
+                    size="lg"
+                    onClick={() =>
+                      setActiveCategory(filter.key as "sculpturen" | "schilderijen")
+                    }
+                    className="
+                      rounded-full px-6 font-medium
+                      w-full sm:w-auto
+                      text-base
+                    "
+                  >
+                    {filter.label}
+                  </Button>
+                ))}
+              </div>
             </div>
-          </div>
+
 
         </div>
       </div>
