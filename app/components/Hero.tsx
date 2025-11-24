@@ -37,7 +37,7 @@ const Hero = ({ activeCategory, setActiveCategory }: HeroProps) => {
           </h1>
 
           <p className="hidden sm:block text-lg lg:text-xl text-foreground font-business mb-8 max-w-2xl leading-relaxed">
-            Ontdek mijn lichtsculpturen. Duurzaam en gemaakt met liefde.
+            Ontdek mijn lichtsculpturen en pasteltekeningen. Duurzaam en gemaakt met liefde.
           </p>
 
           {/* ===== FILTER + NAV BUTTONS ===== */}
