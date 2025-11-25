@@ -42,13 +42,14 @@ const Header = () => {
 
   return (
     <header
-      className={`
-        fixed top-0 left-0 right-0 z-50
-        bg-card/80 backdrop-blur-sm border-b border-border shadow-soft
-        transition-transform duration-300
-        ${showHeader ? "translate-y-0" : "-translate-y-full"}
-      `}
-    >
+  className={`
+    fixed top-0 left-0 right-0 z-50
+    bg-card/80 backdrop-blur-sm border-b border-border shadow-soft
+    transition-transform duration-300
+    translate-y-0 -translate-y-full
+    ${showHeader ? "translate-y-0" : "-translate-y-full"}
+  `}
+>
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
 
