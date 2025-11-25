@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
@@ -11,49 +11,48 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
 
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
+  const lastScrollY = useRef(0);
 
+  useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      // alleen mobiel gedrag (< md)
       const isMobile = window.innerWidth < 768;
 
       if (isMobile) {
-        if (currentScrollY > lastScrollY && currentScrollY > 50) {
-          // naar beneden scrollen → verberg header
+        // scrolling down → hide
+        if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
           setShowHeader(false);
         } else {
-          // naar boven scrollen → toon header
+          // scrolling up → show
           setShowHeader(true);
         }
       } else {
-        // desktop: altijd tonen
+        // always visible on desktop
         setShowHeader(true);
       }
 
-      lastScrollY = currentScrollY;
+      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  
+
   return (
     <header
-  className={`
-    fixed top-0 left-0 right-0 z-50
-    bg-card/80 backdrop-blur-sm border-b border-border shadow-soft
-    transition-transform duration-300
-    translate-y-0 -translate-y-full
-    ${showHeader ? "translate-y-0" : "-translate-y-full"}
-  `}
->
+      className={`
+        fixed top-0 left-0 right-0 z-50
+        bg-card/80 backdrop-blur-sm border-b border-border shadow-soft
+        transition-transform duration-300 ease-in-out
+        ${showHeader ? "translate-y-0" : "-translate-y-full"}
+      `}
+    >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
 
-          {/* logo */}
+          {/* Logo */}
           <Link href="/#hero" onClick={() => setIsMenuOpen(false)}>
             <div className="flex items-center gap-2 cursor-pointer">
               <div className="w-10 h-10 rounded-full flex items-center justify-center">
@@ -70,18 +69,23 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* mobiel menu */}
+          {/* Mobile toggle */}
           <button
             className="md:hidden text-foreground hover:text-primary transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => setIsMenuOpen((prev) => !prev)}
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
 
-          {/* mobiele navigatie */}
+          {/* Mobile nav */}
           {isMenuOpen && (
             <div className="md:hidden absolute top-full left-0 right-0 bg-card border-b border-border shadow-warm">
               <div className="px-6 py-4 space-y-4">
+
                 <Link href="/#galerij" onClick={() => setIsMenuOpen(false)}>
                   <button className="block text-foreground mb-6 mt-2 hover:text-primary transition-colors duration-300">
                     Galerij
@@ -99,6 +103,7 @@ const Header = () => {
                     Contact
                   </Button>
                 </Link>
+
               </div>
             </div>
           )}
