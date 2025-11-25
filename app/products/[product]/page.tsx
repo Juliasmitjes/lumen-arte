@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import { useRouter } from "next/navigation";
 import Request from "../../components/Request";
 import { ArrowLeft, X, Clock, Award, Package, ChevronLeft, ChevronRight } from "lucide-react";
@@ -14,10 +14,12 @@ import Image from "next/image";
 export default function ProductDetail({
   params,
 }: {
-  params: { product: string };
+  params: Promise<{ product: string }>;
 }) {
+  const { product: productId } = use(params);
+  
   const router = useRouter();
-  const productId = params.product;
+  
 
   // Load product FIRST
   const product = getProductById(productId);
@@ -138,7 +140,7 @@ export default function ProductDetail({
                   <button
                     className="
                       absolute left-5 top-1/2 -translate-y-1/2
-                      w-14 h-14 flex items-center justify-center
+                      w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center
                       bg-black/50 hover:bg-black/70
                       rounded-full z-50 cursor-pointer
                     "
@@ -148,14 +150,14 @@ export default function ProductDetail({
                       )
                     }
                   >
-                    <ChevronLeft className="w-8 h-8 text-white" />
+                    <ChevronLeft className="sm:w-8 sm:h-8 text-white" />
                   </button>
 
                   {/* RIGHT ARROW */}
                  <button
                     className="
                       absolute right-5 top-1/2 -translate-y-1/2
-                      w-14 h-14 flex items-center justify-center
+                      w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center
                       bg-black/50 hover:bg-black/70
                       rounded-full z-50 cursor-pointer
                     "
@@ -165,7 +167,7 @@ export default function ProductDetail({
                       )
                     }
                   >
-                    <ChevronRight className="w-8 h-8 text-white" />
+                    <ChevronRight className="sm:w-8 sm:h-8 text-white" />
                   </button>
 
                   <div
