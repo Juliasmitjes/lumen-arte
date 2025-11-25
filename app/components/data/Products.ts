@@ -118,7 +118,7 @@ export const products: Product[] = [
     title: 'Lentelicht',
     price: 275,
     images: [boomPaars1, boomPaars2, boomPaars3, inDoos],
-    season: 'winter',
+    season: 'lente',
     dimensions: {
       height: '220 cm',
       diameter: '70 cm',
@@ -136,8 +136,8 @@ export const products: Product[] = [
     id: 5,
     title: 'Krullen',
     price: 275,
-    images: [boomKrul1, boomKrul2, boomKrul3, inDoos],
-    season: 'winter',
+    images: [boomKrul1, boomKrul2, boomKrul3],
+    season: 'zomer',
     dimensions: {
       height: '170 cm',
       diameter: '60 cm',
@@ -155,8 +155,8 @@ export const products: Product[] = [
     id: 6,
     title: 'Strepen',
     price: 275,
-    images: [boomStreep1, boomStreep2, boomStreep3, boomStreep4, boomStreep5, inDoos],
-    season: 'winter',
+    images: [boomStreep1, boomStreep2, boomStreep3, boomStreep4, boomStreep5],
+    season: 'alle-seizoenen',
     dimensions: {
       height: '170 cm',
       diameter: '60 cm',

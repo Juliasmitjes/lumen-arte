@@ -55,7 +55,7 @@ const Hero = () => {
               variant="default"
               className="rounded-full px-6 font-medium w-full sm:w-auto text-base text-primary-foreground"
             >
-              <a href="#over-mij">Leer mij kennen</a>
+              <a href="#galerij">Bekijk mijn werk</a>
             </Button>
 
             <Button
@@ -64,7 +64,7 @@ const Hero = () => {
               variant="hero"
               className="rounded-full px-6 font-medium w-full sm:w-auto text-base text-accent-foreground"
             >
-              <a href="#contact">Contact</a>
+              <a href="#over-mij">Leer mij kennen</a>
             </Button>
           </div>
         </div>
