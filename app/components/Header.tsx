@@ -10,24 +10,17 @@ import Logo from "../../public/images/logo.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
-
   const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      const isMobile = window.innerWidth < 768;
 
-      if (isMobile) {
-        // scrolling down → hide
-        if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
-          setShowHeader(false);
-        } else {
-          // scrolling up → show
-          setShowHeader(true);
-        }
+      // Scroll naar beneden → verberg header
+      if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
+        setShowHeader(false);
       } else {
-        // always visible on desktop
+        // Scroll omhoog → toon header
         setShowHeader(true);
       }
 
@@ -37,8 +30,6 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  
 
   return (
     <header
@@ -74,11 +65,7 @@ const Header = () => {
             className="md:hidden text-foreground hover:text-primary transition-colors"
             onClick={() => setIsMenuOpen((prev) => !prev)}
           >
-            {isMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
 
           {/* Mobile nav */}
