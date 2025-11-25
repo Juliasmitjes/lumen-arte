@@ -18,8 +18,9 @@ const marhey = Marhey({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lumenarte.nl"),
-  title: "LumenArte",
-  description: "Lichtsculpturen en pasteltekeningen",
+  title: "Lichtsculpturen & Pasteltekeningen – LumenArte",
+  description:
+  "Unieke, duurzame lichtsculpturen en pasteltekeningen. Handgemaakt met liefde. Bekijk de collectie en ontdek lichtkunst voor alle seizoenen.",
   keywords: [
   "lichtsculpturen",
   "pasteltekeningen",
