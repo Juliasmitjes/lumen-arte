@@ -17,13 +17,45 @@ const marhey = Marhey({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://lumenarte.nl"),
   title: "LumenArte",
-  description: "Handgemaakte lichtsculpturen",
+  description: "Lichtsculpturen en pasteltekeningen",
+  keywords: [
+  "lichtsculpturen",
+  "pasteltekeningen",
+  "kunst",
+  "lichtkunst",
+  "duurzame kunst",
+  "handgemaakte kunst",
+  "kerstbomen",
+  "LumenArte",
+  ],
   icons: {
     icon: "/favicon.ico", // standaard favicon
     shortcut: "/favicon.ico", // voor snelkoppelingen
     apple: "/apple-touch-icon.png", // voor iOS
-  }
+  },
+  openGraph: {
+    title: "LumenArte",
+    description: "Lichtsculpturen en pasteltekeningen",
+    url: "https://lumenarte.nl",
+    siteName: "LumenArte",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "LumenArte logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.png"],
+    title: "LumenArte",
+    description: "Duurzame lichtsculpturen en pasteltekeningen.",
+  },
 };
 
 export default function RootLayout({
@@ -32,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${nunitoSans.variable} ${marhey.variable} antialiased`}>
+    <html lang="nl" className={`${nunitoSans.variable} ${marhey.variable} antialiased`}>
       <body>
         <Provider>
           <Header />
