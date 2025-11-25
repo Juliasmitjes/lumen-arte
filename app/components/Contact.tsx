@@ -59,10 +59,10 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto">
           {/* header */}
           <div className="lg:text-center mb-8 sm:mb-16">
-            <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4">
+            <h2 className="font-playful text-4xl lg:text-5xl text-center sm:text-start text-accent mb-4">
               Nieuwsgierig?
             </h2>
-            <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+            <h3 className="text-3xl lg:text-4xl text-center sm:text-start font-bold text-foreground mb-6">
               Neem contact op
             </h3>
           </div>

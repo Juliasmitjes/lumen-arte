@@ -67,7 +67,7 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
         {/* HEADER sculpturen */}
         {activeCategory === "sculpturen" && (
           <div className="text-center mb-16">
-            <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4 pt-10 lg:pt-0">
+            <h2 className="font-playful text-4xl lg:text-5xl sm:text-center text-accent mb-4 pt-10 lg:pt-0">
               Licht in alle seizoenen
             </h2>
 

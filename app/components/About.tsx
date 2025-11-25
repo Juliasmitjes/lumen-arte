@@ -18,8 +18,8 @@ const About = () => {
         
         {/* content */}
         <div>
-          <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4 mt-10 lg:mt-0">Veelzijdig en bevlogen</h2>
-          <div className="prose prose-lg text-muted-foreground font-semibold font-business text-xl mb-8">
+          <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4 mt-10 text-center sm:text-start lg:mt-0">Veelzijdig en bevlogen</h2>
+          <div className="prose prose-lg text-muted-foreground font-semibold font-business text-center sm:text-start text-xl mb-8">
             <p className="mb-4"> Ik ben gek op het leven en vind ook veel leuk: getallen, taal, kinderen, kunst. Soms is het lastig kiezen. Gelukkig hoeft niet alles tegelijk. Mijn leven is een avontuurlijke reis van accountant, moeder én kunstenaar. Hoe heerlijk! Vorm kleur en creativiteit. Met hart en handen en altijd met passie. 
             </p>
             <p className="mb-8">Ik maak pasteltekeningen en lichtsculpturen.</p>
