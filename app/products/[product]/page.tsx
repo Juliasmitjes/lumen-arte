@@ -17,14 +17,28 @@ export default function ProductDetail({
   params: Promise<{ product: string }>;
 }) {
   const { product: productId } = use(params);
-  
   const router = useRouter();
-  
 
-  // Load product FIRST
+  // ------------------------
+  // ALL HOOKS MUST ALWAYS RUN
+  // ------------------------
+
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isZoomed, setIsZoomed] = useState(false);
+
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // ------------------------
+  // FETCH PRODUCT AFTER HOOKS
+  // ------------------------
+
   const product = getProductById(productId);
 
-  // Early return → prevents TS error "possibly undefined"
   if (!product) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -38,16 +52,9 @@ export default function ProductDetail({
     );
   }
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [isZoomed, setIsZoomed] = useState(false);
-
-  // --- MOBILE SWIPE SUPPORT ---
-  const [touchStart, setTouchStart] = useState<number | null>(null);
-  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  // ------------------------
+  // TOUCH HANDLERS
+  // ------------------------
 
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStart(e.targetTouches[0].clientX);
@@ -62,15 +69,15 @@ export default function ProductDetail({
 
     const distance = touchStart - touchEnd;
 
-    // SWIPE LEFT → NEXT
     if (distance > 50) {
+      // SWIPE LEFT
       setSelectedImageIndex((prev) =>
         prev === product.images.length - 1 ? 0 : prev + 1
       );
     }
 
-    // SWIPE RIGHT → PREVIOUS
     if (distance < -50) {
+      // SWIPE RIGHT
       setSelectedImageIndex((prev) =>
         prev === 0 ? product.images.length - 1 : prev - 1
       );
@@ -79,6 +86,10 @@ export default function ProductDetail({
     setTouchStart(null);
     setTouchEnd(null);
   };
+
+  // ------------------------
+  // SEASON BADGE COLORS
+  // ------------------------
 
   const seasonColors: Record<string, string> = {
     lente: "bg-green-100 text-green-800",
@@ -96,11 +107,16 @@ export default function ProductDetail({
     "alle-seizoenen": "🔄",
   };
 
+  // ------------------------
+  // PAGE RENDER
+  // ------------------------
+
   return (
     <main>
       <div className="min-h-screen bg-background">
         <div className="container mx-auto mt-16 px-4 py-8">
-          {/* Back button */}
+
+          {/* BACK BUTTON */}
           <Button
             variant="secondary"
             onClick={() => router.push("/")}
@@ -111,6 +127,7 @@ export default function ProductDetail({
           </Button>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
+
             {/* IMAGES */}
             <div>
               <div
@@ -123,41 +140,52 @@ export default function ProductDetail({
                   className="w-full h-full object-cover"
                 />
 
-                 {/* MOBILE OVERLAY */}
-                  <div className="
-                    absolute bottom-3 right-3 
-                    bg-black/60 text-white px-2 py-1 
-                    rounded-md text-xs font-medium 
-                    flex items-center gap-1
-                    sm:hidden
-                    pointer-events-none
-                  ">
-                    <Expand className="w-3 h-3" />
-                    Tik om te vergroten
-                  </div>
-
+                {/* MOBILE OVERLAY */}
+                <div className="
+                  absolute bottom-3 right-3 
+                  bg-black/60 text-white px-2 py-1 
+                  rounded-md text-xs font-medium 
+                  flex items-center gap-1
+                  sm:hidden
+                  pointer-events-none
+                ">
+                  <Expand className="w-3 h-3" />
+                  Tik om te vergroten
+                </div>
 
                 {/* DESKTOP OVERLAY */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="text-white text-lg">Klik om te vergroten</span>
+                <div className="
+                  absolute inset-0 bg-black/40 opacity-0 
+                  group-hover:opacity-100 transition-opacity 
+                  duration-300 flex items-center justify-center
+                ">
+                  <span className="text-white text-lg">
+                    Klik om te vergroten
+                  </span>
                 </div>
               </div>
 
               {/* ZOOM MODAL */}
               {isZoomed && (
                 <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+
                   <X
                     onClick={() => setIsZoomed(false)}
-                    className="absolute top-10 right-10 w-10 h-10 text-white bg-black/50 hover:bg-black/70 rounded-full p-2 cursor-pointer z-50"
+                    className="
+                      absolute top-10 right-10 w-10 h-10 
+                      text-white bg-black/50 hover:bg-black/70 
+                      rounded-full p-2 cursor-pointer z-50
+                    "
                   />
 
                   {/* LEFT ARROW */}
                   <button
                     className="
                       absolute left-5 top-1/2 -translate-y-1/2
-                      w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center
+                      w-10 h-10 sm:w-14 sm:h-14
                       bg-black/50 hover:bg-black/70
-                      rounded-full z-50 cursor-pointer
+                      rounded-full flex items-center justify-center
+                      cursor-pointer z-50
                     "
                     onClick={() =>
                       setSelectedImageIndex((prev) =>
@@ -169,12 +197,13 @@ export default function ProductDetail({
                   </button>
 
                   {/* RIGHT ARROW */}
-                 <button
+                  <button
                     className="
                       absolute right-5 top-1/2 -translate-y-1/2
-                      w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center
+                      w-10 h-10 sm:w-14 sm:h-14
                       bg-black/50 hover:bg-black/70
-                      rounded-full z-50 cursor-pointer
+                      rounded-full flex items-center justify-center
+                      cursor-pointer z-50
                     "
                     onClick={() =>
                       setSelectedImageIndex((prev) =>
@@ -211,11 +240,14 @@ export default function ProductDetail({
                     <button
                       key={index}
                       onClick={() => setSelectedImageIndex(index)}
-                      className={`w-20 h-20 rounded-lg overflow-hidden transition-all ${
-                        selectedImageIndex === index
-                          ? "ring-2 ring-primary shadow-lg"
-                          : "opacity-70 hover:opacity-100"
-                      }`}
+                      className={`
+                        w-20 h-20 rounded-lg overflow-hidden transition-all
+                        ${
+                          selectedImageIndex === index
+                            ? "ring-2 ring-primary shadow-lg"
+                            : "opacity-70 hover:opacity-100"
+                        }
+                      `}
                     >
                       <Image
                         src={image}
@@ -230,6 +262,7 @@ export default function ProductDetail({
 
             {/* PRODUCT INFO */}
             <div className="space-y-6">
+
               <div>
                 <Badge
                   variant="season"
@@ -240,9 +273,11 @@ export default function ProductDetail({
                     ? "Alle seizoenen"
                     : product.season}
                 </Badge>
+
                 <h1 className="text-3xl font-bold">{product.title}</h1>
               </div>
 
+              {/* PRICE / REQUEST */}
               <Card className="border-2 border-primary/10 bg-primary/20">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
@@ -260,12 +295,14 @@ export default function ProductDetail({
                 </CardContent>
               </Card>
 
+              {/* FEATURES */}
               <Card className="border-2 border-secondary/10 bg-secondary-light">
                 <CardContent className="p-6">
                   <h3 className="mb-4 flex items-center">
                     <Award className="w-5 h-5 mr-2 text-primary" />
                     Eigenschappen
                   </h3>
+
                   <div className="grid grid-cols-2 gap-3 text-sm">
                     {product.features.map((feature, i) => (
                       <div key={i} className="flex items-center">
@@ -277,13 +314,16 @@ export default function ProductDetail({
                 </CardContent>
               </Card>
 
+              {/* DIMENSIONS */}
               <Card className="border border-secondary-warm/10 bg-secondary/20">
                 <CardContent className="p-6">
                   <h3 className="mb-4 flex items-center">
                     <Package className="w-5 h-5 mr-2 text-primary" />
                     Afmetingen
                   </h3>
+
                   <div className="grid grid-cols-3 gap-4 text-sm">
+
                     <div>
                       <span className="font-bold text-muted-foreground">
                         Hoogte:
@@ -302,6 +342,7 @@ export default function ProductDetail({
                   </div>
                 </CardContent>
               </Card>
+
             </div>
           </div>
         </div>
