@@ -3,7 +3,7 @@
 import { useState, useEffect, use } from "react";
 import { useRouter } from "next/navigation";
 import Request from "../../components/Request";
-import { ArrowLeft, X, Clock, Award, Package, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, X, Clock, Award, Package, ChevronLeft, ChevronRight, Expand } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { Badge } from "../../components/ui/badge";
@@ -123,6 +123,21 @@ export default function ProductDetail({
                   className="w-full h-full object-cover"
                 />
 
+                 {/* MOBILE OVERLAY */}
+                  <div className="
+                    absolute bottom-3 right-3 
+                    bg-black/60 text-white px-2 py-1 
+                    rounded-md text-xs font-medium 
+                    flex items-center gap-1
+                    sm:hidden
+                    pointer-events-none
+                  ">
+                    <Expand className="w-3 h-3" />
+                    Tik om te vergroten
+                  </div>
+
+
+                {/* DESKTOP OVERLAY */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <span className="text-white text-lg">Klik om te vergroten</span>
                 </div>
