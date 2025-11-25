@@ -275,8 +275,8 @@ export const products: Product[] = [
     images: [schilderij7Img],
     season: 'zomer',
     dimensions: {
-      height: '100 cm',
-      width: '70 cm',
+      height: '40 cm',
+      width: '30 cm',
     },
     features: [
     'Luchtig en humoristisch',

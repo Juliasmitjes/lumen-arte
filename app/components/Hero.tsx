@@ -3,11 +3,8 @@
 import { Button } from "./ui/button";
 import Image from "next/image";
 import kaasdoekImg from "../../public/images/kaasdoek.jpg";
+import { ChevronDown } from 'lucide-react';
 
-type HeroProps = {
-  activeCategory: "sculpturen" | "schilderijen";
-  setActiveCategory: (value: "sculpturen" | "schilderijen") => void;
-};
 
 const Hero = () => {
   return (
@@ -53,16 +50,16 @@ const Hero = () => {
               asChild
               size="lg"
               variant="default"
-              className="rounded-full px-6 font-medium w-full sm:w-auto text-base text-primary-foreground"
+              className="font-semibold lg:text-lg"            
             >
-              <a href="#galerij">Bekijk mijn werk</a>
+              <a href="#galerij">Bekijk mijn werk  <ChevronDown /></a>
             </Button>
 
             <Button
               asChild
               size="lg"
-              variant="hero"
-              className="rounded-full px-6 font-medium w-full sm:w-auto text-base text-accent-foreground"
+              variant="outline"
+              className="font-semibold lg:text-lg"
             >
               <a href="#over-mij">Leer mij kennen</a>
             </Button>

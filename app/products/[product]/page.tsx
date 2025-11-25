@@ -165,10 +165,6 @@ export default function ProductDetail({ params }: { params: { product: string } 
                     <h1 className="text-3xl font-bold text-foreground mb-2">{product.title}</h1>
                   </div>
                 </div>
-
-                <div className="sm:text-3xl text-2xl font-bold mb-6 text-primary">
-                  Prijs op aanvraag
-                </div>
               </div>
 
               {/* CTA */}
@@ -194,6 +190,11 @@ export default function ProductDetail({ params }: { params: { product: string } 
                       ))}
                     </select> */}
                     <Request productId={product.id.toString()} />
+                  </div>
+                  <div>
+                    <p className="mt-4 text-sm text-muted-foreground font-business">
+                      Prijs op aanvraag. Neem contact op voor meer informatie.
+                    </p>
                   </div>
                  </CardContent>
               </Card>
