@@ -22,7 +22,7 @@ const TimelineItem = ({ year, title, description, image, isLeft }: TimelineItemP
     >
       {/* Timeline dot */}
       <div className="absolute left-1/2 -translate-x-1/2 z-10 hidden md:block">
-        <div className="w-4 h-4 rounded-full bg-secondary border-4 border-accent animate-pulse-glow" />
+        <div className="w-4 h-4 rounded-full bg-primary border-4 border-primary animate-pulse-glow" />
       </div>
 
       {/* Content card */}
@@ -58,7 +58,7 @@ const TimelineItem = ({ year, title, description, image, isLeft }: TimelineItemP
 
       {/* Mobile timeline dot */}
       <div className="absolute left-0 top-0 md:hidden">
-        <div className="w-3 h-3 rounded-full bg-timeline-dot border-2 border-background" />
+        <div className="w-3 h-3 rounded-full bg-primary border-2 border-primary" />
       </div>
     </motion.div>
   );

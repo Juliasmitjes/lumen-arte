@@ -52,7 +52,7 @@ const TimelineInput = () => {
       <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-foreground via-secondary to-primary hidden md:block" />
       
       {/* Timeline line - mobile */}
-      <div className="absolute left-1.5 top-0 bottom-0 w-px bg-gradient-to-b from-foreground via-secondary  to-primary md:hidden" />
+      <div className="absolute left-1.5 top-0 bottom-0 w-px bg-gradient-to-b from-foreground via-secondary to-primary md:hidden" />
 
       <div className="container max-w-6xl mx-auto px-4 md:px-8">
       
@@ -68,19 +68,6 @@ const TimelineInput = () => {
             />
           ))}
         </div>
-
-        {/* End marker */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.2 }}
-          className="flex justify-center mt-8"
-        >
-          <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
-            <div className="w-2 h-2 rounded-full bg-primary-foreground" />
-          </div>
-        </motion.div>
       </div>
     </section>
   );
