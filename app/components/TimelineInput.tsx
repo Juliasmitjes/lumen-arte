@@ -50,25 +50,7 @@ const TimelineInput = () => {
       <div className="absolute left-1.5 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-timeline-line to-transparent md:hidden" />
 
       <div className="container max-w-6xl mx-auto px-4 md:px-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16 md:mb-24"
-        >
-          <span className="inline-block text-primary font-medium tracking-widest uppercase text-sm mb-4">
-            Our Journey
-          </span>
-          <h2 className="font-display text-4xl md:text-6xl font-semibold text-foreground mb-6">
-            Moments in Time
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            A collection of memories that shaped who we are. Each photograph tells a story, 
-            each moment a stepping stone in our journey.
-          </p>
-        </motion.div>
+      
 
         {/* Timeline items */}
         <div className="relative pl-8 md:pl-0">

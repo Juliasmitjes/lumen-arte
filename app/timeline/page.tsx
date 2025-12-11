@@ -6,9 +6,7 @@ import TimelineInput from "../components/TimelineInput";
 const Timeline = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
       <header className="relative h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
-        {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background" />
         
         {/* Decorative elements */}
@@ -25,7 +23,7 @@ const Timeline = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="inline-block text-primary font-medium tracking-[0.3em] uppercase text-xs md:text-sm mb-6"
+            className="inline-block mt-50 text-primary font-medium tracking-[0.3em] uppercase text-xs md:text-sm mb-6"
           >
             A Visual Story
           </motion.span>
@@ -58,13 +56,6 @@ const Timeline = () => {
       <main>
         <TimelineInput />
       </main>
-
-      {/* Footer */}
-      <footer className="py-12 text-center border-t border-border">
-        <p className="text-muted-foreground text-sm">
-          Crafted with memories and love
-        </p>
-      </footer>
     </div>
   );
 };
