@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
+import { StaticImageData } from "next/image";
+import Image from "next/image";
 
 interface TimelineItemProps {
   year: string;
   title: string;
   description: string;
-  image: string;
+  image: StaticImageData;
   isLeft: boolean;
   index: number;
 }
@@ -28,7 +30,7 @@ const TimelineItem = ({ year, title, description, image, isLeft, index }: Timeli
         <div className="group relative overflow-hidden rounded-lg bg-card shadow-lg hover:shadow-xl transition-all duration-500">
           {/* Image */}
           <div className="relative h-48 md:h-64 overflow-hidden">
-            <img
+            <Image
               src={image}
               alt={title}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

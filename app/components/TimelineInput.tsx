@@ -1,42 +1,44 @@
 import { motion } from "framer-motion";
 import TimelineItem from "./ui/timelineItem";
 
+import Moment1 from "../../public/images/moment1.jpg"
+
 const timelineData = [
   {
-    year: "2018",
-    title: "The Beginning",
-    description: "Our journey started with a simple idea and a passion for creating something meaningful. This was the moment everything changed.",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop",
+    year: "Februari 2025",
+    title: "Het begin",
+    description: "Met een biertje in onze hand proostten wij op het ontstaan van LumenArte ...",
+    image: Moment1,
   },
   {
     year: "2019",
     title: "First Milestone",
     description: "We celebrated our first major achievement, bringing together a community of like-minded individuals who shared our vision.",
-    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&h=400&fit=crop",
+    image: Moment1,
   },
   {
     year: "2020",
     title: "Growing Together",
     description: "Despite challenges, we adapted and grew stronger. This year taught us resilience and the importance of staying connected.",
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=400&fit=crop",
+    image: Moment1,
   },
   {
     year: "2021",
     title: "New Horizons",
     description: "Expanding our reach and exploring new possibilities. Every step forward brought exciting opportunities and unforgettable experiences.",
-    image: "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=600&h=400&fit=crop",
+    image: Moment1,
   },
   {
     year: "2022",
     title: "Making Memories",
     description: "A year filled with precious moments and cherished memories. We documented our journey through beautiful captures of time.",
-    image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=600&h=400&fit=crop",
+    image: Moment1,
   },
   {
     year: "2023",
     title: "Looking Forward",
     description: "With gratitude for the past and excitement for the future, we continue writing our story one chapter at a time.",
-    image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=400&fit=crop",
+    image: Moment1,
   },
 ];
 
