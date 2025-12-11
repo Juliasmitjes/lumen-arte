@@ -23,11 +23,10 @@ const Timeline = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="inline-block mt-50 text-primary font-medium tracking-[0.3em] uppercase text-xs md:text-sm mb-6"
-          >
+            className="font-playful text-4xl lg:text-5xl text-accent mb-4 mt-10 text-center sm:text-start lg:mt-0">
             Mijn verhaal
           </motion.span>
-          <h1 className="font-playful text-5xl md:text-7xl lg:text-8xl font-semibold text-foreground mb-6">
+          <h1 className="text-3xl lg:text-4xl text-center sm:text-start font-bold text-foreground mb-6">
             Een reis door de tijd
           </h1>
         </motion.div>
