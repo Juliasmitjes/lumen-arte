@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import TimelineItem from "./ui/timelineItem";
 
-import Moment1 from "../../public/images/moment1.jpg"
+import Moment1 from "../../public/images/moment1.jpg";
+import Moment2 from "../../public/images/moment2.jpg";
+import Moment3 from "../../public/images/moment3.jpg";
+import Moment4 from "../../public/images/moment4.jpg";
 
 const timelineData = [
   {
@@ -11,33 +14,33 @@ const timelineData = [
     image: Moment1,
   },
   {
-    year: "2019",
-    title: "First Milestone",
-    description: "We celebrated our first major achievement, bringing together a community of like-minded individuals who shared our vision.",
+    year: "Oktober 2025",
+    title: "Website live",
+    description: "De website is live! ... ",
+    image: Moment2,
+  },
+  {
+    year: "November 2025",
+    title: "Eerste expositie",
+    description: "De eerste officiële expositie in de Mariënburg ...",
+    image: Moment3,
+  },
+  {
+    year: "December 2025",
+    title: "Verkoop",
+    description: "Twee bomen zijn verkocht ...",
+    image: Moment4,
+  },
+  {
+    year: "xxx",
+    title: "xxx",
+    description: "xxx",
     image: Moment1,
   },
   {
-    year: "2020",
-    title: "Growing Together",
-    description: "Despite challenges, we adapted and grew stronger. This year taught us resilience and the importance of staying connected.",
-    image: Moment1,
-  },
-  {
-    year: "2021",
-    title: "New Horizons",
-    description: "Expanding our reach and exploring new possibilities. Every step forward brought exciting opportunities and unforgettable experiences.",
-    image: Moment1,
-  },
-  {
-    year: "2022",
-    title: "Making Memories",
-    description: "A year filled with precious moments and cherished memories. We documented our journey through beautiful captures of time.",
-    image: Moment1,
-  },
-  {
-    year: "2023",
-    title: "Looking Forward",
-    description: "With gratitude for the past and excitement for the future, we continue writing our story one chapter at a time.",
+    year: "xxx",
+    title: "xxx",
+    description: "xxx",
     image: Moment1,
   },
 ];
