@@ -2,13 +2,16 @@
 
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
-import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
 import Kunstenaar from "../../public/images/kunstenaar.jpg";
+import Timeline from '../timeline/page'
 
 
 const About = () => {
   const router = useRouter();
+
+
 
   return (
  <section id="over-mij" className="min-h-screen flex items-center gradient-earth overflow-hidden">
@@ -29,6 +32,10 @@ const About = () => {
             <Button variant="heroref" size="lg" onClick={() => router.push("/#contact")}>
               Neem contact op
             </Button>
+
+            <Link href="/timeline">
+              <Button variant="heroref" size="lg">Bekijk de timeline</Button>
+            </Link>
           </div>
         </div>
 

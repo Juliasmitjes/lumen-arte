@@ -3,7 +3,6 @@
 import Image from "next/image";
 import kaasdoekTexture from "../../public/images/kaasdoekTexture.jpg";
 import { Lightbulb, Leaf, Heart, Recycle } from "lucide-react";
-import { Button } from "./ui/button";
 
 const Story = () => {
 
