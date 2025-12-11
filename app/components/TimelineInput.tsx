@@ -32,15 +32,15 @@ const timelineData = [
     image: Moment4,
   },
   {
-    year: "xxx",
-    title: "xxx",
-    description: "xxx",
+    year: "xxx1",
+    title: "xxx1",
+    description: "xxx1",
     image: Moment1,
   },
   {
-    year: "xxx",
-    title: "xxx",
-    description: "xxx",
+    year: "xxx2",
+    title: "xxx2",
+    description: "xxx2",
     image: Moment1,
   },
 ];

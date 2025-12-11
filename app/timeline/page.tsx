@@ -1,9 +1,20 @@
 "use client";
 
+import { useLayoutEffect } from "react";
 import { motion } from "framer-motion";
 import TimelineInput from "../components/TimelineInput";
 
 const Timeline = () => {
+     useLayoutEffect(() => {
+    if (typeof window !== "undefined" && "scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+    if (typeof window !== "undefined") {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
+
   return (
     <div className="min-h-screen bg-background">
       <header className="relative h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
@@ -27,7 +38,7 @@ const Timeline = () => {
             Mijn verhaal
           </motion.span>
           <h1 className="text-3xl lg:text-4xl text-center sm:text-start font-bold text-foreground mb-6">
-            Een reis door de tijd
+            Een reis door de tijd 
           </h1>
         </motion.div>
       </header>
