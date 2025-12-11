@@ -37,7 +37,7 @@ const Timeline = () => {
             className="font-playful text-4xl lg:text-5xl text-accent mb-4 mt-10 text-center sm:text-start lg:mt-0">
             Mijn verhaal
           </motion.span>
-          <h1 className="text-3xl lg:text-4xl text-center sm:text-start font-bold text-foreground mb-6">
+          <h1 className="text-3xl lg:text-4xl text-center sm:text-start font-bold text-foreground lg:mb-6">
             Een reis door de tijd 
           </h1>
         </motion.div>

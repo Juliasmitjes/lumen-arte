@@ -54,12 +54,7 @@ const TimelineItem = ({ year, title, description, image, isLeft }: TimelineItemP
           {/* Accent line */}
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-primary/50 to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
         </div>
-      </div>
-
-      {/* Mobile timeline dot */}
-      <div className="absolute left-0 top-0 md:hidden">
-        <div className="w-3 h-3 rounded-full bg-primary border-2 border-primary" />
-      </div>
+      </div>  
     </motion.div>
   );
 };
