@@ -11,7 +11,7 @@ interface TimelineItemProps {
   index: number;
 }
 
-const TimelineItem = ({ year, title, description, image, isLeft, index }: TimelineItemProps) => {
+const TimelineItem = ({ year, title, description, image, isLeft }: TimelineItemProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
@@ -22,7 +22,7 @@ const TimelineItem = ({ year, title, description, image, isLeft, index }: Timeli
     >
       {/* Timeline dot */}
       <div className="absolute left-1/2 -translate-x-1/2 z-10 hidden md:block">
-        <div className="w-4 h-4 rounded-full bg-timeline-dot border-4 border-background animate-pulse-glow" />
+        <div className="w-4 h-4 rounded-full bg-secondary border-4 border-accent animate-pulse-glow" />
       </div>
 
       {/* Content card */}
@@ -52,7 +52,7 @@ const TimelineItem = ({ year, title, description, image, isLeft, index }: Timeli
           </div>
 
           {/* Accent line */}
-          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-primary/50 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-primary/50 to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
         </div>
       </div>
 

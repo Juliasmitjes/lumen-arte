@@ -49,10 +49,10 @@ const TimelineInput = () => {
   return (
     <section className="relative pb-16 md:pb-24">
       {/* Timeline line - desktop */}
-      <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-timeline-line to-transparent hidden md:block" />
+      <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-foreground via-secondary to-primary hidden md:block" />
       
       {/* Timeline line - mobile */}
-      <div className="absolute left-1.5 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-timeline-line to-transparent md:hidden" />
+      <div className="absolute left-1.5 top-0 bottom-0 w-px bg-gradient-to-b from-foreground via-secondary  to-primary md:hidden" />
 
       <div className="container max-w-6xl mx-auto px-4 md:px-8">
       
