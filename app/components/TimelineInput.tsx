@@ -42,7 +42,7 @@ const timelineData = [
 
 const TimelineInput = () => {
   return (
-    <section className="relative py-16 md:py-24">
+    <section className="relative pb-16 md:pb-24">
       {/* Timeline line - desktop */}
       <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-timeline-line to-transparent hidden md:block" />
       
