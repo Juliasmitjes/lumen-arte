@@ -61,9 +61,19 @@ const About = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10 lg:mb-0 lg:hidden">
-          <Button variant="heroref" size="lg" onClick={() => router.push("/#contact")}>
+          <Button
+            variant="heroref"
+            size="lg"
+            className="w-full sm:w-auto"
+            onClick={() => router.push("/#contact")}
+          >
             Neem contact op
           </Button>
+          <Link href="/timeline" className="w-full sm:w-auto">
+            <Button variant="outlineref" size="lg" className="w-full sm:w-auto">
+              Bekijk mijn reis
+            </Button>
+          </Link>
         </div>
      </div>
     </div>

@@ -120,10 +120,10 @@ export default function ProductDetail({
           <Button
             variant="secondary"
             onClick={() => router.push("/")}
-            className="mb-6 hover:bg-secondary/50"
+            className="hidden lg:block mb-6 px-10 hover:bg-secondary/50"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Terug naar home
+            Home
           </Button>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">

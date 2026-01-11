@@ -2,7 +2,10 @@
 
 import { useLayoutEffect } from "react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import TimelineInput from "../components/TimelineInput";
+import { Button } from "../components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 const Timeline = () => {
      useLayoutEffect(() => {
@@ -14,6 +17,8 @@ const Timeline = () => {
     }
   }, []);
 
+  const router = useRouter();
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -23,6 +28,18 @@ const Timeline = () => {
         {/* Decorative elements */}
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-primary/5 blur-3xl" />
         <div className="absolute bottom-20 right-10 w-48 h-48 rounded-full bg-primary/5 blur-3xl" />
+
+        <div className="absolute top-6 mt-16 left-6 z-20">
+            {/* BACK BUTTON */}
+          <Button
+            variant="secondary"
+            onClick={() => router.push("/")}
+            className="hidden lg:block mb-6 px-10 hover:bg-secondary/50"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Home
+          </Button>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
