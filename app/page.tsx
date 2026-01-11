@@ -8,8 +8,8 @@ import Contact from "./components/Contact";
 
 
 export default function Home() {
-   const [activeCategory, setActiveCategory] = useState<
-    "sculpturen" | "schilderijen"
+  const [activeCategory, setActiveCategory] = useState<
+    "sculpturen" | "schilderijen" | "doek-aan-de-muur"
   >("sculpturen");
 
   return (

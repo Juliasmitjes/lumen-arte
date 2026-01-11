@@ -7,11 +7,11 @@ import { products } from "./data/Products";
 import Image from "next/image";
 import Link from "next/link";
 
+type GalleryCategory = "sculpturen" | "schilderijen" | "doek-aan-de-muur";
+
 interface GalleryProps {
-  activeCategory: "sculpturen" | "schilderijen";
-  setActiveCategory: (
-    value: "sculpturen" | "schilderijen"
-  ) => void;
+  activeCategory: GalleryCategory;
+  setActiveCategory: (value: GalleryCategory) => void;
 }
 
 const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
@@ -33,13 +33,14 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
             p-2
             rounded-4xl sm:rounded-full
             bg-white/40 backdrop-blur-md shadow-soft
-            w-full sm:w-90 mx-auto mb-14
+            w-full sm:max-w-xl mx-auto mb-14
             items-center justify-center
           "
         >
           {[
             { key: "sculpturen", label: "Lichtsculpturen" },
             { key: "schilderijen", label: "Pasteltekeningen" },
+            { key: "doek-aan-de-muur", label: "Doek aan de muur" },
           ].map((filter) => (
             <Button
               key={filter.key}
@@ -55,7 +56,7 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
               <a
                 href="#galerij"
                 onClick={() =>
-                  setActiveCategory(filter.key as "sculpturen" | "schilderijen")
+                  setActiveCategory(filter.key as GalleryCategory)
                 }
               >
                 {filter.label}
@@ -86,10 +87,20 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
           </div>
         )}
 
+        {/* HEADER doek aan de muur */}
+        {activeCategory === "doek-aan-de-muur" && (
+          <div className="text-center mb-16">
+            <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4 pt-10 lg:pt-0">
+              Doek aan de muur
+            </h2>
+          </div>
+        )}
+
         {/* GALLERY GRID */}
         <div
           className={
-            activeCategory === "schilderijen"
+            activeCategory === "schilderijen" ||
+            activeCategory === "doek-aan-de-muur"
               ? "flex flex-col gap-10"
               : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           }
