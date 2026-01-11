@@ -206,7 +206,7 @@ export const products: Product[] = [
     'Uniek kunstwerk',
     'Klaar om in te lijsten of op te hangen'
     ],
-    inStock: true,
+    inStock: false,
     category: 'schilderijen'
   },
   {
@@ -326,7 +326,7 @@ export const products: Product[] = [
     'Ideaal voor woon- en eetkamers'
     ],
 
-    inStock: true,
+    inStock: false,
     category: 'schilderijen'
   },
 ];

@@ -97,6 +97,10 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
           {filteredProducts.map((product) => {
             const isPainting = product.category === "schilderijen";
             const isSculpture = product.category === "sculpturen";
+            const paintingHeight = isPainting ? parseInt(product.dimensions.height, 10) : 0;
+            const paintingWidth = isPainting ? parseInt(product.dimensions.width, 10) : 0;
+            const isSmallPainting = isPainting && Math.max(paintingHeight, paintingWidth) <= 50;
+            const paintingPrice = isSmallPainting ? "€ 200" : "€ 300";
 
             return (
               <div
@@ -112,6 +116,11 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
                   <div className="flex flex-col md:flex-row gap-6 p-8 md:p-10 items-center md:items-start">
 
                     <div className="relative w-full md:w-[40%]">
+                      {!product.inStock && (
+                        <div className="absolute top-2 left-2 z-10 rounded-full bg-red-600/90 px-3 py-1 text-xs font-semibold text-white">
+                          Verkocht
+                        </div>
+                      )}
                       <div className="rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.07]">
                         <Image
                           src={product.images[0]}
@@ -128,6 +137,9 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
 
                       <p className="text-sm text-accent-warm font-business">
                         Formaat: {product.dimensions.height} × {product.dimensions.width}
+                      </p>
+                      <p className="text-sm text-muted-foreground font-business">
+                        Prijs: {paintingPrice} incl. lijst
                       </p>
                     </div>
 
