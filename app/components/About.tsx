@@ -15,7 +15,7 @@ const About = () => {
 
   return (
  <section id="over-mij" className="min-h-screen flex items-center gradient-earth overflow-hidden">
-  <div className="container mx-auto px-6 z-10">
+  <div className="container mx-auto px-6 lg:py-20 z-10">
     <div className="max-w-6xl mx-auto">
       <div className="grid lg:grid-cols-2 lg:gap-8 items-center">
         
