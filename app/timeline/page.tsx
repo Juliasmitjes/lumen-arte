@@ -34,7 +34,7 @@ const Timeline = () => {
           <Button
             variant="secondary"
             onClick={() => router.push("/")}
-            className="hidden lg:block mb-6 px-10 hover:bg-secondary/50"
+            className="hidden lg:inline-flex mb-6 px-6 hover:bg-secondary/50"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Home
