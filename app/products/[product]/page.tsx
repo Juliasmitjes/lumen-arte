@@ -140,6 +140,12 @@ export default function ProductDetail({
                   className="w-full h-full object-cover"
                 />
 
+                {!product.inStock && (
+                  <div className="absolute top-3 left-3 z-10 rounded-full bg-red-600/90 px-3 py-1 text-xs font-semibold text-white">
+                    Verkocht
+                  </div>
+                )}
+
                 {/* MOBILE OVERLAY */}
                 <div className="
                   absolute bottom-3 right-3 
@@ -280,12 +286,19 @@ export default function ProductDetail({
               {/* PRICE / REQUEST */}
               <Card className="border-2 border-primary/10 bg-primary/20">
                 <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Clock className="w-5 h-5 mr-2 text-green-600" />
-                    <span className="text-green-600">
-                      Op voorraad – Handgemaakt op bestelling
-                    </span>
-                  </div>
+                  {product.inStock ? (
+                    <div className="flex items-center mb-4">
+                      <Clock className="w-5 h-5 mr-2 text-green-600" />
+                      <span className="text-green-600">
+                        Op voorraad ? Handgemaakt op bestelling
+                      </span>
+                    </div>
+                  ) : (
+                    <div className="flex items-center mb-4">
+                      <X className="w-5 h-5 mr-2 text-red-600" />
+                      <span className="text-red-600">Verkocht</span>
+                    </div>
+                  )}
 
                   <Request productId={product.id.toString()} />
 

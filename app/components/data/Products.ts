@@ -72,7 +72,7 @@ export const products: Product[] = [
       'Seizoensgebonden decoratie mogelijk',
       'Mimaal materiaalgebruik met groots effect',
     ],
-    inStock: true,
+    inStock: false,
     category: 'sculpturen'
   },
   {

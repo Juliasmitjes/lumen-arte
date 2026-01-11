@@ -145,6 +145,12 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
 
+                      {!product.inStock && (
+                        <div className="absolute top-3 left-3 z-10 rounded-full bg-red-600/90 px-3 py-1 text-xs font-semibold text-white">
+                          Verkocht
+                        </div>
+                      )}
+
                       {/* Hover overlay */}
                       <div
                         className={`absolute inset-0 bg-primary opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center ${
