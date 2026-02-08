@@ -30,4 +30,9 @@ export interface Painting extends BaseProduct {
   dimensions: PaintingDimensions;
 }
 
-export type Product = Sculpture | Painting;
+export interface Doek extends BaseProduct {
+  category: 'doek-aan-de-muur';
+  dimensions: PaintingDimensions;
+}
+
+export type Product = Sculpture | Painting | Doek;

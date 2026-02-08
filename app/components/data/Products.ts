@@ -55,6 +55,14 @@ import boomStreep3 from "../../../public/images/BoomStreep/BoomStreep3.jpg";
 import boomStreep4 from "../../../public/images/BoomStreep/BoomStreep4.jpg";
 import boomStreep5 from "../../../public/images/BoomStreep/BoomStreep5.jpg";
 
+// -- doeken --
+import doek1Img from "../../../public/images/Doeken/doek1.png";
+import doek2Img from "../../../public/images/Doeken/doek2.jpg";
+import doek3Img from "../../../public/images/Doeken/doek3.png";
+import doek4Img from "../../../public/images/Doeken/doek4.png";
+
+
+
 export const products: Product[] = [
   {
     id: 1,
@@ -328,6 +336,60 @@ export const products: Product[] = [
 
     inStock: false,
     category: 'schilderijen'
+  },
+  {
+    id: 15,
+    title: 'Krullen',
+    price: 240,
+    images: [doek1Img],
+    season: 'lente',
+    dimensions: {
+      height: '50 cm',
+      width: '50 cm',
+    },
+     features: [
+    'Handgemaakt',
+    'Klaar om op te hangen',
+    'Uniek werk',
+  ],
+  inStock: true,
+  category: 'doek-aan-de-muur',
+  },
+  {
+    id: 16,
+    title: 'Vliegen',
+    price: 260,
+    images: [doek2Img, doek3Img],
+    season: 'zomer',
+    dimensions: {
+      height: '50 cm',
+      width: '50 cm',
+    },
+      features: [
+    'Handgemaakt',
+    'Klaar om op te hangen',  
+    'Uniek werk',
+  ],
+  inStock: true,
+  category: 'doek-aan-de-muur',
+  },
+  {
+    id: 17,
+    title: 'Krullen', 
+    price: 240,
+    images: [doek4Img],
+    season: 'lente',
+    dimensions: {
+      height: '50 cm',
+      width: '50 cm',
+    },
+      features: [
+    'Handgemaakt',
+    'Klaar om op te hangen',
+    'Uniek werk',
+  ],
+  inStock: true,
+  category: 'doek-aan-de-muur',
   },
 ];
 

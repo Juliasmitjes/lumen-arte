@@ -108,6 +108,7 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
           {filteredProducts.map((product) => {
             const isPainting = product.category === "schilderijen";
             const isSculpture = product.category === "sculpturen";
+            const isDoek = product.category === "doek-aan-de-muur";
             const paintingHeight = isPainting ? parseInt(product.dimensions.height, 10) : 0;
             const paintingWidth = isPainting ? parseInt(product.dimensions.width, 10) : 0;
             const isSmallPainting = isPainting && Math.max(paintingHeight, paintingWidth) <= 50;
