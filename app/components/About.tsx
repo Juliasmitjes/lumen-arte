@@ -37,7 +37,7 @@ const About = () => {
             </Button>
 
             <Link href="/timeline">
-              <Button variant="outlineref" size="lg">Bekijk mijn reis</Button>
+              <Button variant="outlineref" size="lg">Exposities</Button>
             </Link>
           </div>
         </div>
