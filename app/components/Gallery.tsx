@@ -106,13 +106,19 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
           }
         >
           {filteredProducts.map((product) => {
-            const isPainting = product.category === "schilderijen";
+            const isPaintingLike =
+              product.category === "schilderijen" ||
+              product.category === "doek-aan-de-muur";
             const isSculpture = product.category === "sculpturen";
-            const isDoek = product.category === "doek-aan-de-muur";
-            const paintingHeight = isPainting ? parseInt(product.dimensions.height, 10) : 0;
-            const paintingWidth = isPainting ? parseInt(product.dimensions.width, 10) : 0;
-            const isSmallPainting = isPainting && Math.max(paintingHeight, paintingWidth) <= 50;
-            const paintingPrice = isSmallPainting ? "€ 200" : "€ 300";
+            const paintingHeight = isPaintingLike
+              ? parseInt(product.dimensions.height, 10)
+              : 0;
+            const paintingWidth = isPaintingLike
+              ? parseInt(product.dimensions.width, 10)
+              : 0;
+            const isSmallPainting =
+              isPaintingLike && Math.max(paintingHeight, paintingWidth) <= 50;
+            const paintingPrice = isSmallPainting ? "??? 200" : "??? 300";
 
             return (
               <div
@@ -124,7 +130,7 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
                 onMouseLeave={() => isSculpture && setHoveredItem(null)}
               >
                 {/* PASTELTEKENINGEN */}
-                {isPainting ? (
+                {isPaintingLike ? (
                   <div className="flex flex-col md:flex-row gap-6 p-8 md:p-10 items-center md:items-start">
 
                     <div className="relative w-full md:w-[40%]">
