@@ -9,10 +9,14 @@ const exhibition = {
   location: "Mariënburg Nijmegen",
   date: "November 2025",
   images: [
-    "/images/BoomBruin/BoomBruin1.jpg",
-    "/images/BoomPaars/BoomPaars1.jpg",
-    "/images/BoomKrul/BoomKrul1.jpg",
-    "/images/Doeken/doek2.jpg",
+    "/images/Exposities/GlowUp/expo1.jpg",
+    "/images/Exposities/GlowUp/expo2.jpg",
+    "/images/Exposities/GlowUp/expo3.jpg",
+    "/images/Exposities/GlowUp/expo4.jpeg",
+    "/images/Exposities/GlowUp/expo5.jpeg",
+    "/images/Exposities/GlowUp/expo6.jpeg",
+    "/images/Exposities/GlowUp/expo7.jpeg",
+    "/images/Exposities/GlowUp/expo8.jpeg",
   ],
 };
 
@@ -44,7 +48,10 @@ const Timeline = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {exhibition.images.slice(0, 2).map((image) => (
+              {[1, 2]
+                .map((index) => exhibition.images[index])
+                .filter(Boolean)
+                .map((image) => (
                 <div
                   key={image}
                   className="rounded-2xl overflow-hidden shadow-soft border border-white/20 bg-white/30 backdrop-blur-sm"
@@ -78,7 +85,7 @@ const Timeline = () => {
               </div>
               <div className="rounded-xl overflow-hidden">
                 <Image
-                  src={exhibition.images[1]}
+                  src={exhibition.images[7]}
                   alt={`${exhibition.title} beeld 2`}
                   width={600}
                   height={600}
@@ -87,7 +94,7 @@ const Timeline = () => {
               </div>
               <div className="rounded-xl overflow-hidden">
                 <Image
-                  src={exhibition.images[2]}
+                  src={exhibition.images[3]}
                   alt={`${exhibition.title} beeld 3`}
                   width={600}
                   height={600}
@@ -96,7 +103,7 @@ const Timeline = () => {
               </div>
               <div className="col-span-2 rounded-xl overflow-hidden">
                 <Image
-                  src={exhibition.images[3]}
+                  src={exhibition.images[6]}
                   alt={`${exhibition.title} beeld 4`}
                   width={1200}
                   height={700}
