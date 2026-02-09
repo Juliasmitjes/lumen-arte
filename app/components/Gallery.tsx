@@ -109,6 +109,10 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
             const isPaintingLike =
               product.category === "schilderijen" ||
               product.category === "doek-aan-de-muur";
+            const isDoekAanDeMuur = product.category === "doek-aan-de-muur";
+            const isDoekSmallImage =
+              isDoekAanDeMuur &&
+              ["Krullen", "Vliegen", "Groen"].includes(product.title);
             const isSculpture = product.category === "sculpturen";
             const paintingHeight = isPaintingLike
               ? parseInt(product.dimensions.height, 10)
@@ -118,7 +122,7 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
               : 0;
             const isSmallPainting =
               isPaintingLike && Math.max(paintingHeight, paintingWidth) <= 50;
-            const paintingPrice = isSmallPainting ? "??? 200" : "??? 300";
+            const paintingPrice = isSmallPainting ? "200" : "300";
 
             return (
               <div
@@ -133,7 +137,13 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
                 {isPaintingLike ? (
                   <div className="flex flex-col md:flex-row gap-6 p-8 md:p-10 items-center md:items-start">
 
-                    <div className="relative w-full md:w-[40%]">
+                    <div
+                      className={`relative w-full md:w-[40%] ${
+                        isDoekSmallImage
+                          ? "md:w-[30%] lg:w-[26%] max-w-[260px] mx-auto"
+                          : ""
+                      }`}
+                    >
                       {!product.inStock && (
                         <div className="absolute top-2 left-2 z-10 rounded-full bg-red-600/90 px-3 py-1 text-xs font-semibold text-white">
                           Verkocht

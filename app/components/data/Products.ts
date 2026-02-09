@@ -375,7 +375,7 @@ export const products: Product[] = [
   },
   {
     id: 17,
-    title: 'Krullen', 
+    title: 'Groen', 
     price: 240,
     images: [doek4Img],
     season: 'lente',
