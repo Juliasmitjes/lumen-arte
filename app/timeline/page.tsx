@@ -4,10 +4,10 @@ import { ArrowLeft, MapPin, Calendar } from "lucide-react";
 import { Button } from "../components/ui/button";
 
 const exhibition = {
-  title: "Zomerlicht",
-  subtitle: "Selectie lichtsculpturen en doeken",
-  location: "Atelier Nijmegen",
-  date: "Juni 2025",
+  title: "Glow Up Festival",
+  subtitle: "Selectie lichtsculpturen",
+  location: "Mariënburg Nijmegen",
+  date: "November 2025",
   images: [
     "/images/BoomBruin/BoomBruin1.jpg",
     "/images/BoomPaars/BoomPaars1.jpg",
@@ -114,9 +114,7 @@ const Timeline = () => {
                   {exhibition.subtitle}
                 </p>
                 <p className="text-base text-muted-foreground font-business mb-6">
-                  Een intieme presentatie met meerdere installaties en doeken in
-                  één ruimte. Sfeerbeelden tonen het samenspel tussen licht en
-                  materiaal.
+                  In de donkere wintermaanden zorgde het Glow Up Festival in Bibliotheek Mariënburg voor een lichtpuntje onder jongeren. Mijn lichtcuplturen droegen bij aan de magische sfeer.
                 </p>
                 <div className="flex flex-wrap gap-4 text-sm text-muted-foreground font-business">
                   <span className="inline-flex items-center gap-2">
