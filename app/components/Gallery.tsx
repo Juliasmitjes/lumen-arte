@@ -149,12 +149,27 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
                           Verkocht
                         </div>
                       )}
-                      <div className="rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.07]">
-                        <Image
-                          src={product.images[0]}
-                          alt={product.title}
-                          className="w-full h-auto object-cover"
-                        />
+                      <div className="group rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.07] bg-muted/10">
+                        {product.title === "Vliegen" && product.images[1] ? (
+                          <div className="relative">
+                            <Image
+                              src={product.images[0]}
+                              alt={product.title}
+                              className="w-full h-auto object-cover block transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+                            />
+                            <Image
+                              src={product.images[1]}
+                              alt={product.title}
+                              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 pointer-events-none"
+                            />
+                          </div>
+                        ) : (
+                          <Image
+                            src={product.images[0]}
+                            alt={product.title}
+                            className="w-full h-auto object-cover"
+                          />
+                        )}
                       </div>
                     </div>
 
