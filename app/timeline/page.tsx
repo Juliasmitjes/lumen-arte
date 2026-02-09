@@ -1,69 +1,123 @@
-"use client";
-
-import { useLayoutEffect } from "react";
-import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
-import TimelineInput from "../components/TimelineInput";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowLeft, MapPin, Calendar } from "lucide-react";
 import { Button } from "../components/ui/button";
-import { ArrowLeft } from "lucide-react";
+
+const exhibitions = [
+  {
+    title: "Zomerlicht",
+    subtitle: "Selectie lichtsculpturen",
+    location: "Atelier Nijmegen",
+    date: "Juni 2025",
+    image: "/images/BoomBruin/BoomBruin1.jpg",
+  },
+  {
+    title: "Kleur & Stilte",
+    subtitle: "Pasteltekeningen en doeken",
+    location: "Galerie De Lindenberg",
+    date: "November 2024",
+    image: "/images/schilderij3.jpg",
+  },
+  {
+    title: "Lentegloed",
+    subtitle: "Lichtsculpturen in ruimte",
+    location: "Kunsthuis Amersfoort",
+    date: "April 2024",
+    image: "/images/BoomPaars/BoomPaars1.jpg",
+  },
+  {
+    title: "Textuur & Licht",
+    subtitle: "Doeken en mixed media",
+    location: "Studio Expositie",
+    date: "September 2023",
+    image: "/images/Doeken/doek2.jpg",
+  },
+];
 
 const Timeline = () => {
-     useLayoutEffect(() => {
-    if (typeof window !== "undefined" && "scrollRestoration" in history) {
-      history.scrollRestoration = "manual";
-    }
-    if (typeof window !== "undefined") {
-      window.scrollTo(0, 0);
-    }
-  }, []);
-
-  const router = useRouter();
-
-
   return (
-    <div className="min-h-screen bg-background">
-      <header className="relative h-[40vh] md:h-[60vh] flex items-end justify-center pb-12 md:pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background" />
-        
-        {/* Decorative elements */}
-        <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-48 h-48 rounded-full bg-primary/5 blur-3xl" />
+    <div className="min-h-screen gradient-earth text-foreground">
+      <section className="relative">
+        <div className="container mx-auto px-6 pb-16 pt-10 lg:pt-25">
+          <div className="mb-10">
+            <Button asChild variant="secondary" className="hidden lg:inline-flex">
+              <Link href="/">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Home
+              </Link>
+            </Button>
+          </div>
 
-        <div className="absolute top-6 mt-16 left-6 z-20">
-            {/* BACK BUTTON */}
-          <Button
-            variant="secondary"
-            onClick={() => router.push("/")}
-            className="hidden lg:inline-flex mb-6 px-6 hover:bg-secondary/50"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Home
-          </Button>
+          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-end">
+            <div>
+              <p className="tracking-[0.35em] text-xs text-accent uppercase font-business mb-4">
+                Exposities
+              </p>
+              <h1 className="font-playful text-4xl sm:text-5xl lg:text-6xl leading-tight">
+                Recente tentoonstellingen
+              </h1>
+              <p className="mt-6 text-base sm:text-lg text-muted-foreground font-business max-w-xl">
+                Mijn werk staat regelmatig in de spotlight tijdens tentoonstellingen en exposities. Hier deel ik mijn nieuwste creaties met kunstliefhebbers en verzamelaars. Kom gerust eens langs! 
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {exhibitions.slice(0, 2).map((exhibition) => (
+                <div
+                  key={exhibition.title}
+                  className="rounded-2xl overflow-hidden shadow-soft border border-white/20 bg-white/30 backdrop-blur-sm"
+                >
+                  <Image
+                    src={exhibition.image}
+                    alt={exhibition.title}
+                    width={900}
+                    height={700}
+                    className="h-56 w-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
+      </section>
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative z-10 text-center px-4"
-        >
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="font-playful text-4xl lg:text-5xl text-accent mb-4 mt-0 text-center sm:text-start">
-            Mijn verhaal
-          </motion.span>
-          <h1 className="text-3xl lg:text-4xl text-center sm:text-start font-bold text-foreground lg:mb-6">
-            Een reis door de tijd 
-          </h1>
-        </motion.div>
-      </header>
-
-      {/* Timeline Section */}
-      <main>
-        <TimelineInput />
-      </main>
+      <section className="container mx-auto px-6 pb-20 pt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {exhibitions.map((exhibition) => (
+            <article
+              key={exhibition.title}
+              className="bg-white/60 backdrop-blur-sm rounded-2xl overflow-hidden shadow-soft border border-white/40"
+            >
+              <div className="relative h-64 sm:h-72">
+                <Image
+                  src={exhibition.image}
+                  alt={exhibition.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 sm:p-7">
+                <h2 className="font-playful text-2xl sm:text-3xl mb-2 text-foreground">
+                  {exhibition.title}
+                </h2>
+                <p className="text-sm text-accent font-business mb-4">
+                  {exhibition.subtitle}
+                </p>
+                <div className="flex flex-wrap gap-4 text-sm text-muted-foreground font-business">
+                  <span className="inline-flex items-center gap-2">
+                    <MapPin className="w-4 h-4" />
+                    {exhibition.location}
+                  </span>
+                  <span className="inline-flex items-center gap-2">
+                    <Calendar className="w-4 h-4" />
+                    {exhibition.date}
+                  </span>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };
