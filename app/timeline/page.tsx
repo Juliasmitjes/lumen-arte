@@ -3,36 +3,18 @@ import Link from "next/link";
 import { ArrowLeft, MapPin, Calendar } from "lucide-react";
 import { Button } from "../components/ui/button";
 
-const exhibitions = [
-  {
-    title: "Zomerlicht",
-    subtitle: "Selectie lichtsculpturen",
-    location: "Atelier Nijmegen",
-    date: "Juni 2025",
-    image: "/images/BoomBruin/BoomBruin1.jpg",
-  },
-  {
-    title: "Kleur & Stilte",
-    subtitle: "Pasteltekeningen en doeken",
-    location: "Galerie De Lindenberg",
-    date: "November 2024",
-    image: "/images/schilderij3.jpg",
-  },
-  {
-    title: "Lentegloed",
-    subtitle: "Lichtsculpturen in ruimte",
-    location: "Kunsthuis Amersfoort",
-    date: "April 2024",
-    image: "/images/BoomPaars/BoomPaars1.jpg",
-  },
-  {
-    title: "Textuur & Licht",
-    subtitle: "Doeken en mixed media",
-    location: "Studio Expositie",
-    date: "September 2023",
-    image: "/images/Doeken/doek2.jpg",
-  },
-];
+const exhibition = {
+  title: "Zomerlicht",
+  subtitle: "Selectie lichtsculpturen en doeken",
+  location: "Atelier Nijmegen",
+  date: "Juni 2025",
+  images: [
+    "/images/BoomBruin/BoomBruin1.jpg",
+    "/images/BoomPaars/BoomPaars1.jpg",
+    "/images/BoomKrul/BoomKrul1.jpg",
+    "/images/Doeken/doek2.jpg",
+  ],
+};
 
 const Timeline = () => {
   return (
@@ -62,13 +44,13 @@ const Timeline = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {exhibitions.slice(0, 2).map((exhibition) => (
+              {exhibition.images.slice(0, 2).map((image) => (
                 <div
-                  key={exhibition.title}
+                  key={image}
                   className="rounded-2xl overflow-hidden shadow-soft border border-white/20 bg-white/30 backdrop-blur-sm"
                 >
                   <Image
-                    src={exhibition.image}
+                    src={image}
                     alt={exhibition.title}
                     width={900}
                     height={700}
@@ -82,26 +64,59 @@ const Timeline = () => {
       </section>
 
       <section className="container mx-auto px-6 pb-20 pt-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {exhibitions.map((exhibition) => (
-            <article
-              key={exhibition.title}
-              className="bg-white/60 backdrop-blur-sm rounded-2xl overflow-hidden shadow-soft border border-white/40"
-            >
-              <div className="relative h-64 sm:h-72">
+        <article className="bg-white/60 backdrop-blur-sm rounded-2xl overflow-hidden shadow-soft border border-white/40">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 p-6 sm:p-8">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="col-span-2 rounded-xl overflow-hidden">
                 <Image
-                  src={exhibition.image}
-                  alt={exhibition.title}
-                  fill
-                  className="object-cover"
+                  src={exhibition.images[0]}
+                  alt={`${exhibition.title} beeld 1`}
+                  width={1200}
+                  height={800}
+                  className="h-64 sm:h-72 w-full object-cover"
                 />
               </div>
-              <div className="p-6 sm:p-7">
-                <h2 className="font-playful text-2xl sm:text-3xl mb-2 text-foreground">
+              <div className="rounded-xl overflow-hidden">
+                <Image
+                  src={exhibition.images[1]}
+                  alt={`${exhibition.title} beeld 2`}
+                  width={600}
+                  height={600}
+                  className="h-48 sm:h-52 w-full object-cover"
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden">
+                <Image
+                  src={exhibition.images[2]}
+                  alt={`${exhibition.title} beeld 3`}
+                  width={600}
+                  height={600}
+                  className="h-48 sm:h-52 w-full object-cover"
+                />
+              </div>
+              <div className="col-span-2 rounded-xl overflow-hidden">
+                <Image
+                  src={exhibition.images[3]}
+                  alt={`${exhibition.title} beeld 4`}
+                  width={1200}
+                  height={700}
+                  className="h-52 sm:h-56 w-full object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col justify-between">
+              <div>
+                <h2 className="font-playful text-3xl sm:text-4xl mb-2 text-foreground">
                   {exhibition.title}
                 </h2>
                 <p className="text-sm text-accent font-business mb-4">
                   {exhibition.subtitle}
+                </p>
+                <p className="text-base text-muted-foreground font-business mb-6">
+                  Een intieme presentatie met meerdere installaties en doeken in
+                  één ruimte. Sfeerbeelden tonen het samenspel tussen licht en
+                  materiaal.
                 </p>
                 <div className="flex flex-wrap gap-4 text-sm text-muted-foreground font-business">
                   <span className="inline-flex items-center gap-2">
@@ -114,9 +129,14 @@ const Timeline = () => {
                   </span>
                 </div>
               </div>
-            </article>
-          ))}
-        </div>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Button variant="default">Bekijk meer foto’s</Button>
+                <Button variant="secondary">Vraag details</Button>
+              </div>
+            </div>
+          </div>
+        </article>
       </section>
     </div>
   );
