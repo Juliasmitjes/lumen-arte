@@ -234,7 +234,7 @@ const Timeline = () => {
           <button
             type="button"
             onClick={closeLightbox}
-            className="absolute right-4 top-4 rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white/30"
+            className="absolute right-4 top-4 cursor-pointer rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white/30"
             aria-label="Sluit galerij"
           >
             <X className="h-5 w-5" />
@@ -246,7 +246,7 @@ const Timeline = () => {
               event.stopPropagation();
               showPreviousImage();
             }}
-            className="absolute left-4 rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white/30"
+            className="absolute left-4 cursor-pointer rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white/30"
             aria-label="Vorige foto"
           >
             <ChevronLeft className="h-6 w-6" />
@@ -274,7 +274,7 @@ const Timeline = () => {
               event.stopPropagation();
               showNextImage();
             }}
-            className="absolute right-4 rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white/30"
+            className="absolute right-4 cursor-pointer rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white/30"
             aria-label="Volgende foto"
           >
             <ChevronRight className="h-6 w-6" />
