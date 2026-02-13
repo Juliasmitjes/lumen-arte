@@ -76,7 +76,7 @@ const Timeline = () => {
   return (
     <div className="min-h-screen gradient-earth text-foreground">
       <section className="relative">
-        <div className="container mx-auto px-6 pb-16 pt-10 lg:pt-25">
+        <div className="container mx-auto px-6 pb-16 pt-16 lg:pt-25">
           <div className="mb-10">
             <Button asChild variant="secondary" className="hidden lg:inline-flex">
               <Link href="/">

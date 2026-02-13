@@ -241,7 +241,7 @@ export default function ProductDetail({
 
               {/* THUMBNAILS */}
               {product.images.length > 1 && (
-                <div className="flex gap-3 mt-3">
+                <div className="mt-3 flex gap-3 overflow-x-auto pb-1">
                   {product.images.map((image, index) => (
                     <button
                       key={index}

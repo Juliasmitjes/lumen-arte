@@ -19,12 +19,12 @@ export default function Dialog({ open, onClose, children }: DialogProps) {
   if (!open) return null; 
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
+    <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/50 px-4 py-6 sm:items-center"
       role="dialog"
       aria-modal="true"
       aria-labelledby="dialog-title">
       <h2 id="dialog-title" className="sr-only">Informatie aanvragen</h2>
-      <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md relative">
+      <div className="relative w-full max-w-md overflow-y-auto rounded-lg bg-white p-6 shadow-lg max-h-[90vh]">
         <button
           onClick={onClose}
           className="absolute top-5 right-5 text-gray-500 hover:text-gray-700">
