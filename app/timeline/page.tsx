@@ -11,6 +11,7 @@ import {
   MapPin,
   X,
 } from "lucide-react";
+import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 import { Button } from "../components/ui/button";
 
 const exhibition = {
@@ -258,13 +259,28 @@ const Timeline = () => {
             className="relative w-full max-w-5xl"
             onClick={(event) => event.stopPropagation()}
           >
-            <Image
-              src={exhibition.images[activeImageIndex]}
-              alt={`${exhibition.title} foto ${activeImageIndex + 1}`}
-              width={1800}
-              height={1200}
-              className="max-h-[80vh] w-full rounded-xl object-contain"
-            />
+            <TransformWrapper>
+              <TransformComponent
+                wrapperStyle={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+                contentStyle={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <Image
+                  src={exhibition.images[activeImageIndex]}
+                  alt={`${exhibition.title} foto ${activeImageIndex + 1}`}
+                  width={1800}
+                  height={1200}
+                  className="max-h-[80vh] max-w-full w-auto rounded-xl object-contain"
+                />
+              </TransformComponent>
+            </TransformWrapper>
             <p className="mt-3 text-center text-sm text-white/90 font-business">
               {activeImageIndex + 1} / {exhibition.images.length}
             </p>
