@@ -216,7 +216,9 @@ const Timeline = () => {
                 <Button variant="default" onClick={() => openLightbox(0)}>
                   Bekijk meer foto&apos;s
                 </Button>
-                <Button variant="secondary">Vraag details</Button>
+                <Button asChild variant="secondary">
+                  <Link href="/#contact">Vraag details</Link>
+                </Button>
               </div>
             </div>
           </div>
