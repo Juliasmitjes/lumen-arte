@@ -28,16 +28,37 @@ export default function ProductDetail({
 
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const product = getProductById(productId);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // ------------------------
-  // FETCH PRODUCT AFTER HOOKS
-  // ------------------------
+  useEffect(() => {
+    if (!isZoomed || !product) return;
 
-  const product = getProductById(productId);
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsZoomed(false);
+      if (event.key === "ArrowLeft") {
+        setSelectedImageIndex((prev) =>
+          prev === 0 ? product.images.length - 1 : prev - 1
+        );
+      }
+      if (event.key === "ArrowRight") {
+        setSelectedImageIndex((prev) =>
+          prev === product.images.length - 1 ? 0 : prev + 1
+        );
+      }
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isZoomed, product]);
 
   if (!product) {
     return (
@@ -173,69 +194,81 @@ export default function ProductDetail({
 
               {/* ZOOM MODAL */}
               {isZoomed && (
-                <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-
-                  <X
-                    onClick={() => setIsZoomed(false)}
-                    className="
-                      absolute top-10 right-10 w-10 h-10 
-                      text-white bg-black/50 hover:bg-black/70 
-                      rounded-full p-2 cursor-pointer z-50
-                    "
-                  />
-
-                  {/* LEFT ARROW */}
+                <div
+                  className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4 backdrop-blur-md"
+                  onClick={() => setIsZoomed(false)}
+                  role="dialog"
+                  aria-modal="true"
+                  aria-label="Afbeelding vergroten"
+                >
                   <button
-                    className="
-                      absolute left-5 top-1/2 -translate-y-1/2
-                      w-10 h-10 sm:w-14 sm:h-14
-                      bg-black/50 hover:bg-black/70
-                      rounded-full flex items-center justify-center
-                      cursor-pointer z-50
-                    "
-                    onClick={() =>
-                      setSelectedImageIndex((prev) =>
-                        prev === 0 ? product.images.length - 1 : prev - 1
-                      )
-                    }
+                    type="button"
+                    onClick={() => setIsZoomed(false)}
+                    className="absolute right-4 top-4 z-50 cursor-pointer rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white/30"
+                    aria-label="Sluit galerij"
                   >
-                    <ChevronLeft className="sm:w-8 sm:h-8 text-white" />
+                    <X className="h-5 w-5" />
                   </button>
 
-                  {/* RIGHT ARROW */}
                   <button
-                    className="
-                      absolute right-5 top-1/2 -translate-y-1/2
-                      w-10 h-10 sm:w-14 sm:h-14
-                      bg-black/50 hover:bg-black/70
-                      rounded-full flex items-center justify-center
-                      cursor-pointer z-50
-                    "
-                    onClick={() =>
+                    type="button"
+                    className="absolute left-2 z-50 cursor-pointer rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white/30 sm:left-4"
+                    onClick={(event) => {
+                      event.stopPropagation();
                       setSelectedImageIndex((prev) =>
-                        prev === product.images.length - 1 ? 0 : prev + 1
-                      )
-                    }
+                        prev === 0 ? product.images.length - 1 : prev - 1
+                      );
+                    }}
+                    aria-label="Vorige foto"
                   >
-                    <ChevronRight className="sm:w-8 sm:h-8 text-white" />
+                    <ChevronLeft className="h-6 w-6" />
                   </button>
 
                   <div
-                    className="w-full h-full flex items-center justify-center"
+                    className="relative w-full max-w-5xl"
+                    onClick={(event) => event.stopPropagation()}
                     onTouchStart={handleTouchStart}
                     onTouchMove={handleTouchMove}
                     onTouchEnd={handleTouchEnd}
                   >
                     <TransformWrapper>
-                      <TransformComponent>
+                      <TransformComponent
+                        wrapperStyle={{
+                          width: "100%",
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                        contentStyle={{
+                          width: "100%",
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
                         <Image
                           src={product.images[selectedImageIndex]}
                           alt={product.title}
-                          className="max-w-full max-h-[90vh] object-contain"
+                          className="max-h-[80vh] max-w-full w-auto rounded-xl object-contain"
                         />
                       </TransformComponent>
                     </TransformWrapper>
+                    <p className="mt-3 text-center text-sm text-white/90 font-business">
+                      {selectedImageIndex + 1} / {product.images.length}
+                    </p>
                   </div>
+
+                  <button
+                    type="button"
+                    className="absolute right-2 z-50 cursor-pointer rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white/30 sm:right-4"
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      setSelectedImageIndex((prev) =>
+                        prev === product.images.length - 1 ? 0 : prev + 1
+                      );
+                    }}
+                    aria-label="Volgende foto"
+                  >
+                    <ChevronRight className="h-6 w-6" />
+                  </button>
                 </div>
               )}
 

@@ -62,7 +62,7 @@ const About = () => {
           </Button>
           <Link href="/timeline" className="w-full sm:w-auto">
             <Button variant="outlineref" size="lg" className="w-full sm:w-auto">
-              Bekijk mijn reis
+              Exposities
             </Button>
           </Link>
         </div>
