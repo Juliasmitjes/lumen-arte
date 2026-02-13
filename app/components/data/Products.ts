@@ -4,16 +4,16 @@ import inDoos from "../../../public/images/inDoos.jpg";
 
 // -- schilderijen --
 
-import schilderij1Img from "../../../public/images/schilderij1.jpg";
-import schilderij2Img from "../../../public/images/schilderij2.jpg";
-import schilderij3Img from "../../../public/images/schilderij3.jpg";
-import schilderij4Img from "../../../public/images/schilderij4.jpg";
-import schilderij5Img from "../../../public/images/schilderij5.jpg";
-import schilderij6Img from "../../../public/images/schilderij6.jpg";
-import schilderij7Img from "../../../public/images/schilderij7.jpg";
-import schilderij8Img from "../../../public/images/schilderij8.jpg";
-import schilderij9Img from "../../../public/images/schilderij9.jpg";
-import schilderij10Img from "../../../public/images/schilderij10.jpg";
+import schilderij1Img from "../../../public/images/Pasteltekeningen/schilderij1.jpg";
+import schilderij2Img from "../../../public/images/Pasteltekeningen/schilderij2.jpg";
+import schilderij3Img from "../../../public/images/Pasteltekeningen/schilderij3.jpg";
+import schilderij4Img from "../../../public/images/Pasteltekeningen/schilderij4.jpg";
+import schilderij5Img from "../../../public/images/Pasteltekeningen/schilderij5.jpg";
+import schilderij6Img from "../../../public/images/Pasteltekeningen/schilderij6.jpg";
+import schilderij7Img from "../../../public/images/Pasteltekeningen/schilderij7.jpg";
+import schilderij8Img from "../../../public/images/Pasteltekeningen/schilderij8.jpg";
+import schilderij9Img from "../../../public/images/Pasteltekeningen/schilderij9.jpg";
+import schilderij10Img from "../../../public/images/Pasteltekeningen/schilderij10.jpg";
 
 // -- sculpturen --
 
