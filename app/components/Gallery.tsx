@@ -203,7 +203,7 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
                             Formaat zonder lijst: {framedPaintingDimensions.zonderLijst.height} x {framedPaintingDimensions.zonderLijst.width}
                           </p>
                           <p className="text-sm text-accent-warm font-business">
-                            Formaat incl. lijst: {framedPaintingDimensions.metLijst.height} x {framedPaintingDimensions.metLijst.width}
+                            Formaat met lijst: {framedPaintingDimensions.metLijst.height} x {framedPaintingDimensions.metLijst.width}
                           </p>
                         </>
                       ) : (
@@ -211,8 +211,8 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
                           Formaat: {displayDimensions.height} x {displayDimensions.width}
                         </p>
                       )}
-                      <p className="text-sm text-muted-foreground font-business">
-                        Prijs: {paintingPrice} incl. lijst
+                      <p className="text-sm text-muted-foreground font-business mt-2">
+                        Prijs: {paintingPrice} met lijst
                       </p>
                     </div>
 
