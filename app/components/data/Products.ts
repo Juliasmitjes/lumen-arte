@@ -6,7 +6,7 @@ import inDoos from "../../../public/images/inDoos.jpg";
 
 import schilderij1Img from "../../../public/images/Pasteltekeningen/schilderij1.jpg";
 import schilderij2Img from "../../../public/images/Pasteltekeningen/schilderij2.jpg";
-import schilderij3Img from "../../../public/images/Pasteltekeningen/schilderij3.jpg";
+import schilderij3Img from "../../../public/images/Pasteltekeningen/schilderij3.png";
 import schilderij4Img from "../../../public/images/Pasteltekeningen/schilderij4.jpg";
 import schilderij5Img from "../../../public/images/Pasteltekeningen/schilderij5.jpg";
 import schilderij6Img from "../../../public/images/Pasteltekeningen/schilderij6.jpg";
@@ -14,6 +14,8 @@ import schilderij7Img from "../../../public/images/Pasteltekeningen/schilderij7.
 import schilderij8Img from "../../../public/images/Pasteltekeningen/schilderij8.jpg";
 import schilderij9Img from "../../../public/images/Pasteltekeningen/schilderij9.jpg";
 import schilderij10Img from "../../../public/images/Pasteltekeningen/schilderij10.jpg";
+import schilderij11Img from "../../../public/images/Pasteltekeningen/schilderij11.png";
+import schilderij12Img from "../../../public/images/Pasteltekeningen/schilderij12.jpg";
 
 // -- sculpturen --
 
@@ -337,6 +339,42 @@ export const products: Product[] = [
     inStock: false,
     category: 'schilderijen'
   },
+   {
+    id: 14,
+    title: 'Abstract vlakken',
+    price: 310,
+    images: [schilderij11Img],
+    season: 'winter',
+    dimensions: {
+      height: '52 cm',
+      width: '73 cm',
+    },
+    features: [
+    'Elegant en tijdloos ontwerp',
+    ],
+
+    inStock: true,
+    category: 'schilderijen'
+  },
+   {
+    id: 14,
+    title: 'Paarse slinger',
+    price: 310,
+    images: [schilderij12Img],
+    season: 'winter',
+    dimensions: {
+      height: '50 cm',
+      width: '50 cm',
+    },
+    features: [
+    'Paarse kleuren',
+    'Elegante vorming',
+    'Handgemaakt',
+    'Uniek kunstwerk'
+    ],
+    inStock: true,
+    category: 'schilderijen'
+  },
   {
     id: 15,
     title: 'Krullen',
@@ -344,8 +382,8 @@ export const products: Product[] = [
     images: [doek1Img],
     season: 'lente',
     dimensions: {
-      height: '50 cm',
-      width: '50 cm',
+      height: '73 cm',
+      width: '52 cm',
     },
      features: [
     'Handgemaakt',
@@ -362,8 +400,8 @@ export const products: Product[] = [
     images: [doek2Img, doek3Img],
     season: 'zomer',
     dimensions: {
-      height: '50 cm',
-      width: '50 cm',
+      height: '118 cm',
+      width: '82 cm',
     },
       features: [
     'Handgemaakt',
@@ -380,8 +418,8 @@ export const products: Product[] = [
     images: [doek4Img],
     season: 'lente',
     dimensions: {
-      height: '50 cm',
-      width: '50 cm',
+      height: '78 cm',
+      width: '52 cm',
     },
       features: [
     'Handgemaakt',
