@@ -340,7 +340,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
    {
-    id: 14,
+    id: 15,
     title: 'Abstract vlakken',
     price: 310,
     images: [schilderij11Img],
@@ -357,7 +357,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
    {
-    id: 14,
+    id: 16,
     title: 'Paarse slinger',
     price: 310,
     images: [schilderij12Img],
@@ -376,7 +376,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 15,
+    id: 17,
     title: 'Krullen',
     price: 240,
     images: [doek1Img],
@@ -394,7 +394,7 @@ export const products: Product[] = [
   category: 'doek-aan-de-muur',
   },
   {
-    id: 16,
+    id: 18,
     title: 'Vliegen',
     price: 260,
     images: [doek2Img, doek3Img],
@@ -412,7 +412,7 @@ export const products: Product[] = [
   category: 'doek-aan-de-muur',
   },
   {
-    id: 17,
+    id: 19,
     title: 'Groen', 
     price: 240,
     images: [doek4Img],
