@@ -6,6 +6,7 @@ import { ExternalLink, Heart } from "lucide-react";
 import { products } from "./data/Products";
 import Image from "next/image";
 import Link from "next/link";
+import { FramedPaintingDimensions, PaintingDimensions, Product, RectDimensions } from "../types/products";
 
 type GalleryCategory = "sculpturen" | "schilderijen" | "doek-aan-de-muur";
 
@@ -22,14 +23,30 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
   );
 
   const hasFramedPaintingDimensions = (
-    dimensions: unknown
-  ): dimensions is { zonderLijst: { height: string; width: string }; metLijst: { height: string; width: string } } => {
-    return (
-      typeof dimensions === "object" &&
-      dimensions !== null &&
-      "zonderLijst" in dimensions &&
-      "metLijst" in dimensions
-    );
+    dimensions: PaintingDimensions
+  ): dimensions is FramedPaintingDimensions => {
+    return "zonderLijst" in dimensions && "metLijst" in dimensions;
+  };
+
+  const hasRectDimensions = (
+    dimensions: PaintingDimensions
+  ): dimensions is RectDimensions => {
+    return "height" in dimensions && "width" in dimensions;
+  };
+
+  const getDisplayDimensions = (product: Product): RectDimensions | null => {
+    if (product.category === "sculpturen") {
+      return null;
+    }
+
+    if (
+      product.category === "schilderijen" &&
+      hasFramedPaintingDimensions(product.dimensions)
+    ) {
+      return product.dimensions.zonderLijst;
+    }
+
+    return hasRectDimensions(product.dimensions) ? product.dimensions : null;
   };
 
   return (
@@ -125,19 +142,17 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
               hasFramedPaintingDimensions(product.dimensions)
                 ? product.dimensions
                 : null;
-            const displayDimensions = isPaintingLike
-              ? framedPaintingDimensions?.zonderLijst ?? product.dimensions
-              : null;
+            const displayDimensions = getDisplayDimensions(product);
             const isDoekAanDeMuur = product.category === "doek-aan-de-muur";
             const isDoekSmallImage =
               isDoekAanDeMuur &&
               ["Krullen", "Vliegen", "Groen"].includes(product.title);
             const isSculpture = product.category === "sculpturen";
             const paintingHeight = isPaintingLike
-              ? parseInt(displayDimensions.height, 10)
+              ? parseInt(displayDimensions?.height ?? "0", 10)
               : 0;
             const paintingWidth = isPaintingLike
-              ? parseInt(displayDimensions.width, 10)
+              ? parseInt(displayDimensions?.width ?? "0", 10)
               : 0;
             const isSmallPainting =
               isPaintingLike && Math.max(paintingHeight, paintingWidth) <= 50;
@@ -208,7 +223,7 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
                         </>
                       ) : (
                         <p className="text-sm text-accent-warm font-business">
-                          Formaat: {displayDimensions.height} x {displayDimensions.width}
+                          Formaat: {displayDimensions?.height ?? "-"} x {displayDimensions?.width ?? "-"}
                         </p>
                       )}
                       <p className="text-sm text-muted-foreground font-business mt-2">

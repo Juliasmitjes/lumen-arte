@@ -10,6 +10,7 @@ import { Badge } from "../../components/ui/badge";
 import { getProductById } from "../../components/data/Products";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import Image from "next/image";
+import { FramedPaintingDimensions, PaintingDimensions, RectDimensions } from "../../types/products";
 
 export default function ProductDetail({
   params,
@@ -129,19 +130,28 @@ export default function ProductDetail({
   };
 
   const hasFramedPaintingDimensions = (
-    dimensions: unknown
-  ): dimensions is { zonderLijst: { height: string; width: string }; metLijst: { height: string; width: string } } => {
+    dimensions: PaintingDimensions
+  ): dimensions is FramedPaintingDimensions => {
     return (
-      typeof dimensions === "object" &&
-      dimensions !== null &&
       "zonderLijst" in dimensions &&
       "metLijst" in dimensions
     );
   };
 
+  const hasRectDimensions = (
+    dimensions: PaintingDimensions
+  ): dimensions is RectDimensions => {
+    return "height" in dimensions && "width" in dimensions;
+  };
+
   const framedPaintingDimensions =
     product.category === "schilderijen" &&
     hasFramedPaintingDimensions(product.dimensions)
+      ? product.dimensions
+      : null;
+
+  const rectPaintingDimensions =
+    product.category !== "sculpturen" && hasRectDimensions(product.dimensions)
       ? product.dimensions
       : null;
 
@@ -425,13 +435,13 @@ export default function ProductDetail({
                         <span className="font-bold text-muted-foreground">
                           Hoogte:
                         </span>
-                        <div>{product.dimensions.height}</div>
+                        <div>{rectPaintingDimensions?.height ?? "-"}</div>
                       </div>
                       <div>
                         <span className="font-bold text-muted-foreground">
                           Breedte:
                         </span>
-                        <div>{product.dimensions.width}</div>
+                        <div>{rectPaintingDimensions?.width ?? "-"}</div>
                       </div>
                     </div>
                   )}
