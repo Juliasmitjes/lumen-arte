@@ -147,6 +147,9 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
             const isDoekSmallImage =
               isDoekAanDeMuur &&
               ["Krullen", "Vliegen", "Groen"].includes(product.title);
+            const isPastelLargeImage =
+              product.category === "schilderijen" &&
+              ["Paarse slinger", "Abstract vlakken"].includes(product.title);
             const isSculpture = product.category === "sculpturen";
             const paintingHeight = isPaintingLike
               ? parseInt(displayDimensions?.height ?? "0", 10)
@@ -175,7 +178,9 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
                       className={`relative w-full md:w-[40%] ${
                         isDoekSmallImage
                           ? "md:w-[30%] lg:w-[26%] max-w-[260px] mx-auto"
-                          : ""
+                          : isPastelLargeImage
+                            ? "md:w-[38%] lg:w-[36%] max-w-[380px] mx-auto"
+                            : ""
                       }`}
                     >
                       {!product.inStock && (

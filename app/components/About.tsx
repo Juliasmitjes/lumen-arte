@@ -26,7 +26,7 @@ const About = () => {
             <p className="mb-4"> Ik ben gek op het leven en vind ook veel leuk: getallen, taal, vorm en kleur. Soms is het lastig kiezen. Gelukkig hoeft niet alles tegelijk. Mijn leven is een avontuurlijke reis: accountant, moeder én kunstenaar. Hoe heerlijk! Creativiteit, met hart, handen en altijd met passie. 
             <br />
             <br />
-           Ik heb vooral als autodidact mijn eigen stijl ontwikkeld. Daarnaast heb ik kennis over technieken, kleur, materialen en toepassingen opgedaan bij: Lighting Design Academy in Amersfoort, Textielmuseum in Tilburg, Cursuscentrum De Opstap en Cultuurhuis De Lindenberg in Nijmegen.
+           Ik heb vooral als autodidact mijn eigen stijl ontwikkeld. Daarnaast heb ik kennis over techniek, kleur, materialen en toepassingen opgedaan bij: Lighting Design Academy in Amersfoort, Textielmuseum in Tilburg, Cursuscentrum De Opstap en Cultuurhuis De Lindenberg in Nijmegen.
             </p>
             <p className="mb-8">Ik maak pasteltekeningen en lichtsculpturen.</p>
           </div>
