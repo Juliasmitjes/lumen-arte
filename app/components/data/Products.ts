@@ -363,8 +363,14 @@ export const products: Product[] = [
     images: [schilderij12Img],
     season: 'winter',
     dimensions: {
-      height: '50 cm',
-      width: '50 cm',
+      zonderLijst: {
+        height: '65 cm',
+        width: '95 cm',
+      },
+      metLijst: {
+        height: '80 cm',
+        width: '115 cm',
+      },
     },
     features: [
     'Paarse kleuren',

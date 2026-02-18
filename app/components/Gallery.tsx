@@ -21,6 +21,17 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
     (product) => product.category === activeCategory
   );
 
+  const hasFramedPaintingDimensions = (
+    dimensions: unknown
+  ): dimensions is { zonderLijst: { height: string; width: string }; metLijst: { height: string; width: string } } => {
+    return (
+      typeof dimensions === "object" &&
+      dimensions !== null &&
+      "zonderLijst" in dimensions &&
+      "metLijst" in dimensions
+    );
+  };
+
   return (
     <section id="galerij" className="lg:py-20 gradient-earth">
       <div className="container mx-auto px-6 pb-10 lg:pb-0 pt-16 lg:pt-0">
@@ -109,16 +120,24 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
             const isPaintingLike =
               product.category === "schilderijen" ||
               product.category === "doek-aan-de-muur";
+            const framedPaintingDimensions =
+              product.category === "schilderijen" &&
+              hasFramedPaintingDimensions(product.dimensions)
+                ? product.dimensions
+                : null;
+            const displayDimensions = isPaintingLike
+              ? framedPaintingDimensions?.zonderLijst ?? product.dimensions
+              : null;
             const isDoekAanDeMuur = product.category === "doek-aan-de-muur";
             const isDoekSmallImage =
               isDoekAanDeMuur &&
               ["Krullen", "Vliegen", "Groen"].includes(product.title);
             const isSculpture = product.category === "sculpturen";
             const paintingHeight = isPaintingLike
-              ? parseInt(product.dimensions.height, 10)
+              ? parseInt(displayDimensions.height, 10)
               : 0;
             const paintingWidth = isPaintingLike
-              ? parseInt(product.dimensions.width, 10)
+              ? parseInt(displayDimensions.width, 10)
               : 0;
             const isSmallPainting =
               isPaintingLike && Math.max(paintingHeight, paintingWidth) <= 50;
@@ -178,9 +197,20 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
                         {product.title}
                       </h4>
 
-                      <p className="text-sm text-accent-warm font-business">
-                        Formaat: {product.dimensions.height} × {product.dimensions.width}
-                      </p>
+                      {framedPaintingDimensions ? (
+                        <>
+                          <p className="text-sm text-accent-warm font-business">
+                            Formaat zonder lijst: {framedPaintingDimensions.zonderLijst.height} x {framedPaintingDimensions.zonderLijst.width}
+                          </p>
+                          <p className="text-sm text-accent-warm font-business">
+                            Formaat incl. lijst: {framedPaintingDimensions.metLijst.height} x {framedPaintingDimensions.metLijst.width}
+                          </p>
+                        </>
+                      ) : (
+                        <p className="text-sm text-accent-warm font-business">
+                          Formaat: {displayDimensions.height} x {displayDimensions.width}
+                        </p>
+                      )}
                       <p className="text-sm text-muted-foreground font-business">
                         Prijs: {paintingPrice} incl. lijst
                       </p>

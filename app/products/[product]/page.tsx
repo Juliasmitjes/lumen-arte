@@ -128,6 +128,23 @@ export default function ProductDetail({
     "alle-seizoenen": "🔄",
   };
 
+  const hasFramedPaintingDimensions = (
+    dimensions: unknown
+  ): dimensions is { zonderLijst: { height: string; width: string }; metLijst: { height: string; width: string } } => {
+    return (
+      typeof dimensions === "object" &&
+      dimensions !== null &&
+      "zonderLijst" in dimensions &&
+      "metLijst" in dimensions
+    );
+  };
+
+  const framedPaintingDimensions =
+    product.category === "schilderijen" &&
+    hasFramedPaintingDimensions(product.dimensions)
+      ? product.dimensions
+      : null;
+
   // ------------------------
   // PAGE RENDER
   // ------------------------
@@ -368,24 +385,56 @@ export default function ProductDetail({
                     Afmetingen
                   </h3>
 
-                  <div className="grid grid-cols-3 gap-4 text-sm">
-
-                    <div>
-                      <span className="font-bold text-muted-foreground">
-                        Hoogte:
-                      </span>
-                      <div>{product.dimensions.height}</div>
-                    </div>
-
-                    {product.category === "sculpturen" && (
+                  {product.category === "sculpturen" ? (
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <span className="font-bold text-muted-foreground">
+                          Hoogte:
+                        </span>
+                        <div>{product.dimensions.height}</div>
+                      </div>
                       <div>
                         <span className="font-bold text-muted-foreground">
                           Diameter:
                         </span>
                         <div>{product.dimensions.diameter}</div>
                       </div>
-                    )}
-                  </div>
+                    </div>
+                  ) : framedPaintingDimensions ? (
+                    <div className="space-y-3 text-sm">
+                      <div>
+                        <span className="font-bold text-muted-foreground">
+                          Zonder lijst:
+                        </span>
+                        <div>
+                          {framedPaintingDimensions.zonderLijst.height} x {framedPaintingDimensions.zonderLijst.width}
+                        </div>
+                      </div>
+                      <div>
+                        <span className="font-bold text-muted-foreground">
+                          Inclusief lijst:
+                        </span>
+                        <div>
+                          {framedPaintingDimensions.metLijst.height} x {framedPaintingDimensions.metLijst.width}
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <span className="font-bold text-muted-foreground">
+                          Hoogte:
+                        </span>
+                        <div>{product.dimensions.height}</div>
+                      </div>
+                      <div>
+                        <span className="font-bold text-muted-foreground">
+                          Breedte:
+                        </span>
+                        <div>{product.dimensions.width}</div>
+                      </div>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
 

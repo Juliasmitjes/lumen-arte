@@ -5,10 +5,17 @@ export interface SculptureDimensions {
   diameter: string;
 }
 
-export interface PaintingDimensions {
+export interface RectDimensions {
   height: string;
   width: string;
 }
+
+export interface FramedPaintingDimensions {
+  zonderLijst: RectDimensions;
+  metLijst: RectDimensions;
+}
+
+export type PaintingDimensions = RectDimensions | FramedPaintingDimensions;
 
 export interface BaseProduct {
   id: number;
@@ -32,7 +39,7 @@ export interface Painting extends BaseProduct {
 
 export interface Doek extends BaseProduct {
   category: 'doek-aan-de-muur';
-  dimensions: PaintingDimensions;
+  dimensions: RectDimensions;
 }
 
 export type Product = Sculpture | Painting | Doek;
