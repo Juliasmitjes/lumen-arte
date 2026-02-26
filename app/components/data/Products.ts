@@ -244,7 +244,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   }, 
   {
-    id: 9,
+    id: 10,
     title: 'Krijtjes',
     price: 150,
     images: [schilderij1Img],
@@ -263,7 +263,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   }, 
   {
-    id: 10,
+    id: 11,
     title: 'Abstract',
     price: 275,
     images: [schilderij2Img],
@@ -283,7 +283,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 11,
+    id: 12,
     title: 'Abstract',
     price: 325,
     images: [schilderij3Img],
@@ -303,7 +303,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 12,
+    id: 13,
     title: 'Abstract',
     price: 250,
     images: [schilderij4Img],
@@ -322,7 +322,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 13,
+    id: 14,
     title: 'Abstract',
     price: 295,
     images: [schilderij5Img],
@@ -343,7 +343,7 @@ export const products: Product[] = [
   },
  
   {
-    id: 14,
+    id: 15,
     title: 'Bloemen',  
     price: 280,
     images: [schilderij9Img],
@@ -363,7 +363,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 15,
+    id: 16,
     title: 'Wensboom',
     price: 310,
     images: [schilderij10Img],
@@ -384,7 +384,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
    {
-    id: 16,
+    id: 17,
     title: 'Kippen',
     price: 220,
     images: [schilderij7Img],
@@ -404,7 +404,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 17,
+    id: 18,
     title: 'Krullen',
     price: 240,
     images: [doek1Img],
@@ -422,7 +422,7 @@ export const products: Product[] = [
   category: 'doek-aan-de-muur',
   },
   {
-    id: 18,
+    id: 19,
     title: 'Vliegen',
     price: 260,
     images: [doek2Img, doek3Img],
@@ -440,7 +440,7 @@ export const products: Product[] = [
   category: 'doek-aan-de-muur',
   },
   {
-    id: 19,
+    id: 20,
     title: 'Groen', 
     price: 240,
     images: [doek4Img],
