@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import Kunstenaar from "../../public/images/kunstenaar.jpg";
-import Timeline from '../timeline/page'
 
 
 const About = () => {

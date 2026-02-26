@@ -14,8 +14,10 @@ import schilderij7Img from "../../../public/images/Pasteltekeningen/schilderij7.
 import schilderij8Img from "../../../public/images/Pasteltekeningen/schilderij8.jpg";
 import schilderij9Img from "../../../public/images/Pasteltekeningen/schilderij9.jpg";
 import schilderij10Img from "../../../public/images/Pasteltekeningen/schilderij10.jpg";
-import schilderij11Img from "../../../public/images/Pasteltekeningen/schilderij11.png";
+import schilderij11Img from "../../../public/images/Pasteltekeningen/schilderij11.jpg";
 import schilderij12Img from "../../../public/images/Pasteltekeningen/schilderij12.jpg";
+import schilderij13Img from "../../../public/images/Pasteltekeningen/schilderij13.jpg";
+import schilderij14Img from "../../../public/images/Pasteltekeningen/schilderij14.png";
 
 // -- sculpturen --
 
@@ -182,6 +184,67 @@ export const products: Product[] = [
   },
   {
     id: 7,
+    title: 'Abstract vlakken',
+    price: 310,
+    images: [schilderij11Img],
+    season: 'winter',
+    dimensions: {
+      height: '52 cm',
+      width: '73 cm',
+    },
+    features: [
+    'Elegant en tijdloos ontwerp',
+    ],
+
+    inStock: true,
+    category: 'schilderijen'
+  },
+   {
+    id: 8,
+    title: 'Paarse slinger',
+    price: 310,
+    images: [schilderij12Img],
+    season: 'winter',
+    dimensions: {
+      zonderLijst: {
+        height: '65 cm',
+        width: '95 cm',
+      },
+      metLijst: {
+        height: '80 cm',
+        width: '115 cm',
+      },
+    },
+    features: [
+    'Paarse kleuren',
+    'Elegante vorming',
+    'Handgemaakt',
+    'Uniek kunstwerk'
+    ],
+    inStock: true,
+    category: 'schilderijen'
+  },
+    {
+    id: 9,
+    title: 'Blauwe lente',
+    price: 200,
+    images: [schilderij13Img],
+    season: 'zomer',
+    dimensions: {
+      height: '30 cm',
+      width: '50 cm',
+    },
+    features: [
+      'Kleurrijk ontwerp',
+      'Compact formaat, geschikt voor diverse ruimtes',
+      'Direct ophangbaar',
+      'Handgeschilderd in olieverf'
+    ],
+    inStock: true,
+    category: 'schilderijen'
+  }, 
+  {
+    id: 9,
     title: 'Krijtjes',
     price: 150,
     images: [schilderij1Img],
@@ -200,7 +263,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   }, 
   {
-    id: 8,
+    id: 10,
     title: 'Abstract',
     price: 275,
     images: [schilderij2Img],
@@ -220,7 +283,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 9,
+    id: 11,
     title: 'Abstract',
     price: 325,
     images: [schilderij3Img],
@@ -240,7 +303,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 10,
+    id: 12,
     title: 'Abstract',
     price: 250,
     images: [schilderij4Img],
@@ -259,14 +322,14 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 11,
+    id: 13,
     title: 'Abstract',
     price: 295,
     images: [schilderij5Img],
     season: 'herfst',
     dimensions: {
-      height: '80 cm',
-      width: '70 cm',
+      height: '70 cm',
+      width: '80 cm',
     },
     features: [
     'Expressieve penseelstreken',
@@ -278,28 +341,9 @@ export const products: Product[] = [
     inStock: true,
     category: 'schilderijen'
   },
+ 
   {
-    id: 12,
-    title: 'Kippen',
-    price: 220,
-    images: [schilderij7Img],
-    season: 'zomer',
-    dimensions: {
-      height: '40 cm',
-      width: '30 cm',
-    },
-    features: [
-    'Luchtig en humoristisch',
-    'Vrolijke kleuren',
-    'Handgeschilderd',
-    'Compact formaat',
-    'Ideaal als cadeau'
-    ],
-    inStock: true,
-    category: 'schilderijen'
-  },
-  {
-    id: 13,
+    id: 14,
     title: 'Bloemen',  
     price: 280,
     images: [schilderij9Img],
@@ -319,7 +363,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 14,
+    id: 15,
     title: 'Wensboom',
     price: 310,
     images: [schilderij10Img],
@@ -340,43 +384,21 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
    {
-    id: 15,
-    title: 'Abstract vlakken',
-    price: 310,
-    images: [schilderij11Img],
-    season: 'winter',
-    dimensions: {
-      height: '52 cm',
-      width: '73 cm',
-    },
-    features: [
-    'Elegant en tijdloos ontwerp',
-    ],
-
-    inStock: true,
-    category: 'schilderijen'
-  },
-   {
     id: 16,
-    title: 'Paarse slinger',
-    price: 310,
-    images: [schilderij12Img],
-    season: 'winter',
+    title: 'Kippen',
+    price: 220,
+    images: [schilderij7Img],
+    season: 'zomer',
     dimensions: {
-      zonderLijst: {
-        height: '65 cm',
-        width: '95 cm',
-      },
-      metLijst: {
-        height: '80 cm',
-        width: '115 cm',
-      },
+      height: '40 cm',
+      width: '30 cm',
     },
     features: [
-    'Paarse kleuren',
-    'Elegante vorming',
-    'Handgemaakt',
-    'Uniek kunstwerk'
+    'Luchtig en humoristisch',
+    'Vrolijke kleuren',
+    'Handgeschilderd',
+    'Compact formaat',
+    'Ideaal als cadeau'
     ],
     inStock: true,
     category: 'schilderijen'
