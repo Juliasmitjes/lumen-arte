@@ -171,73 +171,72 @@ const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
                 onMouseLeave={() => isSculpture && setHoveredItem(null)}
               >
                 {/* PASTELTEKENINGEN */}
-                {isPaintingLike ? (
-                  <div className="flex flex-col md:flex-row gap-6 p-8 md:p-10 items-center md:items-start">
+               {isPaintingLike ? (
+  <div className="flex flex-col md:flex-row gap-6 p-8 md:p-10 items-center md:items-start">
 
-                    <div
-                      className={`relative w-full md:w-[40%] ${
-                        isDoekSmallImage
-                          ? "md:w-[30%] lg:w-[26%] max-w-[260px] mx-auto"
-                          : isPastelLargeImage
-                            ? "md:w-[38%] lg:w-[36%] max-w-[380px] mx-auto"
-                            : ""
-                      }`}
-                    >
-                      {!product.inStock && (
-                        <div className="absolute top-2 left-2 z-10 rounded-full bg-red-600/90 px-3 py-1 text-xs font-semibold text-white">
-                          Verkocht
-                        </div>
-                      )}
-                      <div className="group rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.07] bg-muted/10">
-                        {product.title === "Vliegen" && product.images[1] ? (
-                          <div className="relative">
-                            <Image
-                              src={product.images[0]}
-                              alt={product.title}
-                              className="w-full h-auto object-cover block transition-opacity duration-500 ease-in-out group-hover:opacity-0"
-                            />
-                            <Image
-                              src={product.images[1]}
-                              alt={product.title}
-                              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 pointer-events-none"
-                            />
-                          </div>
-                        ) : (
-                          <Image
-                            src={product.images[0]}
-                            alt={product.title}
-                            className="w-full h-auto object-cover"
-                          />
-                        )}
-                      </div>
-                    </div>
+    {/* Afbeelding container — vaste breedte, automatische hoogte */}
+    <div className="w-[300px] mx-auto">
 
-                    <div className="w-full md:w-[55%] flex flex-col justify-center text-center md:text-left">
-                      <h4 className="text-xl font-semibold text-foreground mb-3">
-                        {product.title}
-                      </h4>
+      {!product.inStock && (
+        <div className="absolute top-2 left-2 z-10 rounded-full bg-red-600/90 px-3 py-1 text-xs font-semibold text-white">
+          Verkocht
+        </div>
+      )}
 
-                      {framedPaintingDimensions ? (
-                        <>
-                          <p className="text-sm text-accent-warm font-business">
-                            Formaat zonder lijst: {framedPaintingDimensions.zonderLijst.height} x {framedPaintingDimensions.zonderLijst.width}
-                          </p>
-                          <p className="text-sm text-accent-warm font-business">
-                            Formaat met lijst: {framedPaintingDimensions.metLijst.height} x {framedPaintingDimensions.metLijst.width}
-                          </p>
-                        </>
-                      ) : (
-                        <p className="text-sm text-accent-warm font-business">
-                          Formaat: {displayDimensions?.height ?? "-"} x {displayDimensions?.width ?? "-"}
-                        </p>
-                      )}
-                      <p className="text-sm text-muted-foreground font-business mt-2">
-                        Prijs: {paintingPrice} met lijst
-                      </p>
-                    </div>
+      <div className="group rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.07] bg-muted/10">
 
-                  </div>
-                ) : (
+        {product.title === "Vliegen" && product.images[1] ? (
+          <div className="relative">
+            <Image
+              src={product.images[0]}
+              alt={product.title}
+              className="w-full h-auto object-contain transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+            />
+            <Image
+              src={product.images[1]}
+              alt={product.title}
+              className="absolute inset-0 w-full h-auto object-contain transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 pointer-events-none"
+            />
+          </div>
+        ) : (
+          <Image
+            src={product.images[0]}
+            alt={product.title}
+            className="w-full h-auto object-contain"
+          />
+        )}
+
+      </div>
+    </div>
+
+    {/* Tekstblok */}
+    <div className="w-full md:w-[55%] flex flex-col justify-center text-center md:text-left">
+      <h4 className="text-xl font-semibold text-foreground mb-3">
+        {product.title}
+      </h4>
+
+      {framedPaintingDimensions ? (
+        <>
+          <p className="text-sm text-accent-warm font-business">
+            Formaat zonder lijst: {framedPaintingDimensions.zonderLijst.height} x {framedPaintingDimensions.zonderLijst.width}
+          </p>
+          <p className="text-sm text-accent-warm font-business">
+            Formaat met lijst: {framedPaintingDimensions.metLijst.height} x {framedPaintingDimensions.metLijst.width}
+          </p>
+        </>
+      ) : (
+        <p className="text-sm text-accent-warm font-business">
+          Formaat: {displayDimensions?.height ?? "-"} x {displayDimensions?.width ?? "-"}
+        </p>
+      )}
+
+      <p className="text-sm text-muted-foreground font-business mt-2">
+        Prijs: {paintingPrice} met lijst
+      </p>
+    </div>
+
+  </div>
+): (
                   <>
                     {/* LICHTSCULPTUREN */}
                     <Link
