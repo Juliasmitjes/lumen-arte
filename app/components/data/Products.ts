@@ -8,7 +8,7 @@ import schilderij1Img from "../../../public/images/Pasteltekeningen/schilderij1.
 import schilderij2Img from "../../../public/images/Pasteltekeningen/schilderij2.jpg";
 import schilderij3Img from "../../../public/images/Pasteltekeningen/schilderij3.png";
 import schilderij4Img from "../../../public/images/Pasteltekeningen/schilderij4.jpg";
-import schilderij5Img from "../../../public/images/Pasteltekeningen/schilderij5.jpg";
+import schilderij5Img from "../../../public/images/Pasteltekeningen/schilderij5.png";
 import schilderij6Img from "../../../public/images/Pasteltekeningen/schilderij6.jpg";
 import schilderij7Img from "../../../public/images/Pasteltekeningen/schilderij7.jpg";
 import schilderij8Img from "../../../public/images/Pasteltekeningen/schilderij8.jpg";
@@ -16,8 +16,9 @@ import schilderij9Img from "../../../public/images/Pasteltekeningen/schilderij9.
 import schilderij10Img from "../../../public/images/Pasteltekeningen/schilderij10.jpg";
 import schilderij11Img from "../../../public/images/Pasteltekeningen/schilderij11.jpg";
 import schilderij12Img from "../../../public/images/Pasteltekeningen/schilderij12.jpg";
-import schilderij13Img from "../../../public/images/Pasteltekeningen/schilderij13.jpg";
+import schilderij13Img from "../../../public/images/Pasteltekeningen/schilderij13.png";
 import schilderij14Img from "../../../public/images/Pasteltekeningen/schilderij14.png";
+import schilderij15Img from "../../../public/images/Pasteltekeningen/schilderij15.jpg";
 
 // -- sculpturen --
 
@@ -231,8 +232,8 @@ export const products: Product[] = [
     images: [schilderij13Img],
     season: 'zomer',
     dimensions: {
-      height: '30 cm',
-      width: '50 cm',
+      height: '50 cm',
+      width: '70 cm',
     },
     features: [
       'Kleurrijk ontwerp',
@@ -245,6 +246,25 @@ export const products: Product[] = [
   }, 
   {
     id: 10,
+    title: 'Pastel',
+    price: 200,
+    images: [schilderij15Img],
+    season: 'zomer',
+    dimensions: {
+      height: '50 cm',
+      width: '70 cm',
+    },
+    features: [
+      'Kleurrijk ontwerp',
+      'Compact formaat, geschikt voor diverse ruimtes',
+      'Direct ophangbaar',
+      'Handgeschilderd in olieverf'
+    ],
+    inStock: true,
+    category: 'schilderijen'
+  }, 
+  {
+    id: 11,
     title: 'Krijtjes',
     price: 150,
     images: [schilderij1Img],
@@ -263,7 +283,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   }, 
   {
-    id: 11,
+    id: 12,
     title: 'Abstract',
     price: 275,
     images: [schilderij2Img],
@@ -283,7 +303,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 12,
+    id: 13,
     title: 'Abstract',
     price: 325,
     images: [schilderij3Img],
@@ -303,7 +323,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 13,
+    id: 14,
     title: 'Abstract',
     price: 250,
     images: [schilderij4Img],
@@ -322,7 +342,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 14,
+    id: 15,
     title: 'Abstract',
     price: 295,
     images: [schilderij5Img],
@@ -343,7 +363,7 @@ export const products: Product[] = [
   },
  
   {
-    id: 15,
+    id: 16,
     title: 'Bloemen',  
     price: 280,
     images: [schilderij9Img],
@@ -363,7 +383,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 16,
+    id: 17,
     title: 'Wensboom',
     price: 310,
     images: [schilderij10Img],
@@ -384,7 +404,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
    {
-    id: 17,
+    id: 18,
     title: 'Kippen',
     price: 220,
     images: [schilderij7Img],
@@ -404,7 +424,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 18,
+    id: 19,
     title: 'Krullen',
     price: 240,
     images: [doek1Img],
@@ -422,7 +442,7 @@ export const products: Product[] = [
   category: 'doek-aan-de-muur',
   },
   {
-    id: 19,
+    id: 20,
     title: 'Vliegen',
     price: 260,
     images: [doek2Img, doek3Img],
@@ -440,7 +460,7 @@ export const products: Product[] = [
   category: 'doek-aan-de-muur',
   },
   {
-    id: 20,
+    id: 21,
     title: 'Groen', 
     price: 240,
     images: [doek4Img],
