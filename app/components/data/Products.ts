@@ -18,7 +18,7 @@ import schilderij11Img from "../../../public/images/Pasteltekeningen/schilderij1
 import schilderij12Img from "../../../public/images/Pasteltekeningen/schilderij12.jpg";
 import schilderij13Img from "../../../public/images/Pasteltekeningen/schilderij13.png";
 import schilderij14Img from "../../../public/images/Pasteltekeningen/schilderij14.png";
-import schilderij15Img from "../../../public/images/Pasteltekeningen/schilderij15.jpg";
+import schilderij15Img from "../../../public/images/Pasteltekeningen/schilderij15.png";
 
 // -- sculpturen --
 
