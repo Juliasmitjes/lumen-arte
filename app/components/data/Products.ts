@@ -299,7 +299,7 @@ export const products: Product[] = [
     'Uniek kunstwerk',
     'Klaar om in te lijsten of op te hangen'
     ],
-    inStock: false,
+    inStock: true,
     category: 'schilderijen'
   },
   {
