@@ -185,7 +185,7 @@ export const products: Product[] = [
   },
   {
     id: 7,
-    title: 'Abstract vlakken',
+    title: 'Vlakken',
     price: 310,
     images: [schilderij11Img],
     season: 'winter',
@@ -284,7 +284,7 @@ export const products: Product[] = [
   }, 
   {
     id: 12,
-    title: 'Abstract',
+    title: 'Anders blauw',
     price: 275,
     images: [schilderij2Img],
     season: 'lente',
@@ -304,7 +304,7 @@ export const products: Product[] = [
   },
   {
     id: 13,
-    title: 'Abstract',
+    title: 'Harmonie',
     price: 325,
     images: [schilderij3Img],
     season: 'herfst',
@@ -324,7 +324,7 @@ export const products: Product[] = [
   },
   {
     id: 14,
-    title: 'Abstract',
+    title: 'Dansen',
     price: 250,
     images: [schilderij4Img],
     season: 'lente',
@@ -343,7 +343,7 @@ export const products: Product[] = [
   },
   {
     id: 15,
-    title: 'Abstract',
+    title: 'Hink stap sprong',
     price: 295,
     images: [schilderij5Img],
     season: 'herfst',
