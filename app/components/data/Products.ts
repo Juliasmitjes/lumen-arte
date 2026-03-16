@@ -19,6 +19,7 @@ import schilderij12Img from "../../../public/images/Pasteltekeningen/schilderij1
 import schilderij13Img from "../../../public/images/Pasteltekeningen/schilderij13.png";
 import schilderij14Img from "../../../public/images/Pasteltekeningen/schilderij14.png";
 import schilderij15Img from "../../../public/images/Pasteltekeningen/schilderij15.png";
+import schilderij16Img from "../../../public/images/Pasteltekeningen/schilderij16.jpg";
 
 // -- sculpturen --
 
@@ -361,9 +362,28 @@ export const products: Product[] = [
     inStock: true,
     category: 'schilderijen'
   },
- 
-  {
+    {
     id: 16,
+    title: 'Krijtjes',
+    price: 295,
+    images: [schilderij16Img],
+    season: 'herfst',
+    dimensions: {
+      height: '70 cm',
+      width: '80 cm',
+    },
+    features: [
+    'Expressieve penseelstreken',
+    'Sterke contrasten',
+    'Abstracte weergave van beweging',
+    'Hoogwaardige olieverf',
+    'Een echte blikvanger'
+    ],
+    inStock: true,
+    category: 'schilderijen'
+  }, 
+  {
+    id: 17,
     title: 'Bloemen',  
     price: 280,
     images: [schilderij9Img],
@@ -383,7 +403,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 17,
+    id: 18,
     title: 'Wensboom',
     price: 310,
     images: [schilderij10Img],
@@ -404,7 +424,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
    {
-    id: 18,
+    id: 19,
     title: 'Kippen',
     price: 220,
     images: [schilderij7Img],
@@ -424,7 +444,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 19,
+    id: 20,
     title: 'Krullen',
     price: 240,
     images: [doek1Img],
@@ -442,7 +462,7 @@ export const products: Product[] = [
   category: 'doek-aan-de-muur',
   },
   {
-    id: 20,
+    id: 21,
     title: 'Vliegen',
     price: 260,
     images: [doek2Img, doek3Img],
@@ -460,7 +480,7 @@ export const products: Product[] = [
   category: 'doek-aan-de-muur',
   },
   {
-    id: 21,
+    id: 22,
     title: 'Groen', 
     price: 240,
     images: [doek4Img],
