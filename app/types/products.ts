@@ -23,7 +23,6 @@ export interface BaseProduct {
   price: number;
   images: StaticImageData[];
   season: 'lente' | 'zomer' | 'herfst' | 'winter' | 'alle-seizoenen';
-  features: string[];
   inStock: boolean;
 }
 

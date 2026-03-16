@@ -80,12 +80,6 @@ export const products: Product[] = [
       height: '195 cm',
       diameter: '60 cm', 
     },
-    features: [
-      'Handgemaakt',
-      'Eenvoudig op te bergen na gebruik',
-      'Seizoensgebonden decoratie mogelijk',
-      'Mimaal materiaalgebruik met groots effect',
-    ],
     inStock: false,
     category: 'sculpturen'
   },
@@ -99,12 +93,6 @@ export const products: Product[] = [
       height: '200 cm',
       diameter: '70 cm',
     },
-    features: [
-      'Handgemaakt',
-      'Eenvoudig op te bergen na gebruik',
-      'Seizoensgebonden decoratie mogelijk',
-      'Mimaal materiaalgebruik met groots effect',
-    ],
     inStock: true,
     category: 'sculpturen'
   },
@@ -118,12 +106,6 @@ export const products: Product[] = [
       height: '175 cm',
       diameter: '60 cm',
     },
-    features: [
-      'Handgemaakt',
-      'Eenvoudig op te bergen na gebruik',
-      'Seizoensgebonden decoratie mogelijk',
-      'Mimaal materiaalgebruik met groots effect',
-    ],
     inStock: true,
     category: 'sculpturen'
   },
@@ -137,12 +119,6 @@ export const products: Product[] = [
       height: '220 cm',
       diameter: '70 cm',
     },
-    features: [
-      'Handgemaakt',
-      'Eenvoudig op te bergen na gebruik',
-      'Seizoensgebonden decoratie mogelijk',
-      'Mimaal materiaalgebruik met groots effect',
-    ],
     inStock: true,
     category: 'sculpturen'
   },
@@ -156,12 +132,6 @@ export const products: Product[] = [
       height: '170 cm',
       diameter: '60 cm',
     },
-    features: [
-      'Handgemaakt',
-      'Eenvoudig op te bergen na gebruik',
-      'Seizoensgebonden decoratie mogelijk',
-      'Mimaal materiaalgebruik met groots effect',
-    ],
     inStock: true,
     category: 'sculpturen'
   },
@@ -175,12 +145,6 @@ export const products: Product[] = [
       height: '170 cm',
       diameter: '60 cm',
     },
-    features: [
-      'Handgemaakt',
-      'Eenvoudig op te bergen na gebruik',
-      'Seizoensgebonden decoratie mogelijk',
-      'Mimaal materiaalgebruik met groots effect',
-    ],
     inStock: true,
     category: 'sculpturen'
   },
@@ -194,10 +158,6 @@ export const products: Product[] = [
       height: '52 cm',
       width: '73 cm',
     },
-    features: [
-    'Elegant en tijdloos ontwerp',
-    ],
-
     inStock: true,
     category: 'schilderijen'
   },
@@ -217,12 +177,6 @@ export const products: Product[] = [
         width: '115 cm',
       },
     },
-    features: [
-    'Paarse kleuren',
-    'Elegante vorming',
-    'Handgemaakt',
-    'Uniek kunstwerk'
-    ],
     inStock: true,
     category: 'schilderijen'
   },
@@ -236,12 +190,6 @@ export const products: Product[] = [
       height: '50 cm',
       width: '70 cm',
     },
-    features: [
-      'Kleurrijk ontwerp',
-      'Compact formaat, geschikt voor diverse ruimtes',
-      'Direct ophangbaar',
-      'Handgeschilderd in olieverf'
-    ],
     inStock: true,
     category: 'schilderijen'
   }, 
@@ -255,12 +203,6 @@ export const products: Product[] = [
       height: '50 cm',
       width: '70 cm',
     },
-    features: [
-      'Kleurrijk ontwerp',
-      'Compact formaat, geschikt voor diverse ruimtes',
-      'Direct ophangbaar',
-      'Handgeschilderd in olieverf'
-    ],
     inStock: true,
     category: 'schilderijen'
   }, 
@@ -274,12 +216,6 @@ export const products: Product[] = [
       height: '50 cm',
       width: '70 cm',
     },
-    features: [
-      'Kleurrijk ontwerp',
-      'Compact formaat, geschikt voor diverse ruimtes',
-      'Direct ophangbaar',
-      'Handgeschilderd in olieverf'
-    ],
     inStock: true,
     category: 'schilderijen'
   }, 
@@ -293,13 +229,6 @@ export const products: Product[] = [
       height: '58 cm',
       width: '50 cm',
     },
-    features: [
-    'Origineel abstract ontwerp',
-    'Met aquareltechniek handgeschilderd',
-    'Frisse, lichte uitstraling',
-    'Uniek kunstwerk',
-    'Klaar om in te lijsten of op te hangen'
-    ],
     inStock: true,
     category: 'schilderijen'
   },
@@ -313,13 +242,6 @@ export const products: Product[] = [
       height: '50 cm',
       width: '70 cm',
     },
-    features: [
-    'Diepe, warme kleuren',
-    'Abstracte interpretatie van de natuur',
-    'Handgemaakt en uniek',
-    'Stevige linnen ondergrond',
-    'Geschikt voor woonkamer of kantoor'
-    ],
     inStock: true,
     category: 'schilderijen'
   },
@@ -333,12 +255,6 @@ export const products: Product[] = [
       height: '50 cm',
       width: '70 cm',
     },
-    features: [
-    'Kleurrijk en expressief',
-    'Lichte aquareltechniek',
-    'Past bij moderne en klassieke interieurs',
-    'Brengt vrolijkheid in huis'
-    ],
     inStock: true,
     category: 'schilderijen'
   },
@@ -352,13 +268,6 @@ export const products: Product[] = [
       height: '70 cm',
       width: '80 cm',
     },
-    features: [
-    'Expressieve penseelstreken',
-    'Sterke contrasten',
-    'Abstracte weergave van beweging',
-    'Hoogwaardige olieverf',
-    'Een echte blikvanger'
-    ],
     inStock: true,
     category: 'schilderijen'
   },
@@ -372,13 +281,6 @@ export const products: Product[] = [
       height: '70 cm',
       width: '80 cm',
     },
-    features: [
-    'Expressieve penseelstreken',
-    'Sterke contrasten',
-    'Abstracte weergave van beweging',
-    'Hoogwaardige olieverf',
-    'Een echte blikvanger'
-    ],
     inStock: true,
     category: 'schilderijen'
   }, 
@@ -392,13 +294,6 @@ export const products: Product[] = [
       height: '40 cm',
       width: '50 cm',
     },
-    features: [
-    'Vrolijke, heldere kleuren',
-    'Energieke compositie', 
-    'Handgemaakt',
-    'Brengt licht in huis',
-    'Geschikt voor diverse interieurs'
-    ],
     inStock: true,
     category: 'schilderijen'
   },
@@ -412,14 +307,6 @@ export const products: Product[] = [
       height: '50 cm',
       width: '50 cm',
     },
-    features: [
-    'Elegant en tijdloos ontwerp',  
-    'Zachte, harmonieuze kleuren',
-    'Hoogwaardige olieverf',
-    'Handgemaakt',
-    'Ideaal voor woon- en eetkamers'
-    ],
-
     inStock: false,
     category: 'schilderijen'
   },
@@ -433,13 +320,6 @@ export const products: Product[] = [
       height: '40 cm',
       width: '30 cm',
     },
-    features: [
-    'Luchtig en humoristisch',
-    'Vrolijke kleuren',
-    'Handgeschilderd',
-    'Compact formaat',
-    'Ideaal als cadeau'
-    ],
     inStock: true,
     category: 'schilderijen'
   },
@@ -453,11 +333,6 @@ export const products: Product[] = [
       height: '73 cm',
       width: '52 cm',
     },
-     features: [
-    'Handgemaakt',
-    'Klaar om op te hangen',
-    'Uniek werk',
-  ],
   inStock: true,
   category: 'doek-aan-de-muur',
   },
@@ -471,11 +346,6 @@ export const products: Product[] = [
       height: '118 cm',
       width: '82 cm',
     },
-      features: [
-    'Handgemaakt',
-    'Klaar om op te hangen',  
-    'Uniek werk',
-  ],
   inStock: true,
   category: 'doek-aan-de-muur',
   },
@@ -489,11 +359,6 @@ export const products: Product[] = [
       height: '78 cm',
       width: '52 cm',
     },
-      features: [
-    'Handgemaakt',
-    'Klaar om op te hangen',
-    'Uniek werk',
-  ],
   inStock: true,
   category: 'doek-aan-de-muur',
   },
