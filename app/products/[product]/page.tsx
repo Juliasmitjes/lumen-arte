@@ -368,25 +368,6 @@ export default function ProductDetail({
                 </CardContent>
               </Card>
 
-              {/* FEATURES */}
-              <Card className="border-2 border-secondary/10 bg-secondary-light">
-                <CardContent className="p-6">
-                  <h3 className="mb-4 flex items-center">
-                    <Award className="w-5 h-5 mr-2 text-primary" />
-                    Eigenschappen
-                  </h3>
-
-                  <div className="grid grid-cols-2 gap-3 text-sm">
-                    {product.features.map((feature, i) => (
-                      <div key={i} className="flex items-center">
-                        <div className="w-2 h-2 bg-primary rounded-full mr-2" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-
               {/* DIMENSIONS */}
               <Card className="border border-secondary-warm/10 bg-secondary/20">
                 <CardContent className="p-6">
