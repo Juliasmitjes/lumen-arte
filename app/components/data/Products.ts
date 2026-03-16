@@ -278,8 +278,8 @@ export const products: Product[] = [
     images: [schilderij16Img],
     season: 'herfst',
     dimensions: {
-      height: '70 cm',
-      width: '80 cm',
+      height: '50 cm',
+      width: '70 cm',
     },
     inStock: true,
     category: 'schilderijen'
