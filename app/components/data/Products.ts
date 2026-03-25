@@ -150,7 +150,7 @@ export const products: Product[] = [
   },
   {
     id: 7,
-    title: 'Vlakken',
+    title: 'Vlakken groen met geel',
     price: 310,
     images: [schilderij11Img],
     season: 'winter',
@@ -163,7 +163,33 @@ export const products: Product[] = [
   },
    {
     id: 8,
-    title: 'Paarse slinger',
+    title: 'Vlakken groen en blauw ',
+    price: 295,
+    images: [schilderij16Img],
+    season: 'herfst',
+    dimensions: {
+      height: '50 cm',
+      width: '70 cm',
+    },
+    inStock: true,
+    category: 'schilderijen'
+  }, 
+  {
+    id: 9,
+    title: 'Vlakken lente',
+    price: 200,
+    images: [schilderij13Img],
+    season: 'zomer',
+    dimensions: {
+      height: '50 cm',
+      width: '70 cm',
+    },
+    inStock: true,
+    category: 'schilderijen'
+  }, 
+   {
+    id: 10,
+    title: 'Slinger',
     price: 310,
     images: [schilderij12Img],
     season: 'winter',
@@ -180,22 +206,10 @@ export const products: Product[] = [
     inStock: true,
     category: 'schilderijen'
   },
-    {
-    id: 9,
-    title: 'Blauwe lente',
-    price: 200,
-    images: [schilderij13Img],
-    season: 'zomer',
-    dimensions: {
-      height: '50 cm',
-      width: '70 cm',
-    },
-    inStock: true,
-    category: 'schilderijen'
-  }, 
+    
   {
-    id: 10,
-    title: 'Pastel',
+    id: 11,
+    title: 'Pastels',
     price: 200,
     images: [schilderij15Img],
     season: 'zomer',
@@ -207,8 +221,8 @@ export const products: Product[] = [
     category: 'schilderijen'
   }, 
   {
-    id: 11,
-    title: 'Anders blauw',
+    id: 12,
+    title: 'Harmonie met blauw',
     price: 275,
     images: [schilderij2Img],
     season: 'lente',
@@ -220,8 +234,8 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 12,
-    title: 'Harmonie',
+    id: 13,
+    title: 'Harmonie in roze',
     price: 325,
     images: [schilderij3Img],
     season: 'herfst',
@@ -233,8 +247,8 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 13,
-    title: 'Dansen',
+    id: 14,
+    title: 'Hink-stap-sprong groen',
     price: 250,
     images: [schilderij4Img],
     season: 'lente',
@@ -246,8 +260,8 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 14,
-    title: 'Hink stap sprong',
+    id: 15,
+    title: 'Hink-stap-sprong roze',
     price: 295,
     images: [schilderij5Img],
     season: 'herfst',
@@ -258,19 +272,7 @@ export const products: Product[] = [
     inStock: true,
     category: 'schilderijen'
   },
-    {
-    id: 15,
-    title: 'Krijtjes',
-    price: 295,
-    images: [schilderij16Img],
-    season: 'herfst',
-    dimensions: {
-      height: '50 cm',
-      width: '70 cm',
-    },
-    inStock: true,
-    category: 'schilderijen'
-  }, 
+   
    {
     id: 16,
     title: 'Krijtjes',
