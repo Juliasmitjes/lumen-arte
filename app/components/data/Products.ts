@@ -208,19 +208,6 @@ export const products: Product[] = [
   }, 
   {
     id: 11,
-    title: 'Krijtjes',
-    price: 150,
-    images: [schilderij1Img],
-    season: 'zomer',
-    dimensions: {
-      height: '50 cm',
-      width: '70 cm',
-    },
-    inStock: true,
-    category: 'schilderijen'
-  }, 
-  {
-    id: 12,
     title: 'Anders blauw',
     price: 275,
     images: [schilderij2Img],
@@ -233,7 +220,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 13,
+    id: 12,
     title: 'Harmonie',
     price: 325,
     images: [schilderij3Img],
@@ -246,7 +233,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 14,
+    id: 13,
     title: 'Dansen',
     price: 250,
     images: [schilderij4Img],
@@ -259,7 +246,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 15,
+    id: 14,
     title: 'Hink stap sprong',
     price: 295,
     images: [schilderij5Img],
@@ -272,11 +259,24 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
     {
-    id: 16,
+    id: 15,
     title: 'Krijtjes',
     price: 295,
     images: [schilderij16Img],
     season: 'herfst',
+    dimensions: {
+      height: '50 cm',
+      width: '70 cm',
+    },
+    inStock: true,
+    category: 'schilderijen'
+  }, 
+   {
+    id: 16,
+    title: 'Krijtjes',
+    price: 150,
+    images: [schilderij1Img],
+    season: 'zomer',
     dimensions: {
       height: '50 cm',
       width: '70 cm',
