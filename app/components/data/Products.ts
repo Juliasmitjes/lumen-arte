@@ -228,8 +228,8 @@ export const products: Product[] = [
     images: [schilderij18Img],
     season: 'zomer',
     dimensions: {
-      height: '30 cm',
-      width: '40 cm',
+      height: '50 cm',
+      width: '70 cm',
     },
     inStock: true,
     category: 'schilderijen'
