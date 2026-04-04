@@ -18,7 +18,7 @@ import schilderij11Img from "../../../public/images/Pasteltekeningen/schilderij1
 import schilderij12Img from "../../../public/images/Pasteltekeningen/schilderij12.jpg";
 import schilderij13Img from "../../../public/images/Pasteltekeningen/schilderij13.png";
 import schilderij14Img from "../../../public/images/Pasteltekeningen/schilderij14.png";
-import schilderij15Img from "../../../public/images/Pasteltekeningen/schilderij15.png";
+import schilderij15Img from "../../../public/images/Pasteltekeningen/schilderij15.jpg";
 import schilderij16Img from "../../../public/images/Pasteltekeningen/schilderij16.jpg";
 import schilderij17Img from "../../../public/images/Pasteltekeningen/schilderij17.jpg";
 import schilderij18Img from "../../../public/images/Pasteltekeningen/schilderij18.jpg";
@@ -208,10 +208,9 @@ export const products: Product[] = [
     inStock: true,
     category: 'schilderijen'
   },
-    
   {
     id: 11,
-    title: 'Pastels',
+    title: 'Pastel roze',
     price: 200,
     images: [schilderij15Img],
     season: 'zomer',
@@ -224,6 +223,19 @@ export const products: Product[] = [
   }, 
   {
     id: 12,
+    title: 'Pastel groen',
+    price: 150,
+    images: [schilderij18Img],
+    season: 'zomer',
+    dimensions: {
+      height: '30 cm',
+      width: '40 cm',
+    },
+    inStock: true,
+    category: 'schilderijen'
+  }, 
+  {
+    id: 13,
     title: 'Harmonie met blauw',
     price: 275,
     images: [schilderij2Img],
@@ -236,7 +248,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 13,
+    id: 14,
     title: 'Harmonie in roze',
     price: 325,
     images: [schilderij3Img],
@@ -249,7 +261,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 14,
+    id: 15,
     title: 'Hink-stap-sprong groen',
     price: 250,
     images: [schilderij4Img],
@@ -262,7 +274,7 @@ export const products: Product[] = [
     category: 'schilderijen'
   },
   {
-    id: 15,
+    id: 16,
     title: 'Hink-stap-sprong roze',
     price: 295,
     images: [schilderij5Img],
@@ -274,19 +286,7 @@ export const products: Product[] = [
     inStock: true,
     category: 'schilderijen'
   },
-  {
-    id: 16,
-    title: 'Gebroken',
-    price: 150,
-    images: [schilderij18Img],
-    season: 'zomer',
-    dimensions: {
-      height: '30 cm',
-      width: '40 cm',
-    },
-    inStock: true,
-    category: 'schilderijen'
-  }, 
+  
   {
     id: 17,
     title: 'Wijds',

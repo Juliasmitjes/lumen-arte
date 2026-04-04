@@ -21,7 +21,7 @@ interface GalleryProps {
 }
 
 const ABSTRACT_PAINTING_IDS = new Set([7, 8, 9, 10, 11, 12, 13, 14, 15, 16]);
-const FIGURATIVE_PAINTING_IDS = new Set([17, 18, 19, 20, 21, 22, 23, 24]);
+const FIGURATIVE_PAINTING_IDS = new Set([17, 18, 19, 20, 21]);
 
 const Gallery = ({ activeCategory, setActiveCategory }: GalleryProps) => {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
