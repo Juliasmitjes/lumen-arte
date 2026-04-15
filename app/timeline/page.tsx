@@ -36,7 +36,7 @@ const upcomingExhibition = {
   venue: "Kerkje van Persingen",
   date: "4 en 5 december 2027",
   description:
-    "In het sfeervolle kerkje van Persingen staat begin december een nieuwe expositie gepland. Een warm vooruitzicht vol licht, kleur en verstilling in een intieme setting.",
+    "In het sfeervolle kerkje van Persingen staat begin december een nieuwe expositie gepland. Een warm vooruitzicht vol licht en kleur.",
 };
 
 const Timeline = () => {
@@ -237,7 +237,7 @@ const Timeline = () => {
           <div className="grid grid-cols-1 gap-8 p-6 sm:p-8 lg:grid-cols-[0.95fr_1.05fr] lg:p-10">
             <div className="flex flex-col justify-between rounded-[1.5rem] bg-white/50 p-6">
               <div>
-                <p className="mb-3 text-xs uppercase tracking-[0.35em] text-accent font-business">
+                <p className="mb-5 text-xs uppercase tracking-[0.35em] text-accent font-business">
                   Vooruitblik
                 </p>
                 <h2 className="font-playful text-3xl leading-tight text-foreground sm:text-4xl">
@@ -257,23 +257,19 @@ const Timeline = () => {
 
             <div className="rounded-[1.5rem] border border-white/60 bg-[#8e9a86] px-6 py-8 text-foreground sm:px-8 sm:py-10">
               <div>
-                <span className="inline-flex rounded-full border border-white/30 bg-white/20 px-3 py-1 text-xs uppercase tracking-[0.25em] text-white font-business">
-                  Aangekondigd
-                </span>
-                <div className="mt-8 flex flex-col gap-5">
-                  <div className="flex items-center gap-3 text-sm text-white font-business">
+                <div className="mt-4 flex flex-col gap-5">
+                  <div className="flex items-center gap-3 text-md text-white font-business">
                     <Calendar className="h-4 w-4 text-white" />
                     {upcomingExhibition.date}
                   </div>
-                  <div className="flex items-center gap-3 text-sm text-white font-business">
+                  <div className="flex items-center gap-3 text-md text-white font-business">
                     <MapPin className="h-4 w-4 text-white" />
                     {upcomingExhibition.venue}
                   </div>
                 </div>
                 <div className="mt-10 border-t border-white/20 pt-6">
                   <p className="max-w-md text-xl leading-relaxed text-white font-playful sm:text-2xl">
-                    Reserveer dit weekend alvast in je agenda voor een sfeervolle decemberexpo
-                    in Persingen.
+                    Tot ziens in december!
                   </p>
                 </div>
               </div>
