@@ -98,7 +98,7 @@ const Timeline = () => {
               <p className="mt-6 max-w-xl text-base text-muted-foreground font-business sm:text-lg">
                 Mijn werk staat regelmatig in de spotlight tijdens tentoonstellingen en
                 exposities. Hier deel ik mijn nieuwste creaties met kunstliefhebbers en
-                verzamelaars. Kom gerust eens langs!
+                verzamelaars. Kom gerust langs!
               </p>
             </div>
 
