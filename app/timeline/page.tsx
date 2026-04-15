@@ -31,6 +31,14 @@ const exhibition = {
   ],
 };
 
+const upcomingExhibition = {
+  title: "Expo Decemberlichten",
+  venue: "Kerkje van Persingen",
+  date: "4 en 5 december 2027",
+  description:
+    "In het sfeervolle kerkje van Persingen staat begin december een nieuwe expositie gepland. Een warm vooruitzicht vol licht, kleur en verstilling in een intieme setting.",
+};
+
 const Timeline = () => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
@@ -93,12 +101,12 @@ const Timeline = () => {
                 Exposities
               </p>
               <h1 className="font-playful text-4xl leading-tight sm:text-5xl lg:text-6xl">
-                Recente tentoonstellingen
+                Exposities en aankondigingen
               </h1>
               <p className="mt-6 max-w-xl text-base text-muted-foreground font-business sm:text-lg">
                 Mijn werk staat regelmatig in de spotlight tijdens tentoonstellingen en
-                exposities. Hier deel ik mijn nieuwste creaties met kunstliefhebbers en
-                verzamelaars. Kom gerust langs!
+                exposities. Hier deel ik recente presentaties en alvast een blik op wat eraan
+                komt voor kunstliefhebbers en verzamelaars.
               </p>
             </div>
 
@@ -220,6 +228,54 @@ const Timeline = () => {
                 <Button asChild variant="secondary">
                   <Link href="/#contact">Vraag details</Link>
                 </Button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article className="mt-8 overflow-hidden rounded-[2rem] border border-accent/20 bg-[#ead9c6]">
+          <div className="grid grid-cols-1 gap-8 p-6 sm:p-8 lg:grid-cols-[0.95fr_1.05fr] lg:p-10">
+            <div className="flex flex-col justify-between rounded-[1.5rem] bg-white/50 p-6">
+              <div>
+                <p className="mb-3 text-xs uppercase tracking-[0.35em] text-accent font-business">
+                  Vooruitblik
+                </p>
+                <h2 className="font-playful text-3xl leading-tight text-foreground sm:text-4xl">
+                  {upcomingExhibition.title}
+                </h2>
+                <p className="mt-4 max-w-lg text-base text-muted-foreground font-business sm:text-lg">
+                  {upcomingExhibition.description}
+                </p>
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Button asChild variant="default">
+                  <Link href="/#contact">Blijf op de hoogte</Link>
+                </Button>
+              </div>
+            </div>
+
+            <div className="rounded-[1.5rem] border border-white/60 bg-[#8e9a86] px-6 py-8 text-foreground sm:px-8 sm:py-10">
+              <div>
+                <span className="inline-flex rounded-full border border-white/30 bg-white/20 px-3 py-1 text-xs uppercase tracking-[0.25em] text-white font-business">
+                  Aangekondigd
+                </span>
+                <div className="mt-8 flex flex-col gap-5">
+                  <div className="flex items-center gap-3 text-sm text-white font-business">
+                    <Calendar className="h-4 w-4 text-white" />
+                    {upcomingExhibition.date}
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-white font-business">
+                    <MapPin className="h-4 w-4 text-white" />
+                    {upcomingExhibition.venue}
+                  </div>
+                </div>
+                <div className="mt-10 border-t border-white/20 pt-6">
+                  <p className="max-w-md text-xl leading-relaxed text-white font-playful sm:text-2xl">
+                    Reserveer dit weekend alvast in je agenda voor een sfeervolle decemberexpo
+                    in Persingen.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
